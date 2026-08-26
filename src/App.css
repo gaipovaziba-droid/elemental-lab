@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #F5F0E8;
+  color: #3C1518;
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ─── Focus visible ─── */
+:focus-visible {
+  outline: 2px solid #A44A3F;
+  outline-offset: 2px;
+}
+
+/* ─── Header ─── */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #E8DFD1;
+  flex-shrink: 0;
+}
+
+.app-header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.app-header .header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.app-header button {
+  background: none;
+  border: 1px solid #3C1518;
+  border-radius: 6px;
+  color: #3C1518;
+  font-size: 12px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.app-header button:hover {
+  background: #3C1518;
+  color: #F5F0E8;
+}
+
+/* ─── Body: sidebar + lab ─── */
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ─── Sidebar (element library, narrow) ─── */
+.collection-panel {
+  width: 76px;
+  min-width: 76px;
+  border-right: 1px solid #E8DFD1;
+  padding: 8px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.collection-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.collection-panel::-webkit-scrollbar-thumb {
+  background: #E8DFD1;
+  border-radius: 2px;
+}
+
+/* ─── Element icon (in sidebar) ─── */
+.element-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #EDE6D6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: grab;
+  position: relative;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.element-icon:hover {
+  background: #E0D6C2;
+}
+
+.element-icon:active {
+  cursor: grabbing;
+}
+
+.element-icon.selected {
+  background: #C4B8A4;
+  box-shadow: 0 0 0 2px #A44A3F;
+}
+
+.element-icon .tooltip {
+  display: none;
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3C1518;
+  color: #F5F0E8;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.element-icon:hover .tooltip,
+.element-icon:focus-visible .tooltip,
+.element-icon.tooltip-visible .tooltip {
+  display: block;
+}
+
+/* ─── Laboratory (workspace) ─── */
+.laboratory {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    radial-gradient(circle, #E8DFD1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.laboratory-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8B7E74;
+  font-size: 15px;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.laboratory-hint.hidden {
+  opacity: 0;
+}
+
+/* ─── Workspace element ─── */
+.workspace-element {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #E8DFD1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  cursor: grab;
+  user-select: none;
+  transition: box-shadow 0.15s;
+  z-index: 1;
+}
+
+.workspace-element:hover {
+  box-shadow: 0 0 0 2px #C4B8A4;
+  z-index: 2;
+}
+
+.workspace-element:active {
+  cursor: grabbing;
+}
+
+.workspace-element.drag-over {
+  box-shadow: 0 0 0 3px #A44A3F;
+  z-index: 3;
+}
+
+.workspace-element.selected {
+  box-shadow: 0 0 0 2px #A44A3F;
+  z-index: 2;
+}
+
+/* ─── Discovery toast ─── */
+.discovery-toast {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #A44A3F;
+  color: #F5F0E8;
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.discovery-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.discovery-toast.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-12px);
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 640px) {
+  .app-body {
+    flex-direction: column;
+  }
+
+  .collection-panel {
+    width: 100%;
+    min-width: unset;
+    height: 80px;
+    border-right: none;
+    border-bottom: 1px solid #E8DFD1;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .collection-panel::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .collection-panel::-webkit-scrollbar-thumb {
+    background: #E8DFD1;
+    border-radius: 2px;
+  }
+
+  .element-icon .tooltip {
+    display: none !important;
+  }
+
+  .laboratory-hint {
+    font-size: 13px;
+  }
+
+  .app-header button {
+    min-height: 44px;
+  }
+
+  .discovery-toast {
+    top: 52px;
+    width: calc(100% - 24px);
+    padding-inline: 12px;
+    text-align: center;
+  }
+}

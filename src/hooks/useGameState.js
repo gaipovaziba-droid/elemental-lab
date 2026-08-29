@@ -1,8 +1,10 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { saveState, loadState, clearState } from '../utils/storage'
+import { ELEMENTS } from '../data/engine'
 
 const STARTERS = ['water', 'fire', 'air', 'earth']
 const DEBOUNCE_MS = 300
+const VALID_IDS = new Set(Object.keys(ELEMENTS))
 
 function useGameState() {
   const [discovered, setDiscovered] = useState(STARTERS)
@@ -11,22 +13,30 @@ function useGameState() {
   const persistTimer = useRef(null)
   const latestRef = useRef({ discovered: STARTERS, workspace: [] })
 
-  // Keep latestRef in sync with state
   latestRef.current = { discovered, workspace }
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount with migration filtering
   useEffect(() => {
     const saved = loadState()
     if (saved) {
       if (Array.isArray(saved.discovered)) {
-        setDiscovered(saved.discovered)
-        latestRef.current.discovered = saved.discovered
+        const filtered = saved.discovered.filter(id => VALID_IDS.has(id))
+        if (filtered.length >= 4) {
+          setDiscovered(filtered)
+          latestRef.current.discovered = filtered
+        }
       }
       if (Array.isArray(saved.workspace)) {
-        setWorkspace(saved.workspace)
-        latestRef.current.workspace = saved.workspace
+        const filtered = saved.workspace.filter(item => VALID_IDS.has(item.elementId))
+        if (filtered.length > 0) {
+          setWorkspace(filtered)
+          latestRef.current.workspace = filtered
+          // Keep highest uid + 1 for nextId
+          const maxUid = Math.max(...filtered.map(w => w.uid), 0)
+          if (maxUid > 0) nextIdRef.current = maxUid + 1
+        }
       }
-      if (saved.nextId) {
+      if (saved.nextId && saved.nextId > nextIdRef.current) {
         nextIdRef.current = saved.nextId
       }
     }

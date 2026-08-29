@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { ELEMENT_CATALOG } from '../data/catalog'
+import { ELEMENTS } from '../data/engine'
 import WorkspaceElement from './WorkspaceElement'
 
 function Laboratory({ workspace, pointerDrag, tooltipTarget }) {
@@ -35,7 +35,7 @@ function Laboratory({ workspace, pointerDrag, tooltipTarget }) {
         Drag elements here to combine
       </div>
       {workspace.map((item) => {
-        const el = ELEMENT_CATALOG[item.elementId]
+        const el = ELEMENTS[item.elementId]
         if (!el) return null
         return (
           <WorkspaceElement

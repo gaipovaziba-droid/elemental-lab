@@ -1,6 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
-import { ELEMENT_CATALOG } from './data/catalog'
-import { getCombinationResult } from './data/combinations'
+import { ELEMENTS, getCombinationResult, TOTAL_ELEMENT_COUNT } from './data/engine'
 import useGameState from './hooks/useGameState'
 import usePointerDrag from './hooks/usePointerDrag'
 import Header from './components/Header'
@@ -28,7 +27,7 @@ function App() {
   const toastTimer = useRef(null)
 
   const showToast = useCallback((elementId) => {
-    const el = ELEMENT_CATALOG[elementId]
+    const el = ELEMENTS[elementId]
     if (!el) return
     if (toastTimer.current) clearTimeout(toastTimer.current)
     setToast({ name: el.name, emoji: el.emoji })
@@ -55,10 +54,8 @@ function App() {
 
   const handleDragEndRef = useRef(null)
 
-  // Handle end of pointer drag — determine what happened
   const handleDragEnd = useCallback((payload, clientX, clientY) => {
     if (!payload) return
-
     if (payload.type === 'sidebar') {
       const el = document.elementFromPoint(clientX, clientY)
       const wsEl = el?.closest('.workspace-element')
@@ -95,31 +92,34 @@ function App() {
 
   const pointerDrag = usePointerDrag(handleDragEndRef)
 
-  // Cleanup toast timer
   useEffect(() => {
     return () => {
       if (toastTimer.current) clearTimeout(toastTimer.current)
     }
   }, [])
 
-  // Ghost element while dragging
   const ds = pointerDrag.dragState
   const getGhostContent = () => {
     if (!ds || !ds.isDragging || !ds.payload) return null
     if (ds.payload.type === 'sidebar') {
-      const el = ELEMENT_CATALOG[ds.payload.elementId]
+      const el = ELEMENTS[ds.payload.elementId]
       return el ? { emoji: el.emoji } : null
     }
     const wsItem = workspaceRef.current.find(w => w.uid === ds.payload.uid)
     if (!wsItem) return null
-    const el = ELEMENT_CATALOG[wsItem.elementId]
+    const el = ELEMENTS[wsItem.elementId]
     return el ? { emoji: el.emoji } : null
   }
   const ghost = getGhostContent()
 
   return (
     <div id="root">
-      <Header onReset={reset} onClearWorkspace={clearWorkspace} />
+      <Header
+        discoveredCount={discovered.length}
+        totalCount={TOTAL_ELEMENT_COUNT}
+        onReset={reset}
+        onClearWorkspace={clearWorkspace}
+      />
       <div className="app-body">
         <CollectionPanel
           discovered={discovered}
@@ -128,7 +128,6 @@ function App() {
         <Laboratory
           workspace={workspace}
           pointerDrag={pointerDrag}
-          onDragEnd={handleDragEnd}
           tooltipTarget={pointerDrag.tooltipTarget}
         />
       </div>

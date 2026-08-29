@@ -305,6 +305,68 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
+/* ─── Info card (tooltip) ─── */
+.info-card {
+  position: fixed;
+  background: #3C1518;
+  color: #F5F0E8;
+  border: 1px solid #A44A3F;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 11px;
+  z-index: 500;
+  pointer-events: none;
+  max-width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.info-card-emoji {
+  font-size: 20px;
+}
+
+.info-card-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #F5F0E8;
+}
+
+.info-card-symbol {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.science-badge {
+  background: #A44A3F;
+  color: #F5F0E8;
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.info-card-desc {
+  color: #D4C9B8;
+  font-size: 11px;
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+
+.info-card-category {
+  color: #8B7E74;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .discovery-toast {
   position: fixed;
   top: 56px;

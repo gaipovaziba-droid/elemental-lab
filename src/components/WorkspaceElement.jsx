@@ -1,7 +1,9 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
+import InfoCard from './InfoCard'
 
-function WorkspaceElement({ uid, name, emoji, x, y, isDragOver, pointerDrag, isTooltipTarget }) {
+function WorkspaceElement({ uid, element, x, y, isDragOver, pointerDrag, isTooltipTarget }) {
   const ref = useRef(null)
+  const [rect, setRect] = useState({ left: 0, top: 0 })
   const payload = { type: 'workspace', uid }
 
   useEffect(() => {
@@ -22,18 +24,35 @@ function WorkspaceElement({ uid, name, emoji, x, y, isDragOver, pointerDrag, isT
     }
   }, [payload, pointerDrag])
 
+  useEffect(() => {
+    const updateRect = () => {
+      if (ref.current) {
+        const r = ref.current.getBoundingClientRect()
+        setRect({ left: r.left, top: r.top })
+      }
+    }
+    updateRect()
+    window.addEventListener('scroll', updateRect, true)
+    return () => window.removeEventListener('scroll', updateRect, true)
+  }, [x, y])
+
   return (
-    <div
-      ref={ref}
-      className={`workspace-element${isDragOver ? ' drag-over' : ''}${isTooltipTarget ? ' tooltip-visible' : ''}`}
-      style={{ left: x, top: y, touchAction: 'none' }}
-      tabIndex={0}
-      role="button"
-      aria-label={name}
+    <>
+      <div
+        ref={ref}
+        className={`workspace-element${isDragOver ? ' drag-over' : ''}${isTooltipTarget ? ' tooltip-visible' : ''}`}
+        style={{ left: x, top: y, touchAction: 'none' }}
+        tabIndex={0}
+        role="button"
+aria-label={element.name}
       data-uid={uid}
     >
-      <span>{emoji}</span>
+      <span>{element.emoji}</span>
     </div>
+      {isTooltipTarget && (
+        <InfoCard element={element} x={rect.left} y={rect.top} anchor="workspace" />
+      )}
+    </>
   )
 }
 

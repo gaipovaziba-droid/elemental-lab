@@ -41,8 +41,7 @@ function Laboratory({ workspace, pointerDrag, tooltipTarget }) {
           <WorkspaceElement
             key={item.uid}
             uid={item.uid}
-            name={`${el.name} in laboratory`}
-            emoji={el.emoji}
+            element={el}
             x={item.x}
             y={item.y}
             isDragOver={isDragOver(item.uid)}

@@ -73,8 +73,8 @@ Push the project to GitHub and deploy to Vercel so the game is live and shareabl
 ## Verification steps
 
 - [ ] GitHub repo exists with all source files pushed
-- [ ] Vercel deployment succeeded (green checkmark)
-- [ ] Live URL loads the game
+- [x] Vercel deployment succeeded (green checkmark)
+- [x] Live URL loads the game
 - [ ] Proof Ladder step 2: 4 starters visible on live URL
 - [ ] Proof Ladder step 5: Water + Earth → Plant works on live URL
 - [ ] Proof Ladder step 6: refresh persistence works on live URL

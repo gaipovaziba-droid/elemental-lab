@@ -36,7 +36,7 @@ Ship
 - Design mood: playful + tactile + warm + curious + magical + discovery-driven
 
 ## Blockers
-- GitHub repository URL is required before the first push.
+- GitHub device authorization is required before the first push.
 
 ## Completed Work Cards
 - **Work Card 01** — Project skeleton scaffolded, Vite+React installed, all placeholder files created, dev server verified at HTTP 200
@@ -50,13 +50,15 @@ Ship
 - Standard Vite `.gitignore` created.
 - Local Git repository initialized on `main`; initial V1 commit prepared.
 - Production build passes and the local Vite server responds with HTTP 200.
-- GitHub remote and Vercel deployment are pending.
+- GitHub `origin` configured for `https://github.com/gaipovaziba-droid/elemental-lab.git`; push is pending authentication.
+- Vercel production deployment is READY at `https://elemental-lab.vercel.app`.
+- Production HTML, JavaScript, and CSS return HTTP 200 and contain the expected Elemental Lab application markers.
 
 ## Current Work Card
 `work-cards/07-github-vercel-proof.md`
 
 ## Next Instruction for AI
-Obtain the learner's GitHub repository URL, add it as `origin`, push `main`, then deploy through Vercel and run the live Proof Ladder.
+Complete GitHub device authorization, push `main`, then run the interactive live Proof Ladder. Connect Vercel to GitHub for automatic future deployments only with the learner's explicit approval.
 
 ## KDBM Lite Stage
 Ship

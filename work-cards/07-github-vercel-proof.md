@@ -72,16 +72,16 @@ Push the project to GitHub and deploy to Vercel so the game is live and shareabl
 
 ## Verification steps
 
-- [ ] GitHub repo exists with all source files pushed
+- [x] GitHub repo exists with all source files pushed
 - [x] Vercel deployment succeeded (green checkmark)
 - [x] Live URL loads the game
-- [ ] Proof Ladder step 2: 4 starters visible on live URL
-- [ ] Proof Ladder step 5: Water + Earth → Plant works on live URL
-- [ ] Proof Ladder step 6: refresh persistence works on live URL
-- [ ] Proof Ladder step 8: reset works on live URL
-- [ ] Proof Ladder step 9: mobile layout works on live URL
-- [ ] No console errors on live URL
-- [ ] Design check: all visual design rules apply on live URL (warm cream, deep brown, rust accent)
+- [x] Proof Ladder step 2: 4 starters visible on live URL
+- [x] Proof Ladder step 5: Water + Earth → Plant works on live URL
+- [x] Proof Ladder step 6: refresh persistence works on live URL
+- [x] Proof Ladder step 8: reset works on live URL
+- [x] Proof Ladder step 9: mobile layout works on live URL
+- [x] No console errors on live URL
+- [x] Design check: all visual design rules apply on live URL (warm cream, deep brown, rust accent)
 
 ## Localhost test before continuing
 
@@ -98,4 +98,4 @@ If GitHub push fails, check remote URL and authentication. If Vercel deployment 
 
 ## Status
 
-In progress
+Complete

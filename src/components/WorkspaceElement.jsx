@@ -15,7 +15,9 @@ function WorkspaceElement({ uid, name, emoji, x, y, isDragOver, isSelected, onDr
       onDragOver={(e) => {
         e.preventDefault()
         e.stopPropagation()
-        e.dataTransfer.dropEffect = 'move'
+        e.dataTransfer.dropEffect = e.dataTransfer.effectAllowed === 'copy'
+          ? 'copy'
+          : 'move'
         onDragOver()
       }}
       onDragLeave={(e) => {

@@ -1,7 +1,7 @@
 # Build Status
 
 ## Current Phase
-Ship
+Shipped
 
 ## Completed
 - Setup Gate — all checks passed
@@ -36,7 +36,7 @@ Ship
 - Design mood: playful + tactile + warm + curious + magical + discovery-driven
 
 ## Blockers
-- GitHub device authorization is required before the first push.
+None
 
 ## Completed Work Cards
 - **Work Card 01** — Project skeleton scaffolded, Vite+React installed, all placeholder files created, dev server verified at HTTP 200
@@ -45,20 +45,21 @@ Ship
 - **Work Card 04** — Layout restructured to Little Alchemy style: narrow 76px sidebar, full laboratory dominance. Drag-and-drop from sidebar to workspace, workspace element repositioning, element-on-element combination detection. On success: both inputs consumed, result placed at midpoint, discovery toast. localStorage workspace persistence. Clear Lab and Reset All buttons.
 - **Work Card 05** — localStorage debounced save (300ms), empty-state hint fade transition, discovery toast with entrance/exit animation (opacity + translateY), mobile tap-to-combine (sidebar tap selects → workspace tap places → two workspace element taps combine), focus-visible ring in rust accent, selected element visual states, CSS polish
 - **Work Card 06** — Review & fix complete. Fixed catalog-ID transfer for drag/tap, canonicalized all recipe keys, made every catalog element reachable, added mouse/touch/keyboard operation and accurate accessible names, flushed persistence on page hide, cleared both discovery-toast timers, restored the hint fade, and aligned icon/mobile styling with the design. Production build passes with 0 errors and 37 modules; data proof confirms 57 elements and 55 recipes with no missing references, unsorted keys, or unreachable elements.
+- **Work Card 07** — GitHub and Vercel proof complete. `main` pushed to GitHub, production deployed at `https://elemental-lab.vercel.app`, and a 20-check live Chromium proof passed desktop drag/combine, persistence, invalid combinations, reset, responsive layout, real touch emulation, keyboard operation, styling, and zero console/page errors.
 
-## Work Card 07 Progress
+## Work Card 07 Result
 - Standard Vite `.gitignore` created.
-- Local Git repository initialized on `main`; initial V1 commit prepared.
+- Local Git repository initialized on `main` and pushed to GitHub.
 - Production build passes and the local Vite server responds with HTTP 200.
-- GitHub `origin` configured for `https://github.com/gaipovaziba-droid/elemental-lab.git`; push is pending authentication.
+- GitHub `origin` is `https://github.com/gaipovaziba-droid/elemental-lab.git`.
 - Vercel production deployment is READY at `https://elemental-lab.vercel.app`.
-- Production HTML, JavaScript, and CSS return HTTP 200 and contain the expected Elemental Lab application markers.
+- Full live Proof Ladder passed in Chromium, including desktop, mobile touch, keyboard, refresh persistence, and error monitoring.
 
 ## Current Work Card
-`work-cards/07-github-vercel-proof.md`
+None — Elemental Lab V1 is shipped.
 
 ## Next Instruction for AI
-Complete GitHub device authorization, push `main`, then run the interactive live Proof Ladder. Connect Vercel to GitHub for automatic future deployments only with the learner's explicit approval.
+V1 is complete. Use `https://elemental-lab.vercel.app` for the live proof and begin a new scoped work card before making further product changes.
 
 ## KDBM Lite Stage
-Ship
+Ship — Complete

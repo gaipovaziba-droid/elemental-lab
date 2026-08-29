@@ -31,7 +31,9 @@ function Laboratory({
 
   const handleDragOver = useCallback((e) => {
     e.preventDefault()
-    e.dataTransfer.dropEffect = 'move'
+    e.dataTransfer.dropEffect = e.dataTransfer.effectAllowed === 'copy'
+      ? 'copy'
+      : 'move'
   }, [])
 
   const handleDrop = useCallback((e) => {

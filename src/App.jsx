@@ -1,13 +1,13 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { ELEMENT_CATALOG } from './data/catalog'
 import { getCombinationResult } from './data/combinations'
 import useGameState from './hooks/useGameState'
+import usePointerDrag from './hooks/usePointerDrag'
 import Header from './components/Header'
 import CollectionPanel from './components/CollectionPanel'
 import Laboratory from './components/Laboratory'
 import DiscoveryToast from './components/DiscoveryToast'
-
-const isTouchDevice = () => 'ontouchstart' in window
+import DragGhost from './components/DragGhost'
 
 function App() {
   const {
@@ -21,93 +21,122 @@ function App() {
     reset,
   } = useGameState()
 
-  const [toast, setToast] = useState(null)
-  const [selectedElement, setSelectedElement] = useState(null)
   const workspaceRef = useRef(workspace)
   workspaceRef.current = workspace
 
-  const handleDiscovery = useCallback((elementId) => {
-    addDiscovery(elementId)
+  const [toast, setToast] = useState(null)
+  const toastTimer = useRef(null)
+
+  const showToast = useCallback((elementId) => {
     const el = ELEMENT_CATALOG[elementId]
-    if (el) {
-      setToast({ name: el.name, emoji: el.emoji })
-    }
-  }, [addDiscovery])
-
-  const handleDropFromCollection = useCallback((elementId, x, y) => {
-    addToWorkspace(elementId, x, y)
-  }, [addToWorkspace])
-
-  const handleCombine = useCallback((uidA, uidB, midX, midY) => {
-    const currentWs = workspaceRef.current
-    const itemA = currentWs.find((w) => w.uid === uidA)
-    const itemB = currentWs.find((w) => w.uid === uidB)
-    if (!itemA || !itemB) return null
-
-    const resultId = getCombinationResult(itemA.elementId, itemB.elementId)
-    if (!resultId) return null
-
-    handleDiscovery(resultId)
-    replacePairWithResult(uidA, uidB, resultId, midX, midY)
-    return resultId
-  }, [handleDiscovery, replacePairWithResult])
-
-  const handleSidebarTap = useCallback((elementId) => {
-    setSelectedElement((current) => (
-      current === elementId ? null : elementId
-    ))
+    if (!el) return
+    if (toastTimer.current) clearTimeout(toastTimer.current)
+    setToast({ name: el.name, emoji: el.emoji })
+    toastTimer.current = setTimeout(() => {
+      setToast(null)
+      toastTimer.current = null
+    }, 2300)
   }, [])
 
-  const handleWorkspaceElementTap = useCallback((uid) => {
+  const handleCombineDrop = useCallback((sourceUid, targetUid) => {
+    if (sourceUid === targetUid) return
     const currentWs = workspaceRef.current
-    const tappedItem = currentWs.find((w) => w.uid === uid)
-    if (!tappedItem) return
+    const src = currentWs.find((w) => w.uid === sourceUid)
+    const tgt = currentWs.find((w) => w.uid === targetUid)
+    if (!src || !tgt) return
+    const resultId = getCombinationResult(src.elementId, tgt.elementId)
+    if (!resultId) return
+    showToast(resultId)
+    addDiscovery(resultId)
+    const midX = (src.x + tgt.x) / 2 + 16
+    const midY = (src.y + tgt.y) / 2 + 16
+    replacePairWithResult(sourceUid, targetUid, resultId, midX, midY)
+  }, [showToast, addDiscovery, replacePairWithResult])
 
-    setSelectedElement((prev) => {
-      if (prev) {
-        // Place sidebar element near tapped element
-        addToWorkspace(prev, tappedItem.x + 70, tappedItem.y)
-        return null
-      }
-      return prev
-    })
-  }, [addToWorkspace])
+  const handleDragEndRef = useRef(null)
 
-  const handleWorkspaceTap = useCallback(() => {
-    setSelectedElement((prev) => {
-      if (prev) {
-        const x = 100 + Math.random() * 200
-        const y = 100 + Math.random() * 200
-        addToWorkspace(prev, x, y)
+  // Handle end of pointer drag — determine what happened
+  const handleDragEnd = useCallback((payload, clientX, clientY) => {
+    if (!payload) return
+
+    if (payload.type === 'sidebar') {
+      const el = document.elementFromPoint(clientX, clientY)
+      const wsEl = el?.closest('.workspace-element')
+      if (wsEl) {
+        const uid = parseInt(wsEl.dataset.uid, 10)
+        const targetItem = workspaceRef.current.find(w => w.uid === uid)
+        if (targetItem) {
+          addToWorkspace(payload.elementId, targetItem.x + 70, targetItem.y + 20)
+          return
+        }
       }
-      return null
-    })
-  }, [addToWorkspace])
+      const lab = document.querySelector('.laboratory')
+      if (!lab) return
+      const rect = lab.getBoundingClientRect()
+      addToWorkspace(payload.elementId, clientX - rect.left - 32, clientY - rect.top - 32)
+    } else if (payload.type === 'workspace') {
+      const el = document.elementFromPoint(clientX, clientY)
+      const wsEl = el?.closest('.workspace-element')
+      if (wsEl) {
+        const targetUid = parseInt(wsEl.dataset.uid, 10)
+        handleCombineDropRef.current(payload.uid, targetUid)
+      } else {
+        const lab = document.querySelector('.laboratory')
+        if (!lab) return
+        const rect = lab.getBoundingClientRect()
+        moveInWorkspace(payload.uid, clientX - rect.left - 32, clientY - rect.top - 32)
+      }
+    }
+  }, [addToWorkspace, moveInWorkspace])
+
+  const handleCombineDropRef = useRef(handleCombineDrop)
+  handleCombineDropRef.current = handleCombineDrop
+  handleDragEndRef.current = handleDragEnd
+
+  const pointerDrag = usePointerDrag(handleDragEndRef)
+
+  // Cleanup toast timer
+  useEffect(() => {
+    return () => {
+      if (toastTimer.current) clearTimeout(toastTimer.current)
+    }
+  }, [])
+
+  // Ghost element while dragging
+  const ds = pointerDrag.dragState
+  const getGhostContent = () => {
+    if (!ds || !ds.isDragging || !ds.payload) return null
+    if (ds.payload.type === 'sidebar') {
+      const el = ELEMENT_CATALOG[ds.payload.elementId]
+      return el ? { emoji: el.emoji } : null
+    }
+    const wsItem = workspaceRef.current.find(w => w.uid === ds.payload.uid)
+    if (!wsItem) return null
+    const el = ELEMENT_CATALOG[wsItem.elementId]
+    return el ? { emoji: el.emoji } : null
+  }
+  const ghost = getGhostContent()
 
   return (
-    <>
+    <div id="root">
       <Header onReset={reset} onClearWorkspace={clearWorkspace} />
       <div className="app-body">
         <CollectionPanel
           discovered={discovered}
-          onDropElement={handleDropFromCollection}
-          selectedElement={selectedElement}
-          onSidebarTap={handleSidebarTap}
-          isTouchDevice={isTouchDevice()}
+          pointerDrag={pointerDrag}
         />
         <Laboratory
           workspace={workspace}
-          onDropFromCollection={handleDropFromCollection}
-          onCombine={handleCombine}
-          onMoveInWorkspace={moveInWorkspace}
-          onWorkspaceTap={handleWorkspaceTap}
-          onWorkspaceElementTap={handleWorkspaceElementTap}
-          selectedElement={selectedElement}
-          isTouchDevice={isTouchDevice()}
+          pointerDrag={pointerDrag}
+          onDragEnd={handleDragEnd}
+          tooltipTarget={pointerDrag.tooltipTarget}
         />
       </div>
-      <DiscoveryToast toast={toast} onDone={() => setToast(null)} />
-    </>
+      {ghost && (
+        <DragGhost emoji={ghost.emoji} clientX={ds.lastX} clientY={ds.lastY} />
+      )}
+      <DiscoveryToast toast={toast} />
+    </div>
   )
 }
 

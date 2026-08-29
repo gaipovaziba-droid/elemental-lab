@@ -1,30 +1,16 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
-function DiscoveryToast({ toast, onDone }) {
+function DiscoveryToast({ toast }) {
   const [visible, setVisible] = useState(false)
-  const onDoneRef = useRef(onDone)
-  onDoneRef.current = onDone
 
   useEffect(() => {
     if (!toast) {
       setVisible(false)
       return
     }
-
     setVisible(true)
-
-    let doneTimer
-    const totalTimer = setTimeout(() => {
-      setVisible(false)
-      doneTimer = setTimeout(() => {
-        onDoneRef.current()
-      }, 300)
-    }, 2000)
-
-    return () => {
-      clearTimeout(totalTimer)
-      clearTimeout(doneTimer)
-    }
+    const timer = setTimeout(() => setVisible(false), 2000)
+    return () => clearTimeout(timer)
   }, [toast])
 
   if (!toast) return null

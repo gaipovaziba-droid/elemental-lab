@@ -1,42 +1,36 @@
-function WorkspaceElement({ uid, name, emoji, x, y, isDragOver, isSelected, onDragOver, onDragLeave, onDrop, onTap, isTouchDevice }) {
+import { useRef, useEffect } from 'react'
+
+function WorkspaceElement({ uid, name, emoji, x, y, isDragOver, pointerDrag, isTooltipTarget }) {
+  const ref = useRef(null)
+  const payload = { type: 'workspace', uid }
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const { handlePointerDown, handlePointerMove, handlePointerUp, handlePointerLeave } = pointerDrag
+    el.addEventListener('pointerdown', (e) => handlePointerDown(e, payload))
+    el.addEventListener('pointermove', handlePointerMove)
+    el.addEventListener('pointerup', handlePointerUp)
+    el.addEventListener('pointerleave', handlePointerLeave)
+    el.addEventListener('pointercancel', handlePointerUp)
+    return () => {
+      el.removeEventListener('pointerdown', handlePointerDown)
+      el.removeEventListener('pointermove', handlePointerMove)
+      el.removeEventListener('pointerup', handlePointerUp)
+      el.removeEventListener('pointerleave', handlePointerLeave)
+      el.removeEventListener('pointercancel', handlePointerUp)
+    }
+  }, [payload, pointerDrag])
+
   return (
     <div
-      className={`workspace-element${isDragOver ? ' drag-over' : ''}${isSelected ? ' selected' : ''}`}
-      style={{ left: x, top: y }}
-      draggable={!isTouchDevice}
+      ref={ref}
+      className={`workspace-element${isDragOver ? ' drag-over' : ''}${isTooltipTarget ? ' tooltip-visible' : ''}`}
+      style={{ left: x, top: y, touchAction: 'none' }}
       tabIndex={0}
       role="button"
       aria-label={name}
-      aria-pressed={isSelected}
-      onDragStart={(e) => {
-        e.dataTransfer.setData('text/plain', String(uid))
-        e.dataTransfer.effectAllowed = 'move'
-      }}
-      onDragOver={(e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        e.dataTransfer.dropEffect = e.dataTransfer.effectAllowed === 'copy'
-          ? 'copy'
-          : 'move'
-        onDragOver()
-      }}
-      onDragLeave={(e) => {
-        e.preventDefault()
-        onDragLeave()
-      }}
-      onDrop={(e) => {
-        onDrop(e)
-      }}
-      onClick={(e) => {
-        e.stopPropagation()
-        onTap()
-      }}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()
-          onTap()
-        }
-      }}
+      data-uid={uid}
     >
       <span>{emoji}</span>
     </div>

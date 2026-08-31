@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run validate:content && npm run audit:gameplay && npm run test:interactions && vite build",
+    "preview": "vite preview",
+    "generate": "node scripts/generate-content.js",
+    "validate:content": "node scripts/validate-content.js",
+    "audit:gameplay": "node scripts/audit-gameplay.js",
+    "test:interactions": "node --test tests/interaction-regression.test.js"
   },
   "dependencies": {
     "idb": "^8.0.3",

@@ -1,7 +1,25 @@
 import { writeFileSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { foundationRecipesA } from './content/foundation-recipes-a.js'
+import { foundationRecipesB } from './content/foundation-recipes-b.js'
+import { foundationRecipesCore } from './content/foundation-recipes-core.js'
+import { foundationRecipesDomain } from './content/foundation-recipes-domain.js'
+import { periodicRecipes } from './content/periodic-recipes.js'
+import { periodicUseRecipes } from './content/periodic-use-recipes.js'
+import { classifyLegacyRecipe } from './content/legacy-recipe-types.js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+const STARTER_IDS = ['water', 'fire', 'air', 'earth']
+const RECIPE_TYPES = new Set([
+  'chemical',
+  'physical',
+  'biological',
+  'industrial',
+  'environmental',
+  'technological',
+  'conceptual',
+])
 
 function sortKey(a, b) {
   const parts = [a, b].sort()
@@ -31,13 +49,41 @@ function el(id, name, emoji, category, tags = [], opts = {}) {
   return id
 }
 
-function re(a, b, result, quality = 'reasonable') {
+function re(
+  a,
+  b,
+  result,
+  quality = 'reasonable',
+  recipeType,
+  explanation,
+) {
   const key = sortKey(a, b)
   if (!R[key]) {
-    R[key] = { a, b, result }
+    const resolvedType = recipeType ?? classifyLegacyRecipe(a, b, result)
+    R[key] = { a, b, result, type: resolvedType }
+    if (explanation) R[key].explanation = explanation
     if (quality === 'strong') QUALITY[result] = 'strong'
     else if (!QUALITY[result]) QUALITY[result] = 'reasonable'
   }
+}
+
+function removeLegacyRecipe(a, b, expectedResult) {
+  const key = sortKey(a, b)
+  if (R[key]?.result !== expectedResult) {
+    throw new Error(`Gameplay audit could not remove ${a} + ${b} -> ${expectedResult}`)
+  }
+  delete R[key]
+}
+
+function replaceLegacyRecipe({ from, to, result, type, explanation }) {
+  removeLegacyRecipe(from[0], from[1], result)
+  const replacementKey = sortKey(to[0], to[1])
+  if (R[replacementKey] && R[replacementKey].result !== result) {
+    throw new Error(
+      `Gameplay audit conflict at ${replacementKey}: ${R[replacementKey].result} vs ${result}`,
+    )
+  }
+  re(to[0], to[1], result, 'strong', type, explanation)
 }
 
 /* ─── 4 STARTERS ─── */
@@ -64,7 +110,14 @@ re('air','water','rain','strong')
 el('mud','Mud','🧴','Earth')
 re('dust','water','mud','strong')
 el('stone','Stone','🪨','Geology')
-re('air','lava','stone','strong')
+re(
+  'air',
+  'lava',
+  'stone',
+  'strong',
+  'physical',
+  'Lava exposed to cooler air loses heat and solidifies into volcanic rock.',
+)
 re('earth','pressure','stone','reasonable')
 el('swamp','Swamp','🏞️','Nature')
 re('mud','plant','swamp','strong')
@@ -163,7 +216,7 @@ re('bacteria','human','disease','reasonable')
 el('bacteria','Bacteria','🦠','Biology')
 re('life','decay','bacteria','strong')
 el('virus','Virus','🦠','Biology')
-re('bacteria','disease','virus','strong')
+re('disease','genetics','virus','strong')
 el('moss','Moss','🌿','Plants')
 re('plant','stone','moss','strong')
 el('fern','Fern','🌿','Plants')
@@ -306,7 +359,7 @@ re('bee','flower','honey','strong')
 el('glass','Glass','🪟','Materials')
 re('fire','sand','glass','strong')
 el('metal','Metal','🔩','Materials')
-re('fire','stone','metal','strong')
+re('fire','mineral','metal','strong')
 el('brick','Brick','🧱','Construction')
 re('clay','fire','brick','strong')
 el('wood','Wood','🪵','Materials')
@@ -315,15 +368,15 @@ re('tree','axe','wood','reasonable')
 el('rope','Rope','🪢','Materials')
 re('grass','grass','rope','strong')
 el('fabric','Fabric','🧵','Materials')
-re('grass','thread','fabric','strong')
+re('thread','thread','fabric','strong')
 el('thread','Thread','🧶','Materials')
-re('flower','rope','thread','strong')
+re('cotton','tool','thread','strong')
 el('paper','Paper','📄','Materials')
-re('wood','water','paper','strong')
+re('water','wood','paper','strong')
 el('tool','Tool','🔧','Tools')
 re('metal','wood','tool','strong')
 el('wheel','Wheel','⚙️','Tools')
-re('mud','wood','wheel','strong')
+re('river','wood','wheel','strong')
 el('pot','Pot','🪣','Tools')
 re('clay','water','pot','strong')
 el('knife','Knife','🔪','Tools')
@@ -369,7 +422,7 @@ re('iron','carbon','steel','strong')
 el('bronze','Bronze','🏆','Materials')
 re('copper','tin','bronze','strong')
 el('diamond','Diamond','💎','Materials')
-re('coal','pressure','diamond','strong')
+re('carbon','pressure','diamond','strong')
 el('crystal','Crystal','💎','Materials')
 re('mineral','time','crystal','strong')
 el('ceramic','Ceramic','🏺','Materials')
@@ -382,7 +435,6 @@ el('coal','Coal','🪨','Energy')
 re('fossil','time','coal','strong')
 re('plant','time','coal','reasonable')
 el('oil','Oil','🛢️','Energy')
-re('coal','pressure','oil','strong')
 re('fossil','heat','oil','reasonable')
 el('gas','Gas','⛽','Energy')
 re('oil','fire','gas','strong')
@@ -409,9 +461,9 @@ re('medicine','virus','vaccine','strong')
 el('antibiotic','Antibiotic','💊','Biology')
 re('medicine','bacteria','antibiotic','strong')
 el('dna','DNA','🧬','Biology')
-re('life','microscope','dna','strong')
+re('cell','chemistry','dna','strong')
 el('gene','Gene','🧬','Biology')
-re('dna','time','gene','strong')
+re('dna','information','gene','strong')
 el('microscope','Microscope','🔬','Tools')
 re('lens','science','microscope','strong')
 el('telescope','Telescope','🔭','Tools')
@@ -426,7 +478,14 @@ el('machine','Machine','⚙️','Technology')
 re('tool','engine','machine','strong')
 re('metal','gear','machine','reasonable')
 el('engine','Engine','🔧','Technology')
-re('metal','fire','engine','strong')
+re(
+  'metal',
+  'steam',
+  'engine',
+  'strong',
+  'technological',
+  'A steam engine uses pressurized steam to drive metal machinery; this recipe represents that engineering system.',
+)
 re('steam','piston','engine','reasonable')
 el('factory','Factory','🏭','Industry')
 re('tool','machine','factory','strong')
@@ -474,7 +533,7 @@ re('wind','turbine','electricity','reasonable')
 el('battery','Battery','🔋','Energy')
 re('electricity','storage','battery','strong')
 el('lamp','Lamp','💡','Tools')
-re('energy','glass','lamp','strong')
+re('bulb','tool','lamp','strong')
 el('wire','Wire','🔌','Technology')
 re('metal','electricity','wire','strong')
 el('bulb','Light Bulb','💡','Technology')
@@ -902,10 +961,7 @@ CROSS.forEach(([a,b,r,q]) => {
 re('sun','solar_panel','energy','reasonable')
 re('water','dam','energy','reasonable')
 re('wind','turbine','energy','reasonable')
-re('air','metal','electricity','reasonable')
 re('sun','flower','flower','strong')
-re('car','truck','truck','reasonable')
-re('car','bus','bus','reasonable')
 re('horse','wagon','cart','reasonable')
 re('wheel','sail','windmill','reasonable')
 re('hammer','chisel','sculpture','reasonable')
@@ -1457,11 +1513,11 @@ re('music','group','orchestra','strong')
 
 /* ─── SEWING/FABRIC ─── */
 el('cotton','Cotton','☁️','Materials')
-re('plant','fabric','cotton','strong')
+re('field','plant','cotton','strong')
 el('wool','Wool','🧶','Materials')
-re('sheep','fabric','wool','strong')
+re('sheep','tool','wool','strong')
 el('silk_f','Silk','🧵','Materials')
-re('worm','fabric','silk_f','strong')
+re('plant','worm','silk_f','strong')
 el('leather','Leather','🧤','Materials')
 re('skin','fabric','leather','strong')
 el('clothing','Clothing','👕','Materials')
@@ -1485,7 +1541,7 @@ re('flower','alcohol','perfume','strong')
 el('incense','Incense','🪔','Culture')
 re('herb','fire','incense','strong')
 el('candle','Candle','🕯️','Tools')
-re('wax','fire','candle','strong')
+re('thread','wax','candle','strong')
 el('pottery','Pottery','🏺','Materials')
 re('clay','fire','pottery','strong')
 el('origami','Origami','🧻','Culture')
@@ -1504,7 +1560,6 @@ el('telescope','Telescope','🔭','Tools')
 re('lens','star','telescope','strong')
 
 /* ─── EXTRA CROSS-RECIPES ─── */
-re('stone','saw','brick','reasonable')
 re('clay','tool','pottery','strong')
 re('wood','tool','furniture','strong')
 re('wood','metal','weapon','strong')
@@ -1729,6 +1784,9 @@ el('hovercraft','Hovercraft','🚤','Transport')
 re('boat','air','hovercraft','strong')
 
 /* ─── DEEP SCIENCE CHAIN ─── */
+el('oxygen','Oxygen','🫧','Chemistry',['gas','element'],{
+  description:'The reactive gas used in respiration and combustion; about one fifth of Earth\'s atmosphere by volume.'
+})
 el('atom','Atom','⚛️','Science')
 re('matter','physics','atom','strong')
 el('molecule','Molecule','🧬','Science')
@@ -1738,7 +1796,7 @@ re('molecule','reaction','compound','strong')
 el('reaction','Chemical Reaction','⚡','Science')
 re('compound','energy','reaction','strong')
 el('acid','Acid','🧪','Science')
-re('sulfur','oxygen','acid','strong')
+re('chemistry','hydrogen','acid','strong')
 el('base','Base','🧪','Science')
 re('mineral','water','base','strong')
 el('experiment','Experiment','🧪','Science')
@@ -1764,7 +1822,7 @@ re('nerve','organ','brain','strong')
 el('nerve','Nerve','🧠','Biology')
 re('cell','signal','nerve','strong')
 el('blood','Blood','🩸','Biology')
-re('cell','water','blood','strong')
+re('cell','tissue','blood','strong')
 el('pharmacy','Pharmacy','💊','Biology')
 re('chemistry','medicine','pharmacy','strong')
 el('surgery','Surgery','🔪','Biology')
@@ -1936,7 +1994,14 @@ re('explosive','metal','bomb','strong')
 el('missile','Missile','🚀','Weapons')
 re('rocket','bomb','missile','strong')
 el('gunpowder','Gunpowder','💥','Weapons')
-re('sulfur','carbon','gunpowder','strong')
+re(
+  'sulfur',
+  'carbon',
+  'gunpowder',
+  'strong',
+  'conceptual',
+  'Sulfur and charcoal supply two historic ingredients; an oxidizing nitrate is omitted, so this is an explicit game abstraction.',
+)
 el('bow','Bow','🏹','Weapons')
 re('wood','string','bow','strong')
 
@@ -2270,6 +2335,68 @@ re('wood','fire','ash','strong')
 re('wood','fire','charcoal','strong')
 re('iron','carbon','steel','strong')
 re('electricity','metal','wire','strong')
+
+/* ─── GAMEPLAY LOGIC AUDIT REPAIRS ─── */
+// These replace genuinely arbitrary or misleading legacy shortcuts. Each new
+// route uses existing elements and describes a defensible relationship.
+;[
+  { from: ['mineral', 'water'], to: ['ash', 'water'], result: 'base', type: 'chemical', explanation: 'Water leaches alkaline compounds from wood ash, historically producing a basic lye solution.' },
+  { from: ['planet', 'explosion'], to: ['space', 'stone'], result: 'asteroid', type: 'conceptual', explanation: 'An asteroid is a rocky body traveling through space; this is a classification abstraction.' },
+  { from: ['mammal', 'big'], to: ['mammal', 'honey'], result: 'bear', type: 'conceptual', explanation: 'Bears are mammals strongly associated with seeking honey; this is an ecological association.' },
+  { from: ['wheat', 'beer'], to: ['beer', 'factory'], result: 'brewery', type: 'industrial', explanation: 'A brewery is a production facility where beer is manufactured.' },
+  { from: ['pine', 'mountain'], to: ['tree', 'mountain'], result: 'cedar', type: 'biological', explanation: 'Cedars are trees commonly associated with mountainous habitats.' },
+  { from: ['frost', 'sun'], to: ['air', 'humidity'], result: 'dew', type: 'environmental', explanation: 'Dew forms when humid air cools enough for water vapor to condense on surfaces.' },
+  { from: ['fish', 'human'], to: ['mammal', 'ocean'], result: 'dolphin', type: 'biological', explanation: 'Dolphins are marine mammals, not fish.' },
+  { from: ['skin', 'fabric'], to: ['skin', 'tool'], result: 'leather', type: 'industrial', explanation: 'Leather is produced by processing animal hide; Tool abstracts the tanning and finishing process.' },
+  { from: ['ice', 'city'], to: ['ice', 'shelter'], result: 'igloo', type: 'industrial', explanation: 'An igloo is a shelter constructed from blocks of compacted snow or ice.' },
+  { from: ['desert', 'city'], to: ['oasis_geo', 'city'], result: 'oasis_city', type: 'conceptual', explanation: 'Settlements commonly grow around reliable oasis water sources in deserts.' },
+  { from: ['water', 'sugar'], to: ['carbon_dioxide', 'water'], result: 'soda', type: 'physical', explanation: 'Dissolving carbon dioxide in water produces carbonated water, the physical basis of soda.' },
+  { from: ['fish', 'ocean'], to: ['mammal', 'sea'], result: 'whale', type: 'biological', explanation: 'Whales are large marine mammals, not fish.' },
+  { from: ['life', 'stone'], to: ['life', 'mineral'], result: 'egg', type: 'biological', explanation: 'An egg is a living reproductive structure whose shell is commonly mineralized.' },
+  { from: ['vegetable', 'green'], to: ['tree', 'vegetable'], result: 'broccoli', type: 'conceptual', explanation: 'Broccoli is a vegetable with a branching, tree-like form.' },
+  { from: ['fruit', 'warm'], to: ['fruit', 'pink'], result: 'peach', type: 'conceptual', explanation: 'Peach fruit gives its name to a familiar warm pink-orange color.' },
+  { from: ['moss', 'swamp'], to: ['forest', 'rain'], result: 'mushroom', type: 'biological', explanation: 'Moist forest conditions support fungi that produce mushrooms.' },
+  { from: ['algae', 'ocean'], to: ['colony', 'ocean'], result: 'coral', type: 'biological', explanation: 'Corals are colonies of marine animals; algae often live symbiotically within reef-building corals.' },
+].forEach(replaceLegacyRecipe)
+
+;[
+  ['physics', 'energy', 'atom'],
+  ['plant', 'time', 'coal'],
+  ['human', 'robot', 'engineer'],
+  ['energy', 'paper', 'book'],
+  ['volcano', 'ice', 'obsidian'],
+  ['rocket', 'space_exploration', 'moon'],
+  ['cell', 'sun', 'solar_energy'],
+].forEach(([a, b, result]) => removeLegacyRecipe(a, b, result))
+
+// The deepest computing path uses real industrial carbothermic reduction of
+// silica. Keep the compact inputs, but label and explain the process honestly.
+const siliconRecipe = R[sortKey('sand', 'carbon')]
+if (!siliconRecipe || siliconRecipe.result !== 'silicon') {
+  throw new Error('Gameplay audit could not locate sand + carbon -> silicon')
+}
+siliconRecipe.type = 'industrial'
+siliconRecipe.explanation = 'Industrial silicon is produced by reducing silica-rich sand with carbon at high temperature; the furnace is abstracted.'
+
+const auditedElementUpdates = {
+  astronaut_p: ['Spacefarer', 'A person traveling beyond Earth aboard a spacecraft; a broader gameplay synonym for an astronaut.'],
+  automation_i: ['Industrial Automation', 'The use of control systems and robots to operate industrial production with reduced manual intervention.'],
+  beach_g: ['Island Beach', 'A shoreline of sand or pebbles bordering an island and the surrounding water.'],
+  butterfly_i: ['Colorful Butterfly', 'A butterfly whose patterned scales produce conspicuous colors used in signaling and camouflage.'],
+  database_e: ['Software Database', 'A structured collection of information managed by database software.'],
+  eagle_b: ['Cliff Eagle', 'An eagle associated with high cliffs used for nesting and surveying prey.'],
+  earth_p: ['Habitable Planet', 'A planet with environmental conditions capable of supporting life; Earth is the known example.'],
+  fear_e: ['Alarm Response', 'A protective fear response triggered when danger threatens survival.'],
+  mars_p: ['Iron-rich Planet', 'A rocky planet whose iron-bearing surface minerals can produce a reddish appearance, as on Mars.'],
+  microscope_g: ['Magnifying Microscope', 'An optical instrument that combines lenses to magnify structures too small for unaided vision.'],
+  mushroom_f: ['Cave Fungus', 'A fungus adapted to the dark, humid conditions found in caves.'],
+  music_genre: ['Music Genre', 'A category of music sharing cultural traditions, techniques, or stylistic conventions.'],
+  owl_b: ['Forest Owl', 'An owl adapted to hunting and nesting in woodland habitats.'],
+  server_c: ['Storage Server', 'A networked computer configured to store and provide data to other systems.'],
+  street: ['Streetlight', 'An outdoor electric lamp that illuminates streets and public paths after dark.'],
+  telescope_g: ['Optical Telescope', 'A telescope that uses lenses or mirrors in a tube to collect and focus visible light.'],
+  tissue_bio: ['Biological Tissue', 'A coordinated group of similar cells that performs a shared function in an organism.'],
+}
 /* ─── FIX MISSING INTERMEDIATES ─── */
 if (!Object.values(R).some(r => r.result === 'worm')) re('water','mud','worm','reasonable')
 if (!Object.values(R).some(r => r.result === 'pressure')) re('air','weight','pressure','strong')
@@ -2316,6 +2443,33 @@ const ELEMENT_DESCRIPTIONS = {
   fire: 'A rapid chemical reaction releasing heat, light, and flame. Early humans harnessed it for warmth, cooking, and protection.',
   air: 'The invisible mixture of gases that surrounds Earth. Primarily composed of nitrogen and oxygen.',
   earth: 'The solid surface of our planet. Composed of rock, soil, and minerals. The foundation for life and civilization.',
+  archipelago: 'A chain or cluster of islands grouped together within a sea or ocean.',
+  cliff: 'A steep, near-vertical rock face formed by erosion, faulting, or other geological processes.',
+  emerald_g: 'A green variety of the mineral beryl, colored mainly by trace chromium or vanadium.',
+  gem: 'A mineral or organic material valued for beauty, rarity, and durability, often cut and polished for decoration.',
+  island: 'An area of land completely surrounded by water and smaller than a continent.',
+  pond: 'A relatively small, shallow body of standing freshwater that can support aquatic ecosystems.',
+  rose_garden: 'A cultivated garden designed primarily for growing and displaying roses.',
+  anatomy: 'The scientific study of the structures and physical organization of living organisms.',
+  organ: 'A body structure composed of multiple tissues working together to perform a specialized function.',
+  surgery: 'Medical treatment that uses operative procedures to repair, remove, or examine body tissues.',
+  vaccine: 'A biological preparation that trains the immune system to recognize and respond to a specific pathogen or disease.',
+  '3d_printer': 'A machine that builds three-dimensional objects layer by layer from a digital model.',
+  bulb: 'An electric lamp that produces light using a filament, gas discharge, or semiconductor light source.',
+  cryptocurrency: 'A digital asset whose transactions are recorded and secured using cryptographic computer networks.',
+  ecommerce: 'The buying and selling of goods or services through websites, apps, and other electronic networks.',
+  hard_drive: 'A data-storage device that records digital information magnetically on rotating disks.',
+  rocket_engine: 'An engine that produces thrust by expelling high-speed exhaust while carrying both fuel and oxidizer.',
+  smartphone: 'A mobile phone that combines communication with a programmable computer, sensors, and internet access.',
+  television: 'A system and display device for receiving synchronized moving images and sound.',
+  amber: 'Fossilized tree resin, usually golden or brown, that can preserve ancient organisms and plant material.',
+  clock: 'An instrument that measures and displays time using a regular mechanical, electrical, or atomic process.',
+  dam: 'A barrier built across flowing water to store it, control floods, support irrigation, or generate power.',
+  granite: 'A coarse-grained igneous rock composed mainly of quartz, feldspar, and mica.',
+  lighthouse: 'A coastal tower carrying a powerful warning or navigation light for ships.',
+  orange: 'A round citrus fruit with a fragrant rind and juicy segments rich in vitamin C.',
+  quartz: 'A common crystalline mineral made of silicon dioxide, found in many rocks and sands.',
+  smoothie: 'A thick drink made by blending fruit or vegetables, often with milk, yogurt, juice, or ice.',
   plant: 'A living organism that uses sunlight to produce its own food through photosynthesis. The base of most ecosystems.',
   lava: 'Molten rock that erupts from volcanoes. Temperatures typically range from 700 to 1,200°C.',
   steam: 'The gaseous phase of water. Water vapor becomes visible when it condenses into tiny droplets in the air.',
@@ -2468,35 +2622,81 @@ Object.keys(E).forEach(id => {
   }
 })
 
-// Replace earth+id fallback for periodic elements with air+id fallback
-// (earth+id pairs are all taken by the grid; air+id pairs are free)
-Object.keys(E).forEach(id => {
-  if (!id.startsWith('element_')) return
-  const oldKey = sortKey('earth', id)
-  if (R[oldKey] && R[oldKey].result === id) {
-    delete R[oldKey]
-    re('air', id, id, 'reasonable')
-  }
-})
-
-/* ─── FINAL: ensure no missing intermediates ─── */
-// Auto-create any recipe input elements that don't exist yet as unnamed intermediates
-Object.values(R).forEach(r => {
-  [r.a, r.b, r.result].forEach(id => {
+// Complete the catalog from authored recipe references before validating the
+// curated modules. Curated entries may use these established intermediates,
+// but they are not allowed to invent additional element IDs.
+Object.values(R).forEach(recipe => {
+  [recipe.a, recipe.b, recipe.result].forEach(id => {
     if (!E[id]) {
-      el(id, id.charAt(0).toUpperCase() + id.slice(1).replace(/_/g,' '), '🔮', 'Concept', ['concept'])
+      el(id, id.charAt(0).toUpperCase() + id.slice(1).replace(/_/g, ' '), '🔮', 'Concept', ['concept'])
     }
   })
 })
 
-// Ensure every non-starter has at least one recipe
-const hasRecipe = new Set(Object.values(R).map(r => r.result))
-Object.keys(E).forEach(id => {
-  if (['water','fire','air','earth'].includes(id)) return
-  if (hasRecipe.has(id)) return
-  // Give a reasonable recipe using reachable elements
-  re('earth', id, id, 'reasonable')
-})
+for (const [id, [name, description]] of Object.entries(auditedElementUpdates)) {
+  if (!E[id]) throw new Error(`Gameplay audit could not update missing element ${id}`)
+  E[id].name = name
+  E[id].description = description
+}
+
+const CURATED_RECIPE_GROUPS = [
+  ['foundation-a', foundationRecipesA],
+  ['foundation-b', foundationRecipesB],
+  ['foundation-core', foundationRecipesCore],
+  ['foundation-domain', foundationRecipesDomain],
+  ['periodic-table', periodicRecipes],
+  ['periodic-uses', periodicUseRecipes],
+]
+
+// The earlier catalog expansion assigned unused input pairs to periodic
+// elements only to make them reachable. Remove those arbitrary associations;
+// the curated periodic set below is the sole discovery path for all 118
+// chemical elements.
+const periodicResultIds = new Set(periodicRecipes.map(recipe => recipe.result))
+for (const [key, recipe] of Object.entries(R)) {
+  if (periodicResultIds.has(recipe.result)) delete R[key]
+}
+
+// Curated recipes replace the old self-producing reachability fallbacks. Never
+// let a curated pair silently displace an existing authored result: a pair can
+// only be enriched when both definitions already produce the same element.
+for (const [groupName, recipes] of CURATED_RECIPE_GROUPS) {
+  for (const recipe of recipes) {
+    const { a, b, result, type, explanation, quality = 'reasonable' } = recipe
+    if (![a, b, result, type, explanation].every(value => (
+      typeof value === 'string' && value.trim().length > 0
+    ))) {
+      throw new Error(`Invalid curated recipe in ${groupName}: ${JSON.stringify(recipe)}`)
+    }
+    if (!RECIPE_TYPES.has(type)) {
+      throw new Error(`Invalid curated recipe type in ${groupName}: ${type}`)
+    }
+    if (result === a || result === b) {
+      throw new Error(`Self-producing curated recipe in ${groupName}: ${a} + ${b} -> ${result}`)
+    }
+    const missingIds = [a, b, result].filter(id => !E[id])
+    if (missingIds.length > 0) {
+      throw new Error(
+        `Unknown curated recipe ID in ${groupName}: ${missingIds.join(', ')} (${a} + ${b} -> ${result})`,
+      )
+    }
+
+    const key = sortKey(a, b)
+    const existing = R[key]
+    if (existing && existing.result !== result) {
+      throw new Error(
+        `Curated recipe conflict at ${key}: ${existing.result} vs ${result} (${groupName})`,
+      )
+    }
+    if (existing) {
+      existing.type = type
+      if (explanation) existing.explanation = explanation
+      continue
+    }
+
+    re(a, b, result, quality, type, explanation)
+  }
+}
 
 // Second description pass — cover Concept and Auto elements created above
 Object.keys(E).forEach(id => {
@@ -2512,6 +2712,63 @@ Object.keys(E).forEach(id => {
 const elementIds = Object.keys(E)
 const recipeKeys = Object.keys(R)
 const categories = [...new Set(elementIds.map(id => E[id].category))].sort()
+
+const integrityFailures = []
+for (const key of recipeKeys) {
+  const recipe = R[key]
+  const expectedKey = sortKey(recipe.a, recipe.b)
+  if (key !== expectedKey) integrityFailures.push(`${key} is not canonical (${expectedKey})`)
+  if (![recipe.a, recipe.b, recipe.result].every(id => E[id])) {
+    integrityFailures.push(`${key} references an unknown element`)
+  }
+  if (recipe.result === recipe.a || recipe.result === recipe.b) {
+    integrityFailures.push(`${key} is self-producing (${recipe.result})`)
+  }
+  if (!RECIPE_TYPES.has(recipe.type)) {
+    integrityFailures.push(`${key} has invalid type ${JSON.stringify(recipe.type)}`)
+  }
+}
+
+for (const [groupName, recipes] of CURATED_RECIPE_GROUPS) {
+  for (const recipe of recipes) {
+    const key = sortKey(recipe.a, recipe.b)
+    const compiledRecipe = R[key]
+    if (
+      !compiledRecipe ||
+      compiledRecipe.result !== recipe.result ||
+      compiledRecipe.type !== recipe.type ||
+      compiledRecipe.explanation !== recipe.explanation
+    ) {
+      integrityFailures.push(`${groupName} recipe was not preserved at ${key}`)
+    }
+  }
+}
+
+const reachableIds = new Set(STARTER_IDS)
+let discoveredNewElement = true
+while (discoveredNewElement) {
+  discoveredNewElement = false
+  for (const recipe of Object.values(R)) {
+    if (
+      reachableIds.has(recipe.a) &&
+      reachableIds.has(recipe.b) &&
+      !reachableIds.has(recipe.result)
+    ) {
+      reachableIds.add(recipe.result)
+      discoveredNewElement = true
+    }
+  }
+}
+const unreachableIds = elementIds.filter(id => !reachableIds.has(id))
+if (unreachableIds.length > 0) {
+  integrityFailures.push(
+    `${unreachableIds.length} unreachable elements: ${unreachableIds.join(', ')}`,
+  )
+}
+
+if (integrityFailures.length > 0) {
+  throw new Error(`Generated content failed integrity checks:\n- ${integrityFailures.join('\n- ')}`)
+}
 
 // Count quality
 let strong = 0, reasonable = 0
@@ -2531,8 +2788,7 @@ const output = {
     recipeCount: recipeKeys.length,
     categoryCount: categories.length,
     strongRecipes: strong,
-    reasonableRecipes: reasonable,
-    generatedAt: new Date().toISOString()
+    reasonableRecipes: reasonable
   }
 }
 

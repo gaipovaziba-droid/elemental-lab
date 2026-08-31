@@ -4,7 +4,13 @@ import ElementIcon from './ElementIcon'
 
 const cats = getElementCategories()
 
-function CollectionPanel({ discovered, pointerDrag }) {
+function CollectionPanel({
+  discovered,
+  pointerDrag,
+  selection,
+  onActivate,
+  onCancelSelection,
+}) {
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('All')
   const [showRecent, setShowRecent] = useState(false)
@@ -55,6 +61,7 @@ function CollectionPanel({ discovered, pointerDrag }) {
   return (
     <div className={`collection-panel${showFilters ? ' expanded' : ''}`}>
       <button
+        type="button"
         className="filter-toggle"
         onClick={toggleFilters}
         aria-label={showFilters ? 'Hide filters' : 'Show filters'}
@@ -70,18 +77,27 @@ function CollectionPanel({ discovered, pointerDrag }) {
             type="text"
             className="search-input"
             placeholder="Search elements..."
+            aria-label="Search discovered elements"
             value={query}
             onChange={e => setQuery(e.target.value)}
           />
-          <div className="category-scroll">
+          <div
+            className="category-scroll"
+            role="group"
+            aria-label="Filter discoveries by category"
+          >
             <button
+              type="button"
               className={`cat-btn${activeCategory === 'All' ? ' active' : ''}`}
+              aria-pressed={activeCategory === 'All'}
               onClick={() => setActiveCategory('All')}
             >All</button>
-            {[...cats.entries()].sort((a, b) => b[1].length - a[1].length).slice(0, 15).map(([cat]) => (
+            {[...cats.keys()].sort((a, b) => a.localeCompare(b)).map((cat) => (
               <button
                 key={cat}
+                type="button"
                 className={`cat-btn${activeCategory === cat ? ' active' : ''}`}
+                aria-pressed={activeCategory === cat}
                 onClick={() => setActiveCategory(cat)}
               >{cat}</button>
             ))}
@@ -97,7 +113,7 @@ function CollectionPanel({ discovered, pointerDrag }) {
         </div>
       )}
 
-      <div className="icon-grid">
+      <div className="icon-grid" aria-label="Discovered elements">
         {filtered.map((id) => {
           const el = ELEMENTS[id]
           if (!el) return null
@@ -109,6 +125,9 @@ function CollectionPanel({ discovered, pointerDrag }) {
               emoji={el.emoji}
               payload={{ type: 'sidebar', elementId: id }}
               pointerDrag={pointerDrag}
+              selected={selection?.type === 'sidebar' && selection.elementId === id}
+              onActivate={onActivate}
+              onCancelSelection={onCancelSelection}
             />
           )
         })}

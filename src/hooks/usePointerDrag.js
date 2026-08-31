@@ -1,14 +1,21 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
+import {
+  HOVER_TOOLTIP_DELAY,
+  finishPointerInteraction,
+  pointerMoveTransition,
+  scheduleTooltip,
+  tooltipDelayFor,
+} from './pointerInteraction'
 
-const DRAG_THRESHOLD = 5
-const HOVER_TOOLTIP_DELAY = 2000
-const LONGPRESS_TOOLTIP_DELAY = 3000
+const TOUCH_TOOLTIP_DISMISS_DELAY = 700
 
 export default function usePointerDrag(onDragEndRef) {
   const [dragState, setDragState] = useState(null)
   const [tooltipTarget, setTooltipTarget] = useState(null)
   const dragRef = useRef(null)
   const tooltipTimer = useRef(null)
+  const tooltipDismissTimer = useRef(null)
+  const hoverRef = useRef(null)
   const originRef = useRef({ x: 0, y: 0 })
 
   const clearTooltipTimer = useCallback(() => {
@@ -18,19 +25,52 @@ export default function usePointerDrag(onDragEndRef) {
     }
   }, [])
 
-  const startTooltipTimer = useCallback((target) => {
+  const clearTooltipDismissTimer = useCallback(() => {
+    if (tooltipDismissTimer.current) {
+      clearTimeout(tooltipDismissTimer.current)
+      tooltipDismissTimer.current = null
+    }
+  }, [])
+
+  const hideTooltip = useCallback(() => {
     clearTooltipTimer()
-    const isHover = window.matchMedia('(hover: hover)').matches
-    const delay = isHover ? HOVER_TOOLTIP_DELAY : LONGPRESS_TOOLTIP_DELAY
-    tooltipTimer.current = setTimeout(() => {
-      setTooltipTarget(target)
+    clearTooltipDismissTimer()
+    setTooltipTarget(null)
+  }, [clearTooltipDismissTimer, clearTooltipTimer])
+
+  const startTooltipTimer = useCallback((target, delay) => {
+    clearTooltipTimer()
+    clearTooltipDismissTimer()
+    tooltipTimer.current = scheduleTooltip(target, delay, setTimeout, (shownTarget) => {
+      setTooltipTarget(shownTarget)
       tooltipTimer.current = null
-    }, delay)
-  }, [clearTooltipTimer])
+    })
+  }, [clearTooltipDismissTimer, clearTooltipTimer])
+
+  const handlePointerEnter = useCallback((e, payload) => {
+    if (e.pointerType !== 'mouse' || dragRef.current) return
+    hoverRef.current = {
+      payload,
+      lastX: e.clientX,
+      lastY: e.clientY,
+    }
+    startTooltipTimer(payload, HOVER_TOOLTIP_DELAY)
+  }, [startTooltipTimer])
+
+  const handleFocus = useCallback((payload) => {
+    clearTooltipTimer()
+    clearTooltipDismissTimer()
+    setTooltipTarget(payload)
+  }, [clearTooltipDismissTimer, clearTooltipTimer])
+
+  const handleBlur = useCallback(() => {
+    if (!dragRef.current) hideTooltip()
+  }, [hideTooltip])
 
   const handlePointerDown = useCallback((e, payload) => {
-    if (e.button !== 0) return
+    if (e.button !== 0 || dragRef.current) return
     e.preventDefault()
+    clearTooltipDismissTimer()
     const el = e.currentTarget
     el.setPointerCapture(e.pointerId)
 
@@ -43,22 +83,39 @@ export default function usePointerDrag(onDragEndRef) {
       lastY: e.clientY,
       isDragging: false,
       sourceEl: el,
+      pointerId: e.pointerId,
+      pointerType: e.pointerType,
     }
 
-    startTooltipTimer(payload)
+    startTooltipTimer(payload, tooltipDelayFor(e.pointerType))
     setDragState({ ...dragRef.current, isDragging: false })
-  }, [startTooltipTimer])
+  }, [clearTooltipDismissTimer, startTooltipTimer])
 
   const handlePointerMove = useCallback((e) => {
     const d = dragRef.current
-    if (!d) return
+    if (!d) {
+      const hover = hoverRef.current
+      if (hover && e.pointerType === 'mouse') {
+        const moved = e.clientX !== hover.lastX || e.clientY !== hover.lastY
+        if (moved) {
+          hover.lastX = e.clientX
+          hover.lastY = e.clientY
+          setTooltipTarget(null)
+          startTooltipTimer(hover.payload, HOVER_TOOLTIP_DELAY)
+        }
+      }
+      return
+    }
+
+    if (e.pointerId !== d.pointerId) return
 
     const dx = e.clientX - originRef.current.x
     const dy = e.clientY - originRef.current.y
+    const transition = pointerMoveTransition(d.isDragging, dx, dy)
 
-    if (!d.isDragging && (Math.abs(dx) > DRAG_THRESHOLD || Math.abs(dy) > DRAG_THRESHOLD)) {
-      clearTooltipTimer()
-      setTooltipTarget(null)
+    if (transition.cancelTooltip) hideTooltip()
+
+    if (!d.isDragging && transition.isDragging) {
       d.isDragging = true
       e.preventDefault()
     }
@@ -69,49 +126,71 @@ export default function usePointerDrag(onDragEndRef) {
       d.lastY = e.clientY
       setDragState({ ...d })
     }
-  }, [clearTooltipTimer])
+  }, [hideTooltip, startTooltipTimer])
 
   const handlePointerUp = useCallback((e) => {
     const d = dragRef.current
     if (!d) return
+    if (e.pointerId !== d.pointerId) return
 
     clearTooltipTimer()
 
-    if (d.isDragging && onDragEndRef?.current) {
+    if (d.isDragging) {
       e.preventDefault()
-      onDragEndRef.current(d.payload, e.clientX, e.clientY)
+      finishPointerInteraction(d, e.clientX, e.clientY, onDragEndRef?.current)
     }
 
     setDragState(null)
     dragRef.current = null
 
-    setTimeout(() => setTooltipTarget(null), 500)
-  }, [clearTooltipTimer])
+    if (d.isDragging) {
+      setTooltipTarget(null)
+    } else if (e.pointerType !== 'mouse') {
+      clearTooltipDismissTimer()
+      tooltipDismissTimer.current = setTimeout(() => {
+        setTooltipTarget(null)
+        tooltipDismissTimer.current = null
+      }, TOUCH_TOOLTIP_DISMISS_DELAY)
+    }
+  }, [clearTooltipDismissTimer, clearTooltipTimer])
+
+  const handlePointerCancel = useCallback((e) => {
+    const d = dragRef.current
+    if (d && e.pointerId !== d.pointerId) return
+    dragRef.current = null
+    hoverRef.current = null
+    setDragState(null)
+    hideTooltip()
+  }, [hideTooltip])
 
   const handlePointerLeave = useCallback(() => {
     const d = dragRef.current
-    if (d && !d.isDragging) {
-      clearTooltipTimer()
-      setTooltipTarget(null)
-    }
-  }, [clearTooltipTimer])
+    hoverRef.current = null
+    if (!d || !d.isDragging) hideTooltip()
+  }, [hideTooltip])
 
   useEffect(() => {
     return () => {
       clearTooltipTimer()
+      clearTooltipDismissTimer()
     }
-  }, [clearTooltipTimer])
+  }, [clearTooltipDismissTimer, clearTooltipTimer])
 
   const resetTooltip = useCallback(() => {
-    setTooltipTarget(null)
-  }, [])
+    hoverRef.current = null
+    hideTooltip()
+  }, [hideTooltip])
 
   return {
     dragState,
     tooltipTarget,
+    handlePointerEnter,
+    handleFocus,
+    handleBlur,
     handlePointerDown,
     handlePointerMove,
     handlePointerUp,
+    handlePointerCancel,
     handlePointerLeave,
     resetTooltip,
   }

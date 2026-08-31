@@ -1,46 +1,104 @@
 import { useRef, useEffect, useState } from 'react'
 import InfoCard from './InfoCard'
 import { ELEMENTS } from '../data/engine'
+import { isKeyboardActivationKey } from '../hooks/pointerInteraction'
 
-function ElementIcon({ elementId, name, emoji, payload, pointerDrag }) {
+function ElementIcon({
+  elementId,
+  name,
+  emoji,
+  payload,
+  pointerDrag,
+  selected,
+  onActivate,
+  onCancelSelection,
+}) {
   const ref = useRef(null)
   const [rect, setRect] = useState({ left: 0, top: 0 })
-  const isTooltipTarget = pointerDrag.tooltipTarget === payload
+  const tooltipTarget = pointerDrag.tooltipTarget
+  const isTooltipTarget = tooltipTarget?.type === 'sidebar'
+    && tooltipTarget.elementId === elementId
   const element = ELEMENTS[elementId]
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    const { handlePointerDown, handlePointerMove, handlePointerUp, handlePointerLeave } = pointerDrag
-    el.addEventListener('pointerdown', (e) => handlePointerDown(e, payload))
-    el.addEventListener('pointermove', handlePointerMove)
-    el.addEventListener('pointerup', handlePointerUp)
-    el.addEventListener('pointerleave', handlePointerLeave)
-    el.addEventListener('pointercancel', handlePointerUp)
+    const {
+      handlePointerEnter,
+      handlePointerDown,
+      handlePointerMove,
+      handlePointerUp,
+      handlePointerCancel,
+      handlePointerLeave,
+    } = pointerDrag
     const updateRect = () => {
       const r = el.getBoundingClientRect()
       setRect({ left: r.left, top: r.top })
     }
+    const onPointerEnter = (e) => {
+      updateRect()
+      handlePointerEnter(e, payload)
+    }
+    const onPointerDown = (e) => {
+      updateRect()
+      handlePointerDown(e, payload)
+    }
+
+    el.addEventListener('pointerenter', onPointerEnter)
+    el.addEventListener('pointerdown', onPointerDown)
+    el.addEventListener('pointermove', handlePointerMove)
+    el.addEventListener('pointerup', handlePointerUp)
+    el.addEventListener('pointerleave', handlePointerLeave)
+    el.addEventListener('pointercancel', handlePointerCancel)
     updateRect()
     window.addEventListener('scroll', updateRect, true)
     return () => {
-      el.removeEventListener('pointerdown', handlePointerDown)
+      el.removeEventListener('pointerenter', onPointerEnter)
+      el.removeEventListener('pointerdown', onPointerDown)
       el.removeEventListener('pointermove', handlePointerMove)
       el.removeEventListener('pointerup', handlePointerUp)
       el.removeEventListener('pointerleave', handlePointerLeave)
-      el.removeEventListener('pointercancel', handlePointerUp)
+      el.removeEventListener('pointercancel', handlePointerCancel)
       window.removeEventListener('scroll', updateRect, true)
     }
-  }, [payload, pointerDrag])
+  }, [
+    payload.type,
+    payload.elementId,
+    pointerDrag.handlePointerEnter,
+    pointerDrag.handlePointerDown,
+    pointerDrag.handlePointerMove,
+    pointerDrag.handlePointerUp,
+    pointerDrag.handlePointerCancel,
+    pointerDrag.handlePointerLeave,
+  ])
+
+  const handleKeyDown = (event) => {
+    if (isKeyboardActivationKey(event.key)) {
+      event.preventDefault()
+      event.stopPropagation()
+      onActivate(payload, { inputMethod: 'keyboard' })
+    } else if (event.key === 'Escape') {
+      event.preventDefault()
+      event.stopPropagation()
+      onCancelSelection()
+    }
+  }
 
   return (
     <>
       <div
         ref={ref}
-        className={`element-icon${isTooltipTarget ? ' tooltip-visible' : ''}`}
+        className={`element-icon${selected ? ' selected' : ''}${isTooltipTarget ? ' tooltip-visible' : ''}`}
         tabIndex={0}
         role="button"
-        aria-label={name}
+        aria-label={selected
+          ? `${name} selected — activate again to cancel`
+          : `${name} — select to place in laboratory`}
+        aria-pressed={selected}
+        aria-describedby="lab-instructions"
+        onKeyDown={handleKeyDown}
+        onFocus={() => pointerDrag.handleFocus(payload)}
+        onBlur={pointerDrag.handleBlur}
         style={{ touchAction: 'none' }}
       >
         <span>{emoji}</span>

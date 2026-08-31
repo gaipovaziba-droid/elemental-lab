@@ -1,52 +1,77 @@
-import { useRef } from 'react'
 import { ELEMENTS } from '../data/engine'
 import WorkspaceElement from './WorkspaceElement'
 
-function Laboratory({ workspace, pointerDrag, tooltipTarget }) {
-  const labRef = useRef(null)
-
-  // Detect whether a specific uid is the tooltip target
+function Laboratory({
+  laboratoryRef,
+  workspace,
+  pointerDrag,
+  tooltipTarget,
+  selection,
+  selectionMessage,
+  onActivate,
+  onLaboratoryActivate,
+  onCancelSelection,
+  onNudgeWorkspace,
+  onRemoveWorkspace,
+}) {
   const isTooltipTarget = (uid) => {
-    const t = tooltipTarget
-    return t && t.type === 'workspace' && t.uid === uid
+    const target = tooltipTarget
+    return target && target.type === 'workspace' && target.uid === uid
   }
 
-  // Detect whether a specific uid is being dragged over
-  const isDragOver = (uid) => {
-    const ds = pointerDrag.dragState
-    if (!ds || !ds.isDragging) return false
-    // Should be checked via CSS hover but we can set from the ghost's position
-    return false
+  const isDragOver = () => false
+
+  const handleKeyDown = (event) => {
+    if (event.target !== event.currentTarget) return
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      onLaboratoryActivate({ inputMethod: 'keyboard' })
+    } else if (event.key === 'Escape') {
+      event.preventDefault()
+      onCancelSelection()
+    }
   }
 
   return (
     <div
       className="laboratory"
-      ref={labRef}
-      tabIndex={-1}
+      ref={laboratoryRef}
+      tabIndex={0}
       role="region"
       aria-label="Laboratory workspace"
+      aria-describedby="lab-instructions"
+      onKeyDown={handleKeyDown}
       style={{ touchAction: 'none' }}
     >
       <div
         className={`laboratory-hint${workspace.length === 0 ? '' : ' hidden'}`}
         aria-hidden={workspace.length !== 0}
       >
-        Drag elements here to combine
+        Drag an element here, or use Enter/Space with the keyboard
       </div>
+      {selectionMessage && (
+        <div className="laboratory-status" role="status" aria-live="polite">
+          {selectionMessage}
+        </div>
+      )}
       {workspace.map((item) => {
-        const el = ELEMENTS[item.elementId]
-        if (!el) return null
+        const element = ELEMENTS[item.elementId]
+        if (!element) return null
         return (
           <WorkspaceElement
             key={item.uid}
             uid={item.uid}
-            element={el}
+            element={element}
             x={item.x}
             y={item.y}
             isDragOver={isDragOver(item.uid)}
             pointerDrag={pointerDrag}
             isTooltipTarget={isTooltipTarget(item.uid)}
+            selected={selection?.type === 'workspace' && selection.uid === item.uid}
+            onActivate={onActivate}
+            onCancelSelection={onCancelSelection}
+            onNudgeWorkspace={onNudgeWorkspace}
+            onRemoveWorkspace={onRemoveWorkspace}
           />
         )
       })}

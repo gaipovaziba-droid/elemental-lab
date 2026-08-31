@@ -17,11 +17,11 @@ function DiscoveryToast({ toast }) {
 
   return (
     <div
-      className={`discovery-toast${visible ? ' show' : ' hide'}`}
+      className={`discovery-toast ${toast.isNew ? 'new' : 'created'}${visible ? ' show' : ' hide'}`}
       role="status"
       aria-live="polite"
     >
-      Discovered: {toast.emoji} {toast.name}!
+      {toast.isNew ? 'Discovered' : 'Created'}: {toast.emoji} {toast.name}!
     </div>
   )
 }

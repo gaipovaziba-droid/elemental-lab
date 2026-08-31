@@ -4,43 +4,74 @@ import { ELEMENTS } from '../data/engine'
 
 const STARTERS = ['water', 'fire', 'air', 'earth']
 const DEBOUNCE_MS = 300
+const MAX_SAVED_COORDINATE = 100000
 const VALID_IDS = new Set(Object.keys(ELEMENTS))
 
+function sanitizeSavedState(saved) {
+  const discovered = [...STARTERS]
+  const discoveredSet = new Set(discovered)
+
+  if (Array.isArray(saved?.discovered)) {
+    saved.discovered.forEach((id) => {
+      if (typeof id !== 'string' || !VALID_IDS.has(id) || discoveredSet.has(id)) return
+      discovered.push(id)
+      discoveredSet.add(id)
+    })
+  }
+
+  const workspace = []
+  const seenUids = new Set()
+
+  if (Array.isArray(saved?.workspace)) {
+    saved.workspace.forEach((item) => {
+      if (!item || typeof item !== 'object' || !VALID_IDS.has(item.elementId)) return
+      if (!Number.isSafeInteger(item.uid) || item.uid < 1 || seenUids.has(item.uid)) return
+      if (!Number.isFinite(item.x) || !Number.isFinite(item.y)) return
+
+      seenUids.add(item.uid)
+      workspace.push({
+        uid: item.uid,
+        elementId: item.elementId,
+        x: Math.min(Math.max(0, item.x), MAX_SAVED_COORDINATE),
+        y: Math.min(Math.max(0, item.y), MAX_SAVED_COORDINATE),
+      })
+
+      if (!discoveredSet.has(item.elementId)) {
+        discovered.push(item.elementId)
+        discoveredSet.add(item.elementId)
+      }
+    })
+  }
+
+  const highestUid = workspace.reduce((max, item) => Math.max(max, item.uid), 0)
+  const savedNextId = Number.isSafeInteger(saved?.nextId) && saved.nextId > 0
+    ? saved.nextId
+    : 1
+
+  return {
+    discovered,
+    workspace,
+    nextId: Math.max(highestUid + 1, savedNextId),
+  }
+}
+
 function useGameState() {
-  const [discovered, setDiscovered] = useState(STARTERS)
-  const [workspace, setWorkspace] = useState([])
-  const nextIdRef = useRef(1)
+  const initialStateRef = useRef(null)
+  if (!initialStateRef.current) {
+    initialStateRef.current = sanitizeSavedState(loadState())
+  }
+
+  const initialState = initialStateRef.current
+  const [discovered, setDiscovered] = useState(() => initialState.discovered)
+  const [workspace, setWorkspace] = useState(() => initialState.workspace)
+  const nextIdRef = useRef(initialState.nextId)
   const persistTimer = useRef(null)
-  const latestRef = useRef({ discovered: STARTERS, workspace: [] })
+  const latestRef = useRef({
+    discovered: initialState.discovered,
+    workspace: initialState.workspace,
+  })
 
   latestRef.current = { discovered, workspace }
-
-  // Load from localStorage on mount with migration filtering
-  useEffect(() => {
-    const saved = loadState()
-    if (saved) {
-      if (Array.isArray(saved.discovered)) {
-        const filtered = saved.discovered.filter(id => VALID_IDS.has(id))
-        if (filtered.length >= 4) {
-          setDiscovered(filtered)
-          latestRef.current.discovered = filtered
-        }
-      }
-      if (Array.isArray(saved.workspace)) {
-        const filtered = saved.workspace.filter(item => VALID_IDS.has(item.elementId))
-        if (filtered.length > 0) {
-          setWorkspace(filtered)
-          latestRef.current.workspace = filtered
-          // Keep highest uid + 1 for nextId
-          const maxUid = Math.max(...filtered.map(w => w.uid), 0)
-          if (maxUid > 0) nextIdRef.current = maxUid + 1
-        }
-      }
-      if (saved.nextId && saved.nextId > nextIdRef.current) {
-        nextIdRef.current = saved.nextId
-      }
-    }
-  }, [])
 
   // Debounced persist — always reads latestRef so timer always writes current state
   const schedulePersist = useCallback(() => {
@@ -102,6 +133,23 @@ function useGameState() {
     )
   }, [])
 
+  const constrainWorkspace = useCallback((maxX, maxY) => {
+    const safeMaxX = Math.max(0, Number.isFinite(maxX) ? maxX : 0)
+    const safeMaxY = Math.max(0, Number.isFinite(maxY) ? maxY : 0)
+
+    setWorkspace((prev) => {
+      let changed = false
+      const next = prev.map((item) => {
+        const x = Math.min(Math.max(0, item.x), safeMaxX)
+        const y = Math.min(Math.max(0, item.y), safeMaxY)
+        if (x === item.x && y === item.y) return item
+        changed = true
+        return { ...item, x, y }
+      })
+      return changed ? next : prev
+    })
+  }, [])
+
   const removeFromWorkspace = useCallback((uid) => {
     setWorkspace((prev) => prev.filter((item) => item.uid !== uid))
   }, [])
@@ -140,6 +188,7 @@ function useGameState() {
     addDiscovery,
     addToWorkspace,
     moveInWorkspace,
+    constrainWorkspace,
     removeFromWorkspace,
     replacePairWithResult,
     clearWorkspace,

@@ -12860,6 +12860,2132 @@
         "empirical_science"
       ],
       "description": "Molecular heredity. An element from the Biology category."
+    },
+    "organism": {
+      "id": "organism",
+      "name": "Organism",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "life"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "organism",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Organism. An element from the Biology category."
+    },
+    "eukaryotic_cell": {
+      "id": "eukaryotic_cell",
+      "name": "Eukaryotic cell",
+      "emoji": "🔬",
+      "category": "Biology",
+      "tags": [
+        "cell"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "organism",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Eukaryotic cell. An element from the Biology category."
+    },
+    "heredity": {
+      "id": "heredity",
+      "name": "Heredity",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "genetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Heredity. An element from the Biology category."
+    },
+    "mutation": {
+      "id": "mutation",
+      "name": "Mutation",
+      "emoji": "🔀",
+      "category": "Biology",
+      "tags": [
+        "genetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Mutation. An element from the Biology category."
+    },
+    "genetic_variation": {
+      "id": "genetic_variation",
+      "name": "Genetic variation",
+      "emoji": "🎲",
+      "category": "Biology",
+      "tags": [
+        "genetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Genetic variation. An element from the Biology category."
+    },
+    "genotype": {
+      "id": "genotype",
+      "name": "Genotype",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "genetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Genotype. An element from the Biology category."
+    },
+    "phenotype": {
+      "id": "phenotype",
+      "name": "Phenotype",
+      "emoji": "👁️",
+      "category": "Biology",
+      "tags": [
+        "genetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Phenotype. An element from the Biology category."
+    },
+    "selection_pressure": {
+      "id": "selection_pressure",
+      "name": "Selection pressure",
+      "emoji": "⚖️",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Selection pressure. An element from the Biology category."
+    },
+    "natural_selection": {
+      "id": "natural_selection",
+      "name": "Natural selection",
+      "emoji": "🦋",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Natural selection. An element from the Biology category."
+    },
+    "adaptation": {
+      "id": "adaptation",
+      "name": "Adaptation",
+      "emoji": "🦎",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Adaptation. An element from the Biology category."
+    },
+    "evolution": {
+      "id": "evolution",
+      "name": "Evolution",
+      "emoji": "🌳",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Evolution. An element from the Biology category."
+    },
+    "common_ancestor": {
+      "id": "common_ancestor",
+      "name": "Common ancestor",
+      "emoji": "🌳",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "organism",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Common ancestor. An element from the Biology category."
+    },
+    "isolation": {
+      "id": "isolation",
+      "name": "Isolation",
+      "emoji": "🚧",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Isolation. An element from the Biology category."
+    },
+    "speciation": {
+      "id": "speciation",
+      "name": "Speciation",
+      "emoji": "🌿",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Speciation. An element from the Biology category."
+    },
+    "extinction": {
+      "id": "extinction",
+      "name": "Extinction",
+      "emoji": "🦴",
+      "category": "Biology",
+      "tags": [
+        "evolution"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Extinction. An element from the Biology category."
+    },
+    "biodiversity": {
+      "id": "biodiversity",
+      "name": "Biodiversity",
+      "emoji": "🌎",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Biodiversity. An element from the Biology category."
+    },
+    "species": {
+      "id": "species",
+      "name": "Species",
+      "emoji": "🧾",
+      "category": "Biology",
+      "tags": [
+        "taxonomy"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Species. An element from the Biology category."
+    },
+    "photosynthesis": {
+      "id": "photosynthesis",
+      "name": "Photosynthesis",
+      "emoji": "🌱",
+      "category": "Biology",
+      "tags": [
+        "bioenergetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Photosynthesis. An element from the Biology category."
+    },
+    "cellular_respiration": {
+      "id": "cellular_respiration",
+      "name": "Cellular respiration",
+      "emoji": "⚡",
+      "category": "Biology",
+      "tags": [
+        "bioenergetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Cellular respiration. An element from the Biology category."
+    },
+    "producer": {
+      "id": "producer",
+      "name": "Producer",
+      "emoji": "🌿",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Producer. An element from the Biology category."
+    },
+    "consumer": {
+      "id": "consumer",
+      "name": "Consumer",
+      "emoji": "🦌",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Consumer. An element from the Biology category."
+    },
+    "decomposer": {
+      "id": "decomposer",
+      "name": "Decomposer",
+      "emoji": "🍄",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Decomposer. An element from the Biology category."
+    },
+    "predator": {
+      "id": "predator",
+      "name": "Predator",
+      "emoji": "🦁",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Predator. An element from the Biology category."
+    },
+    "prey": {
+      "id": "prey",
+      "name": "Prey",
+      "emoji": "🐇",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Prey. An element from the Biology category."
+    },
+    "predation": {
+      "id": "predation",
+      "name": "Predation",
+      "emoji": "🦁",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Predation. An element from the Biology category."
+    },
+    "symbiosis": {
+      "id": "symbiosis",
+      "name": "Symbiosis",
+      "emoji": "🤝",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Symbiosis. An element from the Biology category."
+    },
+    "mutualism": {
+      "id": "mutualism",
+      "name": "Mutualism",
+      "emoji": "🤝",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Mutualism. An element from the Biology category."
+    },
+    "parasitism": {
+      "id": "parasitism",
+      "name": "Parasitism",
+      "emoji": "🪱",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Parasitism. An element from the Biology category."
+    },
+    "food_chain": {
+      "id": "food_chain",
+      "name": "Food chain",
+      "emoji": "🔗",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Food chain. An element from the Biology category."
+    },
+    "food_web": {
+      "id": "food_web",
+      "name": "Food web",
+      "emoji": "🕸️",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Food web. An element from the Biology category."
+    },
+    "energy_flow": {
+      "id": "energy_flow",
+      "name": "Energy flow",
+      "emoji": "⚡",
+      "category": "Biology",
+      "tags": [
+        "ecology"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "organismal_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Energy flow. An element from the Biology category."
+    },
+    "physiology": {
+      "id": "physiology",
+      "name": "Physiology",
+      "emoji": "🫁",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "life_sciences",
+      "subdomains": [
+        "human_biology"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Physiology. An element from the Concepts category."
+    },
+    "homeostasis": {
+      "id": "homeostasis",
+      "name": "Homeostasis",
+      "emoji": "⚖️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "life_sciences",
+      "subdomains": [
+        "physiology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Homeostasis. An element from the Concepts category."
+    },
+    "pathogen": {
+      "id": "pathogen",
+      "name": "Pathogen",
+      "emoji": "🦠",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "life_sciences",
+      "subdomains": [
+        "microbiology"
+      ],
+      "output_type": "organism",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Pathogen. An element from the Concepts category."
+    },
+    "infection": {
+      "id": "infection",
+      "name": "Infection",
+      "emoji": "🦠",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "public_health"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Infection. An element from the Concepts category."
+    },
+    "immunity": {
+      "id": "immunity",
+      "name": "Immunity",
+      "emoji": "🛡️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "immunology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Immunity. An element from the Concepts category."
+    },
+    "antibody": {
+      "id": "antibody",
+      "name": "Antibody",
+      "emoji": "🧬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "immunology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Antibody. An element from the Concepts category."
+    },
+    "inflammation": {
+      "id": "inflammation",
+      "name": "Inflammation",
+      "emoji": "🔥",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "physiology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Inflammation. An element from the Concepts category."
+    },
+    "immune_system": {
+      "id": "immune_system",
+      "name": "Immune system",
+      "emoji": "🛡️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "immunology"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Immune system. An element from the Concepts category."
+    },
+    "prevention": {
+      "id": "prevention",
+      "name": "Prevention",
+      "emoji": "🛡️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "public_health"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Prevention. An element from the Concepts category."
+    },
+    "epidemiology": {
+      "id": "epidemiology",
+      "name": "Epidemiology",
+      "emoji": "📊",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "public_health"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Epidemiology. An element from the Concepts category."
+    },
+    "medical_imaging": {
+      "id": "medical_imaging",
+      "name": "Medical imaging",
+      "emoji": "🩻",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "diagnostics"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Medical imaging. An element from the Concepts category."
+    },
+    "pharmacology": {
+      "id": "pharmacology",
+      "name": "Pharmacology",
+      "emoji": "💊",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "human_health",
+      "subdomains": [
+        "medicine"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Pharmacology. An element from the Concepts category."
+    },
+    "engineering": {
+      "id": "engineering",
+      "name": "Engineering",
+      "emoji": "⚙️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "engineering"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Engineering. An element from the Concepts category."
+    },
+    "mechanical_engineering": {
+      "id": "mechanical_engineering",
+      "name": "Mechanical engineering",
+      "emoji": "⚙️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "mechanical_engineering"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Mechanical engineering. An element from the Concepts category."
+    },
+    "electrical_engineering": {
+      "id": "electrical_engineering",
+      "name": "Electrical engineering",
+      "emoji": "🔌",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "electrical_engineering"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Electrical engineering. An element from the Concepts category."
+    },
+    "civil_engineering": {
+      "id": "civil_engineering",
+      "name": "Civil engineering",
+      "emoji": "🏗️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "civil_engineering"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Civil engineering. An element from the Concepts category."
+    },
+    "chemical_engineering": {
+      "id": "chemical_engineering",
+      "name": "Chemical engineering",
+      "emoji": "⚗️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "chemical_engineering"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Chemical engineering. An element from the Concepts category."
+    },
+    "biomedical_engineering": {
+      "id": "biomedical_engineering",
+      "name": "Biomedical engineering",
+      "emoji": "🦾",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "biomedical_engineering"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Biomedical engineering. An element from the Concepts category."
+    },
+    "mechanism": {
+      "id": "mechanism",
+      "name": "Mechanism",
+      "emoji": "⚙️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "mechanical_engineering"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Mechanism. An element from the Concepts category."
+    },
+    "control_system": {
+      "id": "control_system",
+      "name": "Control system",
+      "emoji": "🎛️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "control_engineering"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Control system. An element from the Concepts category."
+    },
+    "artificial_intelligence": {
+      "id": "artificial_intelligence",
+      "name": "Artificial intelligence",
+      "emoji": "🤖",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "artificial_intelligence"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Artificial intelligence. An element from the Concepts category."
+    },
+    "data_structure": {
+      "id": "data_structure",
+      "name": "Data structure",
+      "emoji": "🗂️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "computer_science"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Data structure. An element from the Concepts category."
+    },
+    "program": {
+      "id": "program",
+      "name": "Program",
+      "emoji": "💻",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "software"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Program. An element from the Concepts category."
+    },
+    "hardware": {
+      "id": "hardware",
+      "name": "Hardware",
+      "emoji": "🖥️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "computer_engineering"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Hardware. An element from the Concepts category."
+    },
+    "operating_system": {
+      "id": "operating_system",
+      "name": "Operating system",
+      "emoji": "🖥️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "software"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Operating system. An element from the Concepts category."
+    },
+    "training_data": {
+      "id": "training_data",
+      "name": "Training data",
+      "emoji": "🗃️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "machine_learning"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Training data. An element from the Concepts category."
+    },
+    "inference": {
+      "id": "inference",
+      "name": "Inference",
+      "emoji": "🔎",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "artificial_intelligence"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Inference. An element from the Concepts category."
+    },
+    "computer_vision": {
+      "id": "computer_vision",
+      "name": "Computer vision",
+      "emoji": "👁️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "artificial_intelligence"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Computer vision. An element from the Concepts category."
+    },
+    "natural_language_processing": {
+      "id": "natural_language_processing",
+      "name": "Natural language processing",
+      "emoji": "💬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "artificial_intelligence"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Natural language processing. An element from the Concepts category."
+    },
+    "bioinformatics": {
+      "id": "bioinformatics",
+      "name": "Bioinformatics",
+      "emoji": "🧬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "computational_biology"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Bioinformatics. An element from the Concepts category."
+    },
+    "computational_linguistics": {
+      "id": "computational_linguistics",
+      "name": "Computational linguistics",
+      "emoji": "💬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "computing",
+      "subdomains": [
+        "computational_linguistics"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Computational linguistics. An element from the Concepts category."
+    },
+    "hominin": {
+      "id": "hominin",
+      "name": "Hominin",
+      "emoji": "🦴",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "life_sciences",
+      "subdomains": [
+        "human_evolution"
+      ],
+      "output_type": "organism",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Hominin. An element from the Concepts category."
+    },
+    "human_evolution": {
+      "id": "human_evolution",
+      "name": "Human evolution",
+      "emoji": "🧬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "life_sciences",
+      "subdomains": [
+        "human_evolution"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Human evolution. An element from the Concepts category."
+    },
+    "migration": {
+      "id": "migration",
+      "name": "Migration",
+      "emoji": "🧭",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "social_sciences",
+      "subdomains": [
+        "human_geography"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Migration. An element from the Concepts category."
+    },
+    "hunter_gatherer": {
+      "id": "hunter_gatherer",
+      "name": "Hunter-gatherer",
+      "emoji": "🏹",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "prehistory"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Hunter-gatherer. An element from the Concepts category."
+    },
+    "domestication": {
+      "id": "domestication",
+      "name": "Domestication",
+      "emoji": "🐕",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "archaeology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Domestication. An element from the Concepts category."
+    },
+    "artifact": {
+      "id": "artifact",
+      "name": "Artifact",
+      "emoji": "🏺",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "archaeology",
+      "subdomains": [
+        "archaeology"
+      ],
+      "output_type": "object",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Artifact. An element from the Concepts category."
+    },
+    "excavation": {
+      "id": "excavation",
+      "name": "Excavation",
+      "emoji": "⛏️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "archaeology",
+      "subdomains": [
+        "archaeology"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Excavation. An element from the Concepts category."
+    },
+    "stratigraphy": {
+      "id": "stratigraphy",
+      "name": "Stratigraphy",
+      "emoji": "🪨",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geology"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Stratigraphy. An element from the Concepts category."
+    },
+    "radiometric_dating": {
+      "id": "radiometric_dating",
+      "name": "Radiometric dating",
+      "emoji": "☢️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "archaeology",
+      "subdomains": [
+        "archaeometry"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Radiometric dating. An element from the Concepts category."
+    },
+    "archaeometry": {
+      "id": "archaeometry",
+      "name": "Archaeometry",
+      "emoji": "🔬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "archaeology",
+      "subdomains": [
+        "archaeometry"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Archaeometry. An element from the Concepts category."
+    },
+    "archive": {
+      "id": "archive",
+      "name": "Archive",
+      "emoji": "🗄️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "history",
+      "subdomains": [
+        "historiography"
+      ],
+      "output_type": "institution",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Archive. An element from the Concepts category."
+    },
+    "chronology": {
+      "id": "chronology",
+      "name": "Chronology",
+      "emoji": "🗓️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "history",
+      "subdomains": [
+        "historiography"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Chronology. An element from the Concepts category."
+    },
+    "institution": {
+      "id": "institution",
+      "name": "Institution",
+      "emoji": "🏛️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "social_sciences",
+      "subdomains": [
+        "sociology"
+      ],
+      "output_type": "institution",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Institution. An element from the Concepts category."
+    },
+    "governance": {
+      "id": "governance",
+      "name": "Governance",
+      "emoji": "⚖️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "social_sciences",
+      "subdomains": [
+        "political_science"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Governance. An element from the Concepts category."
+    },
+    "state": {
+      "id": "state",
+      "name": "State",
+      "emoji": "🏛️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "social_sciences",
+      "subdomains": [
+        "political_science"
+      ],
+      "output_type": "institution",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "State. An element from the Concepts category."
+    },
+    "economics": {
+      "id": "economics",
+      "name": "Economics",
+      "emoji": "📈",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "economics"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Economics. An element from the Concepts category."
+    },
+    "finance": {
+      "id": "finance",
+      "name": "Finance",
+      "emoji": "💰",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "finance"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Finance. An element from the Concepts category."
+    },
+    "consumption": {
+      "id": "consumption",
+      "name": "Consumption",
+      "emoji": "🛒",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "economics"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Consumption. An element from the Concepts category."
+    },
+    "supply": {
+      "id": "supply",
+      "name": "Supply",
+      "emoji": "📦",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "economics"
+      ],
+      "output_type": "quantity",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Supply. An element from the Concepts category."
+    },
+    "demand": {
+      "id": "demand",
+      "name": "Demand",
+      "emoji": "📈",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "economics"
+      ],
+      "output_type": "quantity",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Demand. An element from the Concepts category."
+    },
+    "price": {
+      "id": "price",
+      "name": "Price",
+      "emoji": "🏷️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "economics"
+      ],
+      "output_type": "quantity",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Price. An element from the Concepts category."
+    },
+    "labor": {
+      "id": "labor",
+      "name": "Labor",
+      "emoji": "🧑‍🏭",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "labor_economics"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Labor. An element from the Concepts category."
+    },
+    "taxation": {
+      "id": "taxation",
+      "name": "Taxation",
+      "emoji": "🧾",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "public_economics"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Taxation. An element from the Concepts category."
+    },
+    "public_goods": {
+      "id": "public_goods",
+      "name": "Public goods",
+      "emoji": "🏥",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "public_economics"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Public goods. An element from the Concepts category."
+    },
+    "econometrics": {
+      "id": "econometrics",
+      "name": "Econometrics",
+      "emoji": "📉",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "economics",
+      "subdomains": [
+        "econometrics"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Econometrics. An element from the Concepts category."
+    },
+    "gesture": {
+      "id": "gesture",
+      "name": "Gesture",
+      "emoji": "👋",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "communication"
+      ],
+      "output_type": "symbol",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Gesture. An element from the Concepts category."
+    },
+    "speech": {
+      "id": "speech",
+      "name": "Speech",
+      "emoji": "🗣️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "linguistics"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Speech. An element from the Concepts category."
+    },
+    "word": {
+      "id": "word",
+      "name": "Word",
+      "emoji": "🔤",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "linguistics"
+      ],
+      "output_type": "symbol",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Word. An element from the Concepts category."
+    },
+    "grammar": {
+      "id": "grammar",
+      "name": "Grammar",
+      "emoji": "📚",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "linguistics"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Grammar. An element from the Concepts category."
+    },
+    "alphabet": {
+      "id": "alphabet",
+      "name": "Alphabet",
+      "emoji": "🔤",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "writing"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Alphabet. An element from the Concepts category."
+    },
+    "literature": {
+      "id": "literature",
+      "name": "Literature",
+      "emoji": "📖",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "literature"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Literature. An element from the Concepts category."
+    },
+    "melody": {
+      "id": "melody",
+      "name": "Melody",
+      "emoji": "🎵",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "arts",
+      "subdomains": [
+        "music"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Melody. An element from the Concepts category."
+    },
+    "dance": {
+      "id": "dance",
+      "name": "Dance",
+      "emoji": "💃",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "arts",
+      "subdomains": [
+        "performing_arts"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Dance. An element from the Concepts category."
+    },
+    "recording": {
+      "id": "recording",
+      "name": "Recording",
+      "emoji": "🎙️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "media"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Recording. An element from the Concepts category."
+    },
+    "digital_media": {
+      "id": "digital_media",
+      "name": "Digital media",
+      "emoji": "📱",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "engineering",
+      "subdomains": [
+        "media"
+      ],
+      "output_type": "technology",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Digital media. An element from the Concepts category."
+    },
+    "tradition": {
+      "id": "tradition",
+      "name": "Tradition",
+      "emoji": "🪶",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "culture"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Tradition. An element from the Concepts category."
+    },
+    "ritual": {
+      "id": "ritual",
+      "name": "Ritual",
+      "emoji": "🕯️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "culture"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Ritual. An element from the Concepts category."
+    },
+    "heritage": {
+      "id": "heritage",
+      "name": "Heritage",
+      "emoji": "🏛️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "culture"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Heritage. An element from the Concepts category."
+    },
+    "reasoning": {
+      "id": "reasoning",
+      "name": "Reasoning",
+      "emoji": "🧠",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "formal_sciences",
+      "subdomains": [
+        "logic"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Reasoning. An element from the Concepts category."
+    },
+    "argument": {
+      "id": "argument",
+      "name": "Argument",
+      "emoji": "🗣️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "philosophy",
+      "subdomains": [
+        "logic"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Argument. An element from the Concepts category."
+    },
+    "truth": {
+      "id": "truth",
+      "name": "Truth",
+      "emoji": "✅",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "philosophy",
+      "subdomains": [
+        "epistemology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Truth. An element from the Concepts category."
+    },
+    "inference_method": {
+      "id": "inference_method",
+      "name": "Inference",
+      "emoji": "🔎",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "philosophy",
+      "subdomains": [
+        "epistemology"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Inference. An element from the Concepts category."
+    },
+    "deduction": {
+      "id": "deduction",
+      "name": "Deduction",
+      "emoji": "⬇️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "formal_sciences",
+      "subdomains": [
+        "logic"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Deduction. An element from the Concepts category."
+    },
+    "induction": {
+      "id": "induction",
+      "name": "Induction",
+      "emoji": "⬆️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "formal_sciences",
+      "subdomains": [
+        "logic"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Induction. An element from the Concepts category."
+    },
+    "abduction": {
+      "id": "abduction",
+      "name": "Abduction",
+      "emoji": "💡",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "formal_sciences",
+      "subdomains": [
+        "logic"
+      ],
+      "output_type": "method",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Abduction. An element from the Concepts category."
+    },
+    "epistemology": {
+      "id": "epistemology",
+      "name": "Epistemology",
+      "emoji": "📚",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "philosophy",
+      "subdomains": [
+        "epistemology"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Epistemology. An element from the Concepts category."
+    },
+    "ethics": {
+      "id": "ethics",
+      "name": "Ethics",
+      "emoji": "⚖️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "philosophy",
+      "subdomains": [
+        "ethics"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Ethics. An element from the Concepts category."
+    },
+    "metaphysics": {
+      "id": "metaphysics",
+      "name": "Metaphysics",
+      "emoji": "🌌",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "philosophy",
+      "subdomains": [
+        "metaphysics"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Metaphysics. An element from the Concepts category."
+    },
+    "philosophy_of_science": {
+      "id": "philosophy_of_science",
+      "name": "Philosophy of science",
+      "emoji": "🔬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "philosophy",
+      "subdomains": [
+        "philosophy_of_science"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Philosophy of science. An element from the Concepts category."
+    },
+    "meteoroid": {
+      "id": "meteoroid",
+      "name": "Meteoroid",
+      "emoji": "☄️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "space_sciences",
+      "subdomains": [
+        "planetary_science"
+      ],
+      "output_type": "object",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Meteoroid. An element from the Concepts category."
+    },
+    "meteorite": {
+      "id": "meteorite",
+      "name": "Meteorite",
+      "emoji": "🪨",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "space_sciences",
+      "subdomains": [
+        "planetary_science"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Meteorite. An element from the Concepts category."
+    },
+    "impact": {
+      "id": "impact",
+      "name": "Impact",
+      "emoji": "💥",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "space_sciences",
+      "subdomains": [
+        "planetary_science"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Impact. An element from the Concepts category."
+    },
+    "crater": {
+      "id": "crater",
+      "name": "Crater",
+      "emoji": "🌑",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "space_sciences",
+      "subdomains": [
+        "planetary_science"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Crater. An element from the Concepts category."
+    },
+    "planetary_geology": {
+      "id": "planetary_geology",
+      "name": "Planetary geology",
+      "emoji": "🪐",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "space_sciences",
+      "subdomains": [
+        "planetary_science"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Planetary geology. An element from the Concepts category."
+    },
+    "redshift": {
+      "id": "redshift",
+      "name": "Redshift",
+      "emoji": "🔴",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "space_sciences",
+      "subdomains": [
+        "astronomy"
+      ],
+      "output_type": "measurement",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Redshift. An element from the Concepts category."
+    },
+    "astrology": {
+      "id": "astrology",
+      "name": "Astrology",
+      "emoji": "♈",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "historical_beliefs"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Astrology. An element from the Concepts category."
+    },
+    "zodiac": {
+      "id": "zodiac",
+      "name": "Zodiac",
+      "emoji": "♌",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "historical_beliefs"
+      ],
+      "output_type": "symbol",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Zodiac. An element from the Concepts category."
+    },
+    "horoscope": {
+      "id": "horoscope",
+      "name": "Horoscope",
+      "emoji": "🔮",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "historical_beliefs"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Horoscope. An element from the Concepts category."
+    },
+    "alchemy": {
+      "id": "alchemy",
+      "name": "Alchemy",
+      "emoji": "⚗️",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "history_of_science"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Alchemy. An element from the Concepts category."
+    },
+    "transmutation": {
+      "id": "transmutation",
+      "name": "Transmutation",
+      "emoji": "🔄",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "history_of_science"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Transmutation. An element from the Concepts category."
+    },
+    "philosophers_stone": {
+      "id": "philosophers_stone",
+      "name": "Philosopher's stone",
+      "emoji": "🪨",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "history_of_science"
+      ],
+      "output_type": "symbol",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Philosopher's stone. An element from the Concepts category."
+    },
+    "folklore": {
+      "id": "folklore",
+      "name": "Folklore",
+      "emoji": "🦊",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "folklore"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Folklore. An element from the Concepts category."
+    },
+    "divination": {
+      "id": "divination",
+      "name": "Divination",
+      "emoji": "🔮",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "historical_beliefs"
+      ],
+      "output_type": "cultural_practice",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Divination. An element from the Concepts category."
+    },
+    "numerology": {
+      "id": "numerology",
+      "name": "Numerology",
+      "emoji": "🔢",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "historical_beliefs"
+      ],
+      "output_type": "symbol",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Numerology. An element from the Concepts category."
+    },
+    "ancient_cosmology": {
+      "id": "ancient_cosmology",
+      "name": "Ancient cosmology",
+      "emoji": "🌌",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "humanities",
+      "subdomains": [
+        "historical_beliefs"
+      ],
+      "output_type": "model",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Ancient cosmology. An element from the Concepts category."
+    },
+    "biophysics": {
+      "id": "biophysics",
+      "name": "Biophysics",
+      "emoji": "🔬",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "life_sciences",
+      "subdomains": [
+        "biophysics"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Biophysics. An element from the Concepts category."
+    },
+    "cognitive_neuroscience": {
+      "id": "cognitive_neuroscience",
+      "name": "Cognitive neuroscience",
+      "emoji": "🧠",
+      "category": "Concepts",
+      "tags": [],
+      "domain": "life_sciences",
+      "subdomains": [
+        "neuroscience"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Cognitive neuroscience. An element from the Concepts category."
     }
   },
   "recipes": {
@@ -20902,6 +23028,965 @@
       "type": "conceptual",
       "explanation": "Template copying provides a minimal molecular model of heredity before modern cells; this is an abstraction."
     },
+    "cell+metabolism": {
+      "a": "cell",
+      "b": "metabolism",
+      "result": "organism",
+      "type": "biological",
+      "explanation": "An organism is a living system organized around cells and metabolism; this is a minimal biological abstraction."
+    },
+    "cell+genetic_material": {
+      "a": "cell",
+      "b": "genetic_material",
+      "result": "nucleus",
+      "type": "conceptual",
+      "explanation": "A nucleus is a membrane-bound compartment containing genetic material; the compartmentalization is abstracted."
+    },
+    "cell+nucleus": {
+      "a": "cell",
+      "b": "nucleus",
+      "result": "eukaryotic_cell",
+      "type": "conceptual",
+      "explanation": "Eukaryotic cells are cells with a membrane-bound nucleus."
+    },
+    "dna+replication": {
+      "a": "dna",
+      "b": "replication",
+      "result": "heredity",
+      "type": "biological",
+      "explanation": "Accurate DNA copying enables genetic information to be transmitted across cell generations."
+    },
+    "genetic_material+replication": {
+      "a": "replication",
+      "b": "genetic_material",
+      "result": "mutation",
+      "type": "biological",
+      "explanation": "Replication errors and other molecular changes can produce mutations; they are not inherently harmful."
+    },
+    "heredity+mutation": {
+      "a": "mutation",
+      "b": "heredity",
+      "result": "genetic_variation",
+      "type": "biological",
+      "explanation": "Heritable mutations contribute one source of genetic variation in populations."
+    },
+    "cell+gene": {
+      "a": "gene",
+      "b": "cell",
+      "result": "genotype",
+      "type": "conceptual",
+      "explanation": "A genotype is an organism's genetic makeup, represented here by its genes in cells."
+    },
+    "environment+genotype": {
+      "a": "genotype",
+      "b": "environment",
+      "result": "phenotype",
+      "type": "conceptual",
+      "explanation": "Phenotypic traits reflect interactions between genetic makeup and environment."
+    },
+    "competition+environment": {
+      "a": "environment",
+      "b": "competition",
+      "result": "selection_pressure",
+      "type": "conceptual",
+      "explanation": "Environmental conditions and competition can impose selection pressures on populations."
+    },
+    "genetic_variation+selection_pressure": {
+      "a": "genetic_variation",
+      "b": "selection_pressure",
+      "result": "natural_selection",
+      "type": "biological",
+      "explanation": "Natural selection changes trait frequencies when heritable variation affects survival or reproduction."
+    },
+    "natural_selection+population": {
+      "a": "natural_selection",
+      "b": "population",
+      "result": "adaptation",
+      "type": "biological",
+      "explanation": "Adaptation is a population-level outcome of selection across generations, not an individual decision."
+    },
+    "adaptation+population": {
+      "a": "adaptation",
+      "b": "population",
+      "result": "evolution",
+      "type": "biological",
+      "explanation": "Evolution is change in populations across generations; adaptation is one possible result."
+    },
+    "evolution+population": {
+      "a": "evolution",
+      "b": "population",
+      "result": "common_ancestor",
+      "type": "conceptual",
+      "explanation": "Shared evolutionary history supports inference of common ancestors among related populations."
+    },
+    "evolution+isolation": {
+      "a": "evolution",
+      "b": "isolation",
+      "result": "speciation",
+      "type": "biological",
+      "explanation": "Long-term isolation and divergence can produce reproductively distinct species."
+    },
+    "genetic_variation+population": {
+      "a": "population",
+      "b": "genetic_variation",
+      "result": "species",
+      "type": "conceptual",
+      "explanation": "A species is a population lineage whose members share characteristic reproductive and genetic continuity."
+    },
+    "competition+population": {
+      "a": "population",
+      "b": "competition",
+      "result": "isolation",
+      "type": "conceptual",
+      "explanation": "Competition and ecological separation can contribute to reproductive or geographic isolation."
+    },
+    "environment+population": {
+      "a": "population",
+      "b": "environment",
+      "result": "extinction",
+      "type": "biological",
+      "explanation": "A population becomes extinct when no individuals remain; environmental change is one possible pressure."
+    },
+    "ecosystem+species": {
+      "a": "species",
+      "b": "ecosystem",
+      "result": "biodiversity",
+      "type": "conceptual",
+      "explanation": "Biodiversity describes the variety of life, including species within ecosystems."
+    },
+    "organism+organism": {
+      "a": "organism",
+      "b": "organism",
+      "result": "population",
+      "type": "conceptual",
+      "explanation": "A population is a group of organisms of the same species living in a shared area."
+    },
+    "population+population": {
+      "a": "population",
+      "b": "population",
+      "result": "community",
+      "type": "conceptual",
+      "explanation": "A biological community consists of interacting populations of different species."
+    },
+    "community+environment": {
+      "a": "community",
+      "b": "environment",
+      "result": "ecosystem",
+      "type": "conceptual",
+      "explanation": "An ecosystem includes a community of organisms and its interacting physical environment."
+    },
+    "environment+organism": {
+      "a": "organism",
+      "b": "environment",
+      "result": "habitat",
+      "type": "conceptual",
+      "explanation": "A habitat is the physical place and conditions in which an organism lives."
+    },
+    "carbon_dioxide+plant": {
+      "a": "plant",
+      "b": "carbon_dioxide",
+      "result": "photosynthesis",
+      "type": "biological",
+      "explanation": "Photosynthesis fixes carbon dioxide using light energy; the full pathway and water chemistry are abstracted."
+    },
+    "cell+oxygen_molecule": {
+      "a": "cell",
+      "b": "oxygen_molecule",
+      "result": "cellular_respiration",
+      "type": "biological",
+      "explanation": "Cellular respiration uses oxidation chemistry to capture energy in ATP; the full pathway is abstracted."
+    },
+    "plant+sun": {
+      "a": "plant",
+      "b": "sun",
+      "result": "producer",
+      "type": "conceptual",
+      "explanation": "Photosynthetic plants are producers that convert light energy into chemical energy."
+    },
+    "food+organism": {
+      "a": "organism",
+      "b": "food",
+      "result": "consumer",
+      "type": "conceptual",
+      "explanation": "Consumers obtain energy and matter by eating or absorbing other organisms or organic material."
+    },
+    "bacteria+fungus": {
+      "a": "fungus",
+      "b": "bacteria",
+      "result": "decomposer",
+      "type": "conceptual",
+      "explanation": "Fungi and many bacteria act as decomposers that break down organic matter and recycle nutrients."
+    },
+    "competition+consumer": {
+      "a": "consumer",
+      "b": "competition",
+      "result": "predator",
+      "type": "conceptual",
+      "explanation": "Predators are consumers that obtain resources by capturing other organisms; this role classification is abstracted."
+    },
+    "organism+population": {
+      "a": "organism",
+      "b": "population",
+      "result": "prey",
+      "type": "conceptual",
+      "explanation": "Prey is an organism serving as food for a predator; the population link provides ecological context."
+    },
+    "predator+prey": {
+      "a": "predator",
+      "b": "prey",
+      "result": "predation",
+      "type": "biological",
+      "explanation": "Predation is an interaction in which one organism captures and consumes another."
+    },
+    "community+organism": {
+      "a": "organism",
+      "b": "community",
+      "result": "symbiosis",
+      "type": "biological",
+      "explanation": "Symbiosis is a close, sustained interaction between different species; outcomes can be beneficial, neutral, or harmful."
+    },
+    "competition+symbiosis": {
+      "a": "symbiosis",
+      "b": "competition",
+      "result": "mutualism",
+      "type": "conceptual",
+      "explanation": "Mutualism is a symbiotic interaction in which both partners benefit."
+    },
+    "consumer+symbiosis": {
+      "a": "symbiosis",
+      "b": "consumer",
+      "result": "parasitism",
+      "type": "conceptual",
+      "explanation": "Parasitism is symbiosis in which one partner benefits while the host is harmed."
+    },
+    "consumer+producer": {
+      "a": "producer",
+      "b": "consumer",
+      "result": "food_chain",
+      "type": "conceptual",
+      "explanation": "A food chain is a simplified path of energy and matter transfer through feeding."
+    },
+    "community+food_chain": {
+      "a": "food_chain",
+      "b": "community",
+      "result": "food_web",
+      "type": "conceptual",
+      "explanation": "A food web links many overlapping food chains and better represents ecosystem feeding relationships."
+    },
+    "energy+food_web": {
+      "a": "energy",
+      "b": "food_web",
+      "result": "energy_flow",
+      "type": "environmental",
+      "explanation": "Energy flows through food webs from producers to consumers and is dissipated as heat."
+    },
+    "biology+human": {
+      "a": "human",
+      "b": "biology",
+      "result": "anatomy",
+      "type": "biological",
+      "explanation": "Anatomy studies the structure of organisms, including the human body."
+    },
+    "anatomy+cell": {
+      "a": "anatomy",
+      "b": "cell",
+      "result": "physiology",
+      "type": "biological",
+      "explanation": "Physiology studies how cells, tissues, and organs function."
+    },
+    "cell+environment": {
+      "a": "cell",
+      "b": "environment",
+      "result": "homeostasis",
+      "type": "biological",
+      "explanation": "Homeostasis is regulation that keeps internal conditions within viable ranges."
+    },
+    "bacteria+virus": {
+      "a": "bacteria",
+      "b": "virus",
+      "result": "pathogen",
+      "type": "biological",
+      "explanation": "Bacteria and viruses include disease-causing biological agents; this is a category bridge."
+    },
+    "human+pathogen": {
+      "a": "pathogen",
+      "b": "human",
+      "result": "infection",
+      "type": "biological",
+      "explanation": "An infection occurs when a pathogen enters and reproduces in a host."
+    },
+    "health+infection": {
+      "a": "infection",
+      "b": "health",
+      "result": "immunity",
+      "type": "biological",
+      "explanation": "Immune responses can protect health by recognizing and controlling infectious agents."
+    },
+    "immunity+protein": {
+      "a": "immunity",
+      "b": "protein",
+      "result": "antibody",
+      "type": "biological",
+      "explanation": "Antibodies are immune proteins that recognize specific molecular targets."
+    },
+    "medicine+statistics": {
+      "a": "statistics",
+      "b": "medicine",
+      "result": "epidemiology",
+      "type": "biological",
+      "explanation": "Epidemiology uses population data and statistics to study health and disease."
+    },
+    "medicine+physics": {
+      "a": "physics",
+      "b": "medicine",
+      "result": "medical_imaging",
+      "type": "technological",
+      "explanation": "Medical imaging applies physical signals such as radiation, sound, or magnetic fields to visualize anatomy."
+    },
+    "chemistry+health": {
+      "a": "chemistry",
+      "b": "health",
+      "result": "pharmacology",
+      "type": "chemical",
+      "explanation": "Pharmacology studies how chemical substances interact with living systems."
+    },
+    "evolution+human": {
+      "a": "human",
+      "b": "evolution",
+      "result": "hominin",
+      "type": "biological",
+      "explanation": "Hominins are the human evolutionary lineage after divergence from other apes."
+    },
+    "evolution+hominin": {
+      "a": "hominin",
+      "b": "evolution",
+      "result": "human_evolution",
+      "type": "biological",
+      "explanation": "Human evolution describes branching changes in hominin populations across time."
+    },
+    "human+tool": {
+      "a": "tool",
+      "b": "human",
+      "result": "artifact",
+      "type": "conceptual",
+      "explanation": "An artifact is a human-made object preserved as material evidence."
+    },
+    "artifact+earth": {
+      "a": "artifact",
+      "b": "earth",
+      "result": "excavation",
+      "type": "conceptual",
+      "explanation": "Archaeological excavation systematically exposes and records buried artifacts and contexts."
+    },
+    "artifact+geology": {
+      "a": "geology",
+      "b": "artifact",
+      "result": "stratigraphy",
+      "type": "conceptual",
+      "explanation": "Stratigraphy interprets layered deposits to establish relative sequences, including archaeological contexts."
+    },
+    "artifact+chemistry": {
+      "a": "chemistry",
+      "b": "artifact",
+      "result": "archaeometry",
+      "type": "conceptual",
+      "explanation": "Archaeometry applies scientific measurement, especially chemistry and materials analysis, to archaeological evidence."
+    },
+    "archaeometry+time": {
+      "a": "archaeometry",
+      "b": "time",
+      "result": "radiometric_dating",
+      "type": "chemical",
+      "explanation": "Radiometric dating estimates age from radioactive decay and calibrated time scales."
+    },
+    "law+society": {
+      "a": "society",
+      "b": "law",
+      "result": "institution",
+      "type": "conceptual",
+      "explanation": "Institutions are durable social structures organized around rules, roles, and shared purposes."
+    },
+    "government+institution": {
+      "a": "government",
+      "b": "institution",
+      "result": "governance",
+      "type": "conceptual",
+      "explanation": "Governance is the process and structure through which collective decisions are made."
+    },
+    "market+mathematics": {
+      "a": "market",
+      "b": "mathematics",
+      "result": "econometrics",
+      "type": "conceptual",
+      "explanation": "Econometrics applies mathematical and statistical methods to economic data."
+    },
+    "human+language": {
+      "a": "human",
+      "b": "language",
+      "result": "communication",
+      "type": "conceptual",
+      "explanation": "Communication is the exchange of information through language and other signals."
+    },
+    "language+rules": {
+      "a": "language",
+      "b": "rules",
+      "result": "grammar",
+      "type": "conceptual",
+      "explanation": "Grammar is the structured set of conventions governing how a language forms expressions."
+    },
+    "language+writing": {
+      "a": "writing",
+      "b": "language",
+      "result": "alphabet",
+      "type": "conceptual",
+      "explanation": "An alphabet is a writing system that represents speech with a set of symbols."
+    },
+    "knowledge+logic": {
+      "a": "logic",
+      "b": "knowledge",
+      "result": "reasoning",
+      "type": "conceptual",
+      "explanation": "Reasoning uses logical relationships to derive or evaluate conclusions from knowledge."
+    },
+    "evidence+reasoning": {
+      "a": "reasoning",
+      "b": "evidence",
+      "result": "argument",
+      "type": "conceptual",
+      "explanation": "An argument presents reasons and evidence intended to support a conclusion."
+    },
+    "argument+evidence": {
+      "a": "argument",
+      "b": "evidence",
+      "result": "truth",
+      "type": "conceptual",
+      "explanation": "Evidence and argument are tools for assessing claims; they do not guarantee certainty by themselves."
+    },
+    "rock+space": {
+      "a": "space",
+      "b": "rock",
+      "result": "meteoroid",
+      "type": "physical",
+      "explanation": "A meteoroid is a naturally occurring rocky or metallic object moving through space."
+    },
+    "air+meteoroid": {
+      "a": "meteoroid",
+      "b": "air",
+      "result": "meteor",
+      "type": "physical",
+      "explanation": "A meteor is the luminous atmospheric phenomenon produced as a meteoroid enters an atmosphere."
+    },
+    "earth+meteor": {
+      "a": "meteor",
+      "b": "earth",
+      "result": "meteorite",
+      "type": "physical",
+      "explanation": "A meteorite is surviving meteoroid material that reaches the ground."
+    },
+    "spectrum+velocity": {
+      "a": "spectrum",
+      "b": "velocity",
+      "result": "redshift",
+      "type": "physical",
+      "explanation": "Astronomers infer redshift from spectral lines shifted toward longer wavelengths by motion and cosmic expansion."
+    },
+    "mythology+star": {
+      "a": "star",
+      "b": "mythology",
+      "result": "astrology",
+      "type": "conceptual",
+      "explanation": "Astrology is a historical belief system that interprets celestial patterns as meaningful for human affairs, not an empirically validated predictive science."
+    },
+    "astrology+constellation": {
+      "a": "astrology",
+      "b": "constellation",
+      "result": "zodiac",
+      "type": "conceptual",
+      "explanation": "The zodiac is a cultural division of the sky used in astrological traditions."
+    },
+    "prediction+zodiac": {
+      "a": "zodiac",
+      "b": "prediction",
+      "result": "horoscope",
+      "type": "conceptual",
+      "explanation": "A horoscope is an astrological interpretive text or chart; its predictions are not scientifically validated."
+    },
+    "chemistry+mythology": {
+      "a": "chemistry",
+      "b": "mythology",
+      "result": "alchemy",
+      "type": "conceptual",
+      "explanation": "Alchemy was a historical proto-scientific and cultural tradition that sought transformations of matter; it is distinct from modern chemistry."
+    },
+    "alchemy+change": {
+      "a": "alchemy",
+      "b": "change",
+      "result": "transmutation",
+      "type": "conceptual",
+      "explanation": "Transmutation was an alchemical concept of changing one substance into another, preserved here as historical belief."
+    },
+    "alchemy+stone": {
+      "a": "alchemy",
+      "b": "stone",
+      "result": "philosophers_stone",
+      "type": "conceptual",
+      "explanation": "The philosopher's stone is a legendary alchemical substance, not an empirically demonstrated material."
+    },
+    "culture+story": {
+      "a": "story",
+      "b": "culture",
+      "result": "folklore",
+      "type": "conceptual",
+      "explanation": "Folklore is the body of stories, customs, and traditions transmitted within communities."
+    },
+    "mythology+prediction": {
+      "a": "mythology",
+      "b": "prediction",
+      "result": "divination",
+      "type": "conceptual",
+      "explanation": "Divination is a historical practice of seeking knowledge through ritual or symbolic signs, not a validated predictive method."
+    },
+    "mythology+number": {
+      "a": "number",
+      "b": "mythology",
+      "result": "numerology",
+      "type": "conceptual",
+      "explanation": "Numerology assigns mystical meaning to numbers and is a symbolic belief system, not empirical science."
+    },
+    "mythology+universe": {
+      "a": "mythology",
+      "b": "universe",
+      "result": "ancient_cosmology",
+      "type": "conceptual",
+      "explanation": "Ancient cosmologies are historical cultural models of the universe and should not be conflated with modern astronomy."
+    },
+    "cell+immunity": {
+      "a": "immunity",
+      "b": "cell",
+      "result": "immune_system",
+      "type": "biological",
+      "explanation": "The immune system is a coordinated network of cells and molecules that protects an organism."
+    },
+    "health+knowledge": {
+      "a": "health",
+      "b": "knowledge",
+      "result": "prevention",
+      "type": "conceptual",
+      "explanation": "Prevention uses knowledge and action to reduce health risks before disease occurs."
+    },
+    "gear+tool": {
+      "a": "gear",
+      "b": "tool",
+      "result": "mechanism",
+      "type": "conceptual",
+      "explanation": "A mechanism is an arrangement of parts that transmits or transforms motion."
+    },
+    "computer+sensor": {
+      "a": "sensor",
+      "b": "computer",
+      "result": "control_system",
+      "type": "technological",
+      "explanation": "A control system uses sensors and computation to monitor and regulate a process."
+    },
+    "computer+knowledge": {
+      "a": "computer",
+      "b": "knowledge",
+      "result": "artificial_intelligence",
+      "type": "technological",
+      "explanation": "Artificial intelligence uses computational systems to perform tasks associated with intelligent behavior; this does not imply consciousness."
+    },
+    "data+information": {
+      "a": "data",
+      "b": "information",
+      "result": "data_structure",
+      "type": "conceptual",
+      "explanation": "Data structures organize data so algorithms can store and process it efficiently."
+    },
+    "algorithm+computer": {
+      "a": "algorithm",
+      "b": "computer",
+      "result": "program",
+      "type": "technological",
+      "explanation": "A program is an executable specification of algorithms for a computer."
+    },
+    "computer+machine": {
+      "a": "machine",
+      "b": "computer",
+      "result": "hardware",
+      "type": "technological",
+      "explanation": "Computer hardware is the physical equipment that runs computational systems."
+    },
+    "hardware+software": {
+      "a": "hardware",
+      "b": "software",
+      "result": "operating_system",
+      "type": "technological",
+      "explanation": "An operating system coordinates hardware resources and provides services to software."
+    },
+    "data+learning": {
+      "a": "data",
+      "b": "learning",
+      "result": "training_data",
+      "type": "conceptual",
+      "explanation": "Training data are examples used to fit a machine-learning model."
+    },
+    "artificial_intelligence+evidence": {
+      "a": "artificial_intelligence",
+      "b": "evidence",
+      "result": "inference",
+      "type": "conceptual",
+      "explanation": "Inference applies a model or rules to evidence to produce a conclusion."
+    },
+    "artificial_intelligence+camera": {
+      "a": "artificial_intelligence",
+      "b": "camera",
+      "result": "computer_vision",
+      "type": "technological",
+      "explanation": "Computer vision uses computational models to analyze images and video."
+    },
+    "artificial_intelligence+language": {
+      "a": "artificial_intelligence",
+      "b": "language",
+      "result": "natural_language_processing",
+      "type": "technological",
+      "explanation": "Natural-language processing applies computational methods to human language."
+    },
+    "human+movement": {
+      "a": "human",
+      "b": "movement",
+      "result": "migration",
+      "type": "biological",
+      "explanation": "Migration is movement of people or organisms between regions."
+    },
+    "food+human": {
+      "a": "human",
+      "b": "food",
+      "result": "hunter_gatherer",
+      "type": "conceptual",
+      "explanation": "Hunter-gatherers obtain food primarily by hunting animals and gathering wild plants; this is a subsistence classification."
+    },
+    "dog+human": {
+      "a": "human",
+      "b": "dog",
+      "result": "domestication",
+      "type": "conceptual",
+      "explanation": "Domestication is the multigenerational process by which humans shape populations of plants or animals."
+    },
+    "storage+writing": {
+      "a": "writing",
+      "b": "storage",
+      "result": "archive",
+      "type": "conceptual",
+      "explanation": "An archive preserves organized records for future consultation."
+    },
+    "history+time": {
+      "a": "history",
+      "b": "time",
+      "result": "chronology",
+      "type": "conceptual",
+      "explanation": "Chronology orders events and evidence in time."
+    },
+    "country+government": {
+      "a": "government",
+      "b": "country",
+      "result": "state",
+      "type": "conceptual",
+      "explanation": "A state is a political organization with governing institutions and territorial authority."
+    },
+    "market+money": {
+      "a": "market",
+      "b": "money",
+      "result": "economics",
+      "type": "conceptual",
+      "explanation": "Economics studies production, exchange, distribution, and consumption of resources."
+    },
+    "economics+money": {
+      "a": "economics",
+      "b": "money",
+      "result": "finance",
+      "type": "conceptual",
+      "explanation": "Finance concerns the management of money, credit, investment, and risk."
+    },
+    "food+market": {
+      "a": "market",
+      "b": "food",
+      "result": "consumption",
+      "type": "conceptual",
+      "explanation": "Consumption is the use of goods and services to satisfy needs or wants."
+    },
+    "market+production": {
+      "a": "production",
+      "b": "market",
+      "result": "supply",
+      "type": "conceptual",
+      "explanation": "Supply is the quantity producers are willing and able to offer at different conditions."
+    },
+    "consumer+market": {
+      "a": "market",
+      "b": "consumer",
+      "result": "demand",
+      "type": "conceptual",
+      "explanation": "Demand is the quantity consumers are willing and able to purchase under stated conditions."
+    },
+    "demand+supply": {
+      "a": "supply",
+      "b": "demand",
+      "result": "price",
+      "type": "conceptual",
+      "explanation": "Prices are signals that emerge from interactions of supply and demand in markets."
+    },
+    "human+production": {
+      "a": "human",
+      "b": "production",
+      "result": "labor",
+      "type": "conceptual",
+      "explanation": "Labor is human work applied to production."
+    },
+    "money+state": {
+      "a": "state",
+      "b": "money",
+      "result": "taxation",
+      "type": "conceptual",
+      "explanation": "Taxation is the compulsory collection of resources by public authorities to fund collective functions."
+    },
+    "community+government": {
+      "a": "government",
+      "b": "community",
+      "result": "public_goods",
+      "type": "conceptual",
+      "explanation": "Public goods are services or resources that institutions provide for shared use."
+    },
+    "communication+human": {
+      "a": "communication",
+      "b": "human",
+      "result": "gesture",
+      "type": "conceptual",
+      "explanation": "A gesture communicates meaning through bodily movement or position."
+    },
+    "communication+language": {
+      "a": "communication",
+      "b": "language",
+      "result": "speech",
+      "type": "conceptual",
+      "explanation": "Speech is the production of spoken language."
+    },
+    "language+speech": {
+      "a": "speech",
+      "b": "language",
+      "result": "word",
+      "type": "conceptual",
+      "explanation": "Words are conventional units used to express meaning in language."
+    },
+    "story+writing": {
+      "a": "writing",
+      "b": "story",
+      "result": "literature",
+      "type": "conceptual",
+      "explanation": "Literature is artistic or culturally significant writing."
+    },
+    "music+rhythm": {
+      "a": "music",
+      "b": "rhythm",
+      "result": "melody",
+      "type": "conceptual",
+      "explanation": "Melody is an organized sequence of pitches within musical rhythm and structure."
+    },
+    "movement+music": {
+      "a": "music",
+      "b": "movement",
+      "result": "dance",
+      "type": "conceptual",
+      "explanation": "Dance is expressive human movement often organized with music or rhythm."
+    },
+    "data+music": {
+      "a": "music",
+      "b": "data",
+      "result": "recording",
+      "type": "conceptual",
+      "explanation": "A recording stores sound or performance as a durable signal."
+    },
+    "computer+recording": {
+      "a": "recording",
+      "b": "computer",
+      "result": "digital_media",
+      "type": "technological",
+      "explanation": "Digital media encode text, sound, images, or video in computational form."
+    },
+    "culture+history": {
+      "a": "culture",
+      "b": "history",
+      "result": "tradition",
+      "type": "conceptual",
+      "explanation": "A tradition is a cultural practice or idea transmitted across generations."
+    },
+    "mythology+tradition": {
+      "a": "tradition",
+      "b": "mythology",
+      "result": "ritual",
+      "type": "conceptual",
+      "explanation": "Ritual is a patterned symbolic practice often maintained by tradition."
+    },
+    "archive+culture": {
+      "a": "culture",
+      "b": "archive",
+      "result": "heritage",
+      "type": "conceptual",
+      "explanation": "Heritage is culturally valued knowledge, practice, or material inherited from the past."
+    },
+    "evidence+knowledge": {
+      "a": "evidence",
+      "b": "knowledge",
+      "result": "inference_method",
+      "type": "conceptual",
+      "explanation": "Inference methods specify how conclusions are drawn from premises and evidence."
+    },
+    "logic+reasoning": {
+      "a": "logic",
+      "b": "reasoning",
+      "result": "deduction",
+      "type": "conceptual",
+      "explanation": "Deduction derives conclusions that follow necessarily from stated premises."
+    },
+    "evidence+observation": {
+      "a": "evidence",
+      "b": "observation",
+      "result": "induction",
+      "type": "conceptual",
+      "explanation": "Induction generalizes probable patterns from observations or cases."
+    },
+    "hypothesis+reasoning": {
+      "a": "reasoning",
+      "b": "hypothesis",
+      "result": "abduction",
+      "type": "conceptual",
+      "explanation": "Abduction infers a plausible explanation for observations."
+    },
+    "knowledge+philosophy": {
+      "a": "knowledge",
+      "b": "philosophy",
+      "result": "epistemology",
+      "type": "conceptual",
+      "explanation": "Epistemology examines knowledge, justification, evidence, and belief."
+    },
+    "law+philosophy": {
+      "a": "philosophy",
+      "b": "law",
+      "result": "ethics",
+      "type": "conceptual",
+      "explanation": "Ethics studies values and principles concerning right action and responsibility."
+    },
+    "philosophy+universe": {
+      "a": "philosophy",
+      "b": "universe",
+      "result": "metaphysics",
+      "type": "conceptual",
+      "explanation": "Metaphysics investigates questions about reality, existence, and fundamental structure."
+    },
+    "earth+meteoroid": {
+      "a": "meteoroid",
+      "b": "earth",
+      "result": "impact",
+      "type": "physical",
+      "explanation": "A meteoroid striking Earth produces an impact event."
+    },
+    "earth+impact": {
+      "a": "impact",
+      "b": "earth",
+      "result": "crater",
+      "type": "physical",
+      "explanation": "A sufficiently energetic impact excavates a crater in a planetary surface."
+    },
+    "crater+geology": {
+      "a": "crater",
+      "b": "geology",
+      "result": "planetary_geology",
+      "type": "conceptual",
+      "explanation": "Planetary geology applies geologic principles to planets, moons, and other worlds."
+    },
+    "brain+neuroscience": {
+      "a": "neuroscience",
+      "b": "brain",
+      "result": "cognitive_neuroscience",
+      "type": "conceptual",
+      "explanation": "Cognitive neuroscience studies links between brain mechanisms and cognitive functions."
+    },
+    "biology+physics": {
+      "a": "biology",
+      "b": "physics",
+      "result": "biophysics",
+      "type": "conceptual",
+      "explanation": "Biophysics applies physical principles and measurements to biological systems."
+    },
+    "machine+physics": {
+      "a": "machine",
+      "b": "physics",
+      "result": "engineering",
+      "type": "conceptual",
+      "explanation": "Engineering applies scientific principles to design useful machines and systems."
+    },
+    "biology+engineering": {
+      "a": "engineering",
+      "b": "biology",
+      "result": "biomedical_engineering",
+      "type": "conceptual",
+      "explanation": "Biomedical engineering applies engineering methods to biology and medicine."
+    },
+    "biology+computer": {
+      "a": "computer",
+      "b": "biology",
+      "result": "bioinformatics",
+      "type": "conceptual",
+      "explanation": "Bioinformatics uses computation to store, analyze, and interpret biological data."
+    },
+    "computer+language": {
+      "a": "computer",
+      "b": "language",
+      "result": "computational_linguistics",
+      "type": "conceptual",
+      "explanation": "Computational linguistics studies language with algorithms and computational models."
+    },
+    "philosophy+science": {
+      "a": "philosophy",
+      "b": "science",
+      "result": "philosophy_of_science",
+      "type": "conceptual",
+      "explanation": "Philosophy of science examines scientific reasoning, methods, evidence, and explanation."
+    },
+    "immune_system+infection": {
+      "a": "infection",
+      "b": "immune_system",
+      "result": "inflammation",
+      "type": "biological",
+      "explanation": "Inflammation is a regulated immune response to injury or infection."
+    },
+    "engineering+machine": {
+      "a": "engineering",
+      "b": "machine",
+      "result": "mechanical_engineering",
+      "type": "conceptual",
+      "explanation": "Mechanical engineering designs and analyzes machines and physical mechanisms."
+    },
+    "electricity+engineering": {
+      "a": "engineering",
+      "b": "electricity",
+      "result": "electrical_engineering",
+      "type": "conceptual",
+      "explanation": "Electrical engineering designs systems that use electric circuits and signals."
+    },
+    "engineering+house": {
+      "a": "engineering",
+      "b": "house",
+      "result": "civil_engineering",
+      "type": "conceptual",
+      "explanation": "Civil engineering designs and builds infrastructure and the built environment."
+    },
+    "chemistry+engineering": {
+      "a": "engineering",
+      "b": "chemistry",
+      "result": "chemical_engineering",
+      "type": "conceptual",
+      "explanation": "Chemical engineering applies chemistry and process design to materials and production."
+    },
     "electron+proton": {
       "a": "proton",
       "b": "electron",
@@ -22985,7 +26070,7 @@
     "ferment": "reasonable",
     "butcher": "reasonable",
     "churn": "reasonable",
-    "population": "reasonable",
+    "population": "strong",
     "exchange": "reasonable",
     "market": "reasonable",
     "competition": "reasonable",
@@ -23078,7 +26163,7 @@
     "norse": "reasonable",
     "exploration": "reasonable",
     "tooth": "reasonable",
-    "community": "reasonable",
+    "community": "strong",
     "shop": "reasonable",
     "electric": "reasonable",
     "poetry": "reasonable",
@@ -23310,6 +26395,135 @@
     "prebiotic_chemistry": "reasonable",
     "rna_world": "reasonable",
     "molecular_heredity": "reasonable",
+    "organism": "reasonable",
+    "eukaryotic_cell": "strong",
+    "heredity": "strong",
+    "mutation": "reasonable",
+    "genetic_variation": "strong",
+    "genotype": "strong",
+    "phenotype": "strong",
+    "selection_pressure": "strong",
+    "natural_selection": "strong",
+    "adaptation": "strong",
+    "evolution": "strong",
+    "common_ancestor": "reasonable",
+    "speciation": "reasonable",
+    "species": "strong",
+    "isolation": "reasonable",
+    "extinction": "reasonable",
+    "biodiversity": "strong",
+    "photosynthesis": "reasonable",
+    "cellular_respiration": "reasonable",
+    "producer": "strong",
+    "consumer": "strong",
+    "decomposer": "strong",
+    "predator": "reasonable",
+    "prey": "reasonable",
+    "predation": "strong",
+    "symbiosis": "reasonable",
+    "mutualism": "reasonable",
+    "parasitism": "reasonable",
+    "food_chain": "strong",
+    "food_web": "strong",
+    "energy_flow": "strong",
+    "physiology": "strong",
+    "homeostasis": "strong",
+    "pathogen": "reasonable",
+    "infection": "strong",
+    "immunity": "reasonable",
+    "antibody": "strong",
+    "epidemiology": "strong",
+    "medical_imaging": "strong",
+    "pharmacology": "strong",
+    "hominin": "reasonable",
+    "human_evolution": "strong",
+    "artifact": "strong",
+    "excavation": "reasonable",
+    "stratigraphy": "reasonable",
+    "archaeometry": "strong",
+    "radiometric_dating": "strong",
+    "institution": "strong",
+    "governance": "strong",
+    "econometrics": "reasonable",
+    "grammar": "strong",
+    "alphabet": "reasonable",
+    "reasoning": "strong",
+    "argument": "strong",
+    "truth": "reasonable",
+    "meteoroid": "strong",
+    "meteorite": "strong",
+    "redshift": "reasonable",
+    "astrology": "strong",
+    "zodiac": "strong",
+    "horoscope": "strong",
+    "alchemy": "strong",
+    "transmutation": "reasonable",
+    "philosophers_stone": "strong",
+    "folklore": "strong",
+    "divination": "strong",
+    "numerology": "strong",
+    "ancient_cosmology": "strong",
+    "immune_system": "strong",
+    "prevention": "strong",
+    "mechanism": "strong",
+    "control_system": "strong",
+    "artificial_intelligence": "reasonable",
+    "data_structure": "strong",
+    "program": "strong",
+    "hardware": "strong",
+    "operating_system": "strong",
+    "training_data": "strong",
+    "inference": "reasonable",
+    "computer_vision": "strong",
+    "natural_language_processing": "strong",
+    "migration": "strong",
+    "hunter_gatherer": "reasonable",
+    "domestication": "strong",
+    "archive": "strong",
+    "chronology": "strong",
+    "state": "reasonable",
+    "economics": "strong",
+    "finance": "strong",
+    "consumption": "strong",
+    "supply": "strong",
+    "demand": "strong",
+    "price": "strong",
+    "labor": "strong",
+    "taxation": "strong",
+    "public_goods": "strong",
+    "gesture": "strong",
+    "speech": "strong",
+    "word": "strong",
+    "literature": "strong",
+    "melody": "strong",
+    "dance": "strong",
+    "recording": "reasonable",
+    "digital_media": "strong",
+    "tradition": "strong",
+    "ritual": "reasonable",
+    "heritage": "strong",
+    "inference_method": "strong",
+    "deduction": "strong",
+    "induction": "strong",
+    "abduction": "strong",
+    "epistemology": "strong",
+    "ethics": "reasonable",
+    "metaphysics": "strong",
+    "impact": "strong",
+    "crater": "strong",
+    "planetary_geology": "strong",
+    "cognitive_neuroscience": "strong",
+    "biophysics": "strong",
+    "engineering": "strong",
+    "biomedical_engineering": "strong",
+    "bioinformatics": "strong",
+    "computational_linguistics": "strong",
+    "philosophy_of_science": "strong",
+    "inflammation": "reasonable",
+    "mechanical_engineering": "strong",
+    "electrical_engineering": "strong",
+    "civil_engineering": "strong",
+    "chemical_engineering": "strong",
     "element_mc": "reasonable",
     "element_lv": "reasonable",
     "element_ts": "reasonable",
@@ -23317,10 +26531,10 @@
     "air": "reasonable"
   },
   "metadata": {
-    "elementCount": 1315,
-    "recipeCount": 1415,
+    "elementCount": 1444,
+    "recipeCount": 1552,
     "categoryCount": 33,
-    "strongRecipes": 791,
-    "reasonableRecipes": 521
+    "strongRecipes": 891,
+    "reasonableRecipes": 550
   }
 }

@@ -16,6 +16,8 @@ import {
 } from './content/foundation-science-phase2.js'
 import { periodicUseRecipes } from './content/periodic-use-recipes.js'
 import { foundationRecipesPhase3, foundationElementsPhase3 } from './content/foundation-science-phase3.js'
+import { foundationRecipesPhase4, foundationElementsPhase4 } from './content/foundation-science-phase4.js'
+import { foundationRecipesPhases5to12, foundationElementsPhases5to12 } from './content/foundation-science-phases5-12.js'
 import { classifyLegacyRecipe } from './content/legacy-recipe-types.js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -2687,6 +2689,31 @@ if (Array.isArray(foundationElementsPhase3)) {
   foundationElementsPhase3.forEach(([id, name, emoji, category, tags, outputType]) =>
     el(id, name, emoji, category, tags, { domain: 'life_sciences', subdomains: ['molecular_biology'], output_type: outputType, epistemic_status: ['empirical_science'] }))
 }
+if (Array.isArray(foundationElementsPhase4)) {
+  foundationElementsPhase4.forEach(([id, name, emoji, category, tags, outputType]) =>
+    el(id, name, emoji, category, tags, { domain: 'life_sciences', subdomains: ['organismal_biology'], output_type: outputType, epistemic_status: ['empirical_science'] }))
+}
+// Keep only the defensible discovery closure from the completed Phase-4 graph;
+// concepts with no reachable prerequisite are deferred rather than given hacks.
+const phase5to12Reachable = new Set(Object.keys(E))
+const phase5to12Recipes = []
+let phase5to12Changed = true
+while (phase5to12Changed) {
+  phase5to12Changed = false
+  for (const recipe of foundationRecipesPhases5to12) {
+    if (phase5to12Reachable.has(recipe.a) && phase5to12Reachable.has(recipe.b)) {
+      if (!phase5to12Reachable.has(recipe.result)) phase5to12Changed = true
+      phase5to12Reachable.add(recipe.result)
+      if (!phase5to12Recipes.includes(recipe)) phase5to12Recipes.push(recipe)
+    }
+  }
+}
+if (Array.isArray(foundationElementsPhases5to12)) {
+  foundationElementsPhases5to12.filter(elMeta => phase5to12Reachable.has(elMeta.id)).forEach(elMeta => {
+    const { id, name, emoji, category, tags, opts } = elMeta
+    el(id, name, emoji, category || 'Concepts', tags || [], opts || {})
+  })
+}
 
 const CURATED_RECIPE_GROUPS = [
   ['foundation-a', foundationRecipesA],
@@ -2696,6 +2723,8 @@ const CURATED_RECIPE_GROUPS = [
   ['foundation-phase2', foundationRecipesPhase2],
   ['foundation-phase2-geology', foundationRecipesPhase2Geology],
   ['foundation-phase3', foundationRecipesPhase3],
+  ['foundation-phase4', foundationRecipesPhase4],
+  ['foundation-phases5-12', phase5to12Recipes],
   ['periodic-table', periodicRecipes],
   ['periodic-uses', periodicUseRecipes],
 ]

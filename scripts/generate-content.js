@@ -15,6 +15,7 @@ import {
   foundationElementsPhase2Geology,
 } from './content/foundation-science-phase2.js'
 import { periodicUseRecipes } from './content/periodic-use-recipes.js'
+import { foundationRecipesPhase3, foundationElementsPhase3 } from './content/foundation-science-phase3.js'
 import { classifyLegacyRecipe } from './content/legacy-recipe-types.js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -2682,6 +2683,10 @@ if (Array.isArray(foundationElementsPhase2Geology)) {
     el(id, name, emoji, category || 'Concepts', tags || [], opts || {})
   })
 }
+if (Array.isArray(foundationElementsPhase3)) {
+  foundationElementsPhase3.forEach(([id, name, emoji, category, tags, outputType]) =>
+    el(id, name, emoji, category, tags, { domain: 'life_sciences', subdomains: ['molecular_biology'], output_type: outputType, epistemic_status: ['empirical_science'] }))
+}
 
 const CURATED_RECIPE_GROUPS = [
   ['foundation-a', foundationRecipesA],
@@ -2690,6 +2695,7 @@ const CURATED_RECIPE_GROUPS = [
   ['foundation-domain', foundationRecipesDomain],
   ['foundation-phase2', foundationRecipesPhase2],
   ['foundation-phase2-geology', foundationRecipesPhase2Geology],
+  ['foundation-phase3', foundationRecipesPhase3],
   ['periodic-table', periodicRecipes],
   ['periodic-uses', periodicUseRecipes],
 ]

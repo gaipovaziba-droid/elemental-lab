@@ -12356,6 +12356,510 @@
         "empirical_science"
       ],
       "description": "differentiation. An element from the Geology category."
+    },
+    "amino_acid": {
+      "id": "amino_acid",
+      "name": "Amino acid",
+      "emoji": "🧪",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Amino acid. An element from the Biology category."
+    },
+    "peptide": {
+      "id": "peptide",
+      "name": "Peptide",
+      "emoji": "🔗",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Peptide. An element from the Biology category."
+    },
+    "protein": {
+      "id": "protein",
+      "name": "Protein",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Protein. An element from the Biology category."
+    },
+    "carbohydrate": {
+      "id": "carbohydrate",
+      "name": "Carbohydrate",
+      "emoji": "🍞",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Carbohydrate. An element from the Biology category."
+    },
+    "fatty_acid": {
+      "id": "fatty_acid",
+      "name": "Fatty acid",
+      "emoji": "🧈",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Fatty acid. An element from the Biology category."
+    },
+    "lipid": {
+      "id": "lipid",
+      "name": "Lipid",
+      "emoji": "🫧",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Lipid. An element from the Biology category."
+    },
+    "phospholipid": {
+      "id": "phospholipid",
+      "name": "Phospholipid",
+      "emoji": "🫧",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Phospholipid. An element from the Biology category."
+    },
+    "nucleotide": {
+      "id": "nucleotide",
+      "name": "Nucleotide",
+      "emoji": "🔹",
+      "category": "Biology",
+      "tags": [
+        "biomolecule"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Nucleotide. An element from the Biology category."
+    },
+    "rna": {
+      "id": "rna",
+      "name": "RNA",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "nucleic_acid"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "RNA. An element from the Biology category."
+    },
+    "genetic_material": {
+      "id": "genetic_material",
+      "name": "Genetic material",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "heredity"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Genetic material. An element from the Biology category."
+    },
+    "enzyme": {
+      "id": "enzyme",
+      "name": "Enzyme",
+      "emoji": "⚙️",
+      "category": "Biology",
+      "tags": [
+        "catalysis"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Enzyme. An element from the Biology category."
+    },
+    "protein_folding": {
+      "id": "protein_folding",
+      "name": "Protein folding",
+      "emoji": "🌀",
+      "category": "Biology",
+      "tags": [
+        "molecular_process"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Protein folding. An element from the Biology category."
+    },
+    "ribosome": {
+      "id": "ribosome",
+      "name": "Ribosome",
+      "emoji": "🔬",
+      "category": "Biology",
+      "tags": [
+        "cellular_structure"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Ribosome. An element from the Biology category."
+    },
+    "cytoplasm": {
+      "id": "cytoplasm",
+      "name": "Cytoplasm",
+      "emoji": "🫧",
+      "category": "Biology",
+      "tags": [
+        "cellular_structure"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Cytoplasm. An element from the Biology category."
+    },
+    "cell_membrane": {
+      "id": "cell_membrane",
+      "name": "Cell membrane",
+      "emoji": "🫧",
+      "category": "Biology",
+      "tags": [
+        "cellular_structure"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Cell membrane. An element from the Biology category."
+    },
+    "self_assembly": {
+      "id": "self_assembly",
+      "name": "Self-assembly",
+      "emoji": "🧩",
+      "category": "Biology",
+      "tags": [
+        "molecular_process"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Self-assembly. An element from the Biology category."
+    },
+    "prokaryotic_cell": {
+      "id": "prokaryotic_cell",
+      "name": "Prokaryotic cell",
+      "emoji": "🦠",
+      "category": "Biology",
+      "tags": [
+        "cell"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "organism",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Prokaryotic cell. An element from the Biology category."
+    },
+    "replication": {
+      "id": "replication",
+      "name": "Replication",
+      "emoji": "♻️",
+      "category": "Biology",
+      "tags": [
+        "molecular_process"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Replication. An element from the Biology category."
+    },
+    "transcription": {
+      "id": "transcription",
+      "name": "Transcription",
+      "emoji": "📝",
+      "category": "Biology",
+      "tags": [
+        "molecular_process"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Transcription. An element from the Biology category."
+    },
+    "translation": {
+      "id": "translation",
+      "name": "Translation",
+      "emoji": "🔤",
+      "category": "Biology",
+      "tags": [
+        "molecular_process"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Translation. An element from the Biology category."
+    },
+    "genetic_code": {
+      "id": "genetic_code",
+      "name": "Genetic code",
+      "emoji": "🔢",
+      "category": "Biology",
+      "tags": [
+        "heredity"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "abstract_concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Genetic code. An element from the Biology category."
+    },
+    "atp": {
+      "id": "atp",
+      "name": "ATP",
+      "emoji": "⚡",
+      "category": "Biology",
+      "tags": [
+        "bioenergetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "ATP. An element from the Biology category."
+    },
+    "metabolism": {
+      "id": "metabolism",
+      "name": "Metabolism",
+      "emoji": "🔄",
+      "category": "Biology",
+      "tags": [
+        "bioenergetics"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Metabolism. An element from the Biology category."
+    },
+    "vesicle": {
+      "id": "vesicle",
+      "name": "Vesicle",
+      "emoji": "🫧",
+      "category": "Biology",
+      "tags": [
+        "origins_of_life"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Vesicle. An element from the Biology category."
+    },
+    "protocell": {
+      "id": "protocell",
+      "name": "Protocell",
+      "emoji": "🫧",
+      "category": "Biology",
+      "tags": [
+        "origins_of_life"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "model",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Protocell. An element from the Biology category."
+    },
+    "prebiotic_chemistry": {
+      "id": "prebiotic_chemistry",
+      "name": "Prebiotic chemistry",
+      "emoji": "⚗️",
+      "category": "Biology",
+      "tags": [
+        "origins_of_life"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "discipline",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Prebiotic chemistry. An element from the Biology category."
+    },
+    "rna_world": {
+      "id": "rna_world",
+      "name": "RNA world",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "origins_of_life"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "model",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "RNA world. An element from the Biology category."
+    },
+    "molecular_heredity": {
+      "id": "molecular_heredity",
+      "name": "Molecular heredity",
+      "emoji": "🧬",
+      "category": "Biology",
+      "tags": [
+        "origins_of_life"
+      ],
+      "domain": "life_sciences",
+      "subdomains": [
+        "molecular_biology"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "Molecular heredity. An element from the Biology category."
     }
   },
   "recipes": {
@@ -20202,6 +20706,202 @@
       "type": "physical",
       "explanation": "Planetary differentiation leads to the formation of an iron-rich core; this is a conceptual mapping, not a literal single-step formation recipe."
     },
+    "element_n+organic_compound": {
+      "a": "organic_compound",
+      "b": "element_n",
+      "result": "amino_acid",
+      "type": "chemical",
+      "explanation": "Amino acids are nitrogen-containing organic compounds; this recipe abstracts their diverse biosynthetic chemistry."
+    },
+    "amino_acid+amino_acid": {
+      "a": "amino_acid",
+      "b": "amino_acid",
+      "result": "peptide",
+      "type": "chemical",
+      "explanation": "A peptide forms when amino acids join through peptide bonds, with condensation chemistry abstracted."
+    },
+    "peptide+peptide": {
+      "a": "peptide",
+      "b": "peptide",
+      "result": "protein",
+      "type": "chemical",
+      "explanation": "Long polypeptide chains fold into proteins; this combines peptide building blocks as an educational polymerization abstraction."
+    },
+    "organic_compound+sugar": {
+      "a": "sugar",
+      "b": "organic_compound",
+      "result": "carbohydrate",
+      "type": "conceptual",
+      "explanation": "Sugars are carbohydrates, a major class of organic biomolecules."
+    },
+    "oil+water": {
+      "a": "oil",
+      "b": "water",
+      "result": "fatty_acid",
+      "type": "chemical",
+      "explanation": "Hydrolysis of fats and oils can release fatty acids; the reaction conditions are abstracted."
+    },
+    "fatty_acid+organic_compound": {
+      "a": "fatty_acid",
+      "b": "organic_compound",
+      "result": "lipid",
+      "type": "conceptual",
+      "explanation": "Fatty acids are characteristic building blocks of many lipids; this is a classifying bridge."
+    },
+    "element_p+lipid": {
+      "a": "lipid",
+      "b": "element_p",
+      "result": "phospholipid",
+      "type": "chemical",
+      "explanation": "Phospholipids contain lipid tails and phosphate-containing headgroups; composition is abstracted."
+    },
+    "element_p+sugar": {
+      "a": "sugar",
+      "b": "element_p",
+      "result": "nucleotide",
+      "type": "chemical",
+      "explanation": "Nucleotides contain a sugar and phosphate plus a nitrogenous base; this recipe abstracts the full assembly."
+    },
+    "nucleotide+nucleotide": {
+      "a": "nucleotide",
+      "b": "nucleotide",
+      "result": "rna",
+      "type": "chemical",
+      "explanation": "RNA is a polymer of nucleotides joined by phosphodiester bonds; polymerization is abstracted."
+    },
+    "dna+rna": {
+      "a": "dna",
+      "b": "rna",
+      "result": "genetic_material",
+      "type": "conceptual",
+      "explanation": "DNA and RNA are nucleic-acid forms of genetic material; this is a classification, not synthesis."
+    },
+    "catalysis+protein": {
+      "a": "protein",
+      "b": "catalysis",
+      "result": "enzyme",
+      "type": "conceptual",
+      "explanation": "Many enzymes are proteins that catalyze reactions and are regenerated overall."
+    },
+    "energy+protein": {
+      "a": "protein",
+      "b": "energy",
+      "result": "protein_folding",
+      "type": "physical",
+      "explanation": "Protein folding is an energy-dependent process that produces a functional three-dimensional conformation."
+    },
+    "protein+rna": {
+      "a": "rna",
+      "b": "protein",
+      "result": "ribosome",
+      "type": "conceptual",
+      "explanation": "Ribosomes are ribonucleoprotein complexes built from ribosomal RNA and proteins."
+    },
+    "cell+water": {
+      "a": "cell",
+      "b": "water",
+      "result": "cytoplasm",
+      "type": "conceptual",
+      "explanation": "Cytoplasm is the aqueous cell interior containing dissolved molecules and structures; this is a structural abstraction."
+    },
+    "phospholipid+self_assembly": {
+      "a": "phospholipid",
+      "b": "self_assembly",
+      "result": "cell_membrane",
+      "type": "physical",
+      "explanation": "Phospholipids self-assemble into bilayer membranes in water."
+    },
+    "bacteria+cell": {
+      "a": "bacteria",
+      "b": "cell",
+      "result": "prokaryotic_cell",
+      "type": "conceptual",
+      "explanation": "Bacteria are prokaryotic cells, lacking a membrane-bound nucleus."
+    },
+    "dna+enzyme": {
+      "a": "dna",
+      "b": "enzyme",
+      "result": "replication",
+      "type": "biological",
+      "explanation": "DNA replication is enzyme-mediated copying of a DNA template."
+    },
+    "dna+nucleotide": {
+      "a": "dna",
+      "b": "nucleotide",
+      "result": "transcription",
+      "type": "biological",
+      "explanation": "Transcription uses a DNA template and ribonucleotide building blocks; enzyme machinery is abstracted."
+    },
+    "ribosome+rna": {
+      "a": "rna",
+      "b": "ribosome",
+      "result": "translation",
+      "type": "biological",
+      "explanation": "Ribosomes translate an RNA sequence into a polypeptide using the genetic code."
+    },
+    "information+rna": {
+      "a": "rna",
+      "b": "information",
+      "result": "genetic_code",
+      "type": "conceptual",
+      "explanation": "The genetic code maps nucleotide triplets in RNA to amino acids during translation."
+    },
+    "energy+nucleotide": {
+      "a": "nucleotide",
+      "b": "energy",
+      "result": "atp",
+      "type": "chemical",
+      "explanation": "ATP is an energy-carrying nucleotide; this abstracts phosphorylation and cellular energy coupling."
+    },
+    "atp+enzyme": {
+      "a": "atp",
+      "b": "enzyme",
+      "result": "metabolism",
+      "type": "biological",
+      "explanation": "Metabolism is the network of enzyme-catalyzed reactions that manages matter and energy in cells."
+    },
+    "lipid+water": {
+      "a": "lipid",
+      "b": "water",
+      "result": "self_assembly",
+      "type": "physical",
+      "explanation": "Amphiphilic lipids self-assemble in water because hydrophobic and hydrophilic interactions favor ordered structures."
+    },
+    "lipid+self_assembly": {
+      "a": "lipid",
+      "b": "self_assembly",
+      "result": "vesicle",
+      "type": "physical",
+      "explanation": "Self-assembling amphiphilic lipids can close into membrane-bound vesicles."
+    },
+    "rna+vesicle": {
+      "a": "vesicle",
+      "b": "rna",
+      "result": "protocell",
+      "type": "conceptual",
+      "explanation": "A protocell is a research model combining a compartment with chemistry capable of supporting heredity-like processes."
+    },
+    "organic_compound+water": {
+      "a": "organic_compound",
+      "b": "water",
+      "result": "prebiotic_chemistry",
+      "type": "chemical",
+      "explanation": "Prebiotic chemistry studies nonliving chemical processes in aqueous and other planetary environments that can produce biological precursors."
+    },
+    "prebiotic_chemistry+rna": {
+      "a": "rna",
+      "b": "prebiotic_chemistry",
+      "result": "rna_world",
+      "type": "conceptual",
+      "explanation": "The RNA-world model is a scientifically studied hypothesis that RNA may have once combined information storage and catalysis; it is not established history."
+    },
+    "replication+rna": {
+      "a": "rna",
+      "b": "replication",
+      "result": "molecular_heredity",
+      "type": "conceptual",
+      "explanation": "Template copying provides a minimal molecular model of heredity before modern cells; this is an abstraction."
+    },
     "electron+proton": {
       "a": "proton",
       "b": "electron",
@@ -22582,6 +23282,34 @@
     "mantle": "reasonable",
     "differentiation": "reasonable",
     "core": "reasonable",
+    "amino_acid": "reasonable",
+    "peptide": "strong",
+    "protein": "reasonable",
+    "carbohydrate": "strong",
+    "fatty_acid": "reasonable",
+    "lipid": "reasonable",
+    "phospholipid": "reasonable",
+    "nucleotide": "reasonable",
+    "rna": "reasonable",
+    "genetic_material": "strong",
+    "enzyme": "strong",
+    "protein_folding": "reasonable",
+    "ribosome": "strong",
+    "cytoplasm": "reasonable",
+    "cell_membrane": "strong",
+    "prokaryotic_cell": "strong",
+    "replication": "reasonable",
+    "transcription": "reasonable",
+    "translation": "strong",
+    "genetic_code": "strong",
+    "atp": "reasonable",
+    "metabolism": "reasonable",
+    "self_assembly": "strong",
+    "vesicle": "strong",
+    "protocell": "reasonable",
+    "prebiotic_chemistry": "reasonable",
+    "rna_world": "reasonable",
+    "molecular_heredity": "reasonable",
     "element_mc": "reasonable",
     "element_lv": "reasonable",
     "element_ts": "reasonable",
@@ -22589,10 +23317,10 @@
     "air": "reasonable"
   },
   "metadata": {
-    "elementCount": 1287,
-    "recipeCount": 1387,
+    "elementCount": 1315,
+    "recipeCount": 1415,
     "categoryCount": 33,
-    "strongRecipes": 780,
-    "reasonableRecipes": 504
+    "strongRecipes": 791,
+    "reasonableRecipes": 521
   }
 }

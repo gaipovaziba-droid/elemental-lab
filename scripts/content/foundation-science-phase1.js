@@ -1,0 +1,73 @@
+export const foundationRecipesPhase1 = [
+  // Reachability bridges from existing game elements
+  { a: 'human', b: 'microscope', result: 'observation', type: 'conceptual', explanation: 'Humans using instruments produce observations.' },
+  { a: 'human', b: 'ruler', result: 'measure', type: 'conceptual', explanation: 'A human using a ruler records a measurement.' },
+  { a: 'human', b: 'measure', result: 'number', type: 'conceptual', explanation: 'Humans quantify measurements as numbers.' },
+  { a: 'human', b: 'number', result: 'mathematics', type: 'conceptual', explanation: 'Mathematics formalizes numeric reasoning used by humans.' },
+  { a: 'human', b: 'mathematics', result: 'statistics', type: 'conceptual', explanation: 'Statistics arises when humans apply mathematics to data.' },
+  { a: 'statistics', b: 'human', result: 'probability', type: 'conceptual', explanation: 'Probability is a mathematical framework developed to reason about statistical uncertainty.' },
+  { a: 'laboratory', b: 'microscope', result: 'observation', type: 'conceptual', explanation: 'Observations arise when experiments are performed using instruments or sensors.' },
+  { a: 'observation', b: 'ruler', result: 'measure', type: 'conceptual', explanation: 'Measurements are recorded observations made with instruments (for example a ruler produces a length measurement).' },
+  { a: 'number', b: 'logic', result: 'mathematics', type: 'conceptual', explanation: 'Mathematics emerges from abstracting numbers with formal logical rules.' },
+  { a: 'data', b: 'mathematics', result: 'statistics', type: 'conceptual', explanation: 'Statistics is the application of mathematical methods to analyze data.' },
+  { a: 'statistics', b: 'mathematics', result: 'probability', type: 'conceptual', explanation: 'Probability formalizes uncertainty within statistical and mathematical frameworks.' },
+  { a: 'observation', b: 'logic', result: 'hypothesis', type: 'conceptual', explanation: 'Hypotheses are proposed explanations formed by reasoning over observations.' },
+  { a: 'observation', b: 'data', result: 'evidence', type: 'conceptual', explanation: 'Evidence consists of observed data that support or refute hypotheses.' },
+  { a: 'hypothesis', b: 'laboratory', result: 'scientific_method', type: 'conceptual', explanation: 'The scientific method combines hypotheses, experiments, and evidence into a repeatable procedure.' },
+  { a: 'observation', b: 'pattern', result: 'direction', type: 'conceptual', explanation: 'Direction can be inferred by observing consistent patterns of movement or orientation.' },
+  { a: 'speed', b: 'direction', result: 'velocity', type: 'conceptual', explanation: 'Velocity is speed combined with a direction, making it a vector quantity.' },
+  { a: 'velocity', b: 'time', result: 'acceleration', type: 'conceptual', explanation: 'Acceleration is the change of velocity with respect to time.' },
+  { a: 'mass', b: 'acceleration', result: 'force', type: 'conceptual', explanation: 'Force relates mass and acceleration (Newton\'s second law: F = m·a).'},
+  { a: 'mass', b: 'velocity', result: 'momentum', type: 'conceptual', explanation: 'Momentum is defined as mass multiplied by velocity, and is conserved in isolated systems.' },
+  { a: 'heat', b: 'measure', result: 'temperature', type: 'conceptual', explanation: 'Temperature quantifies thermal state; instruments measure temperature from heat-related signals.' },
+  { a: 'wave', b: 'time', result: 'frequency', type: 'conceptual', explanation: 'Frequency is the number of wave cycles per unit time.' },
+  { a: 'light', b: 'prism', result: 'spectrum', type: 'conceptual', explanation: 'A prism disperses light into a spectrum across wavelengths.' },
+  { a: 'electron', b: 'observation', result: 'charge', type: 'conceptual', explanation: 'Electrons are observed to carry electric charge; charge is a measurable particle property.' },
+  { a: 'current', b: 'resistance', result: 'voltage', type: 'conceptual', explanation: 'Voltage, current, and resistance are related (Ohm\'s law: V = I·R).'},
+  { a: 'wire', b: 'metal', result: 'resistance', type: 'conceptual', explanation: 'Electrical resistance depends on the material and geometry of conductors like wires.' },
+  { a: 'number', b: 'number', result: 'mathematical_operation', type: 'conceptual', explanation: 'Operations like addition and multiplication combine numbers into new numbers or results.' },
+  // Other small reachability bridges referenced by audits
+  // removed rainbow_c and street reachability bridges (unnecessary artifacts)
+]
+
+export const foundationElementsPhase1 = [
+  { id: 'observation', name: 'observation', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'science', subdomains: ['empirical_methods'], output_type: 'method', epistemic_status: ['empirical_science'], icon: 'icon_observation.svg' } },
+  { id: 'measure', name: 'measure', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'science', subdomains: ['metrology'], output_type: 'measurement', epistemic_status: ['empirical_science'], icon: 'icon_measurement.svg' } },
+  { id: 'number', name: 'number', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'formal_sciences', output_type: 'abstract_concept', epistemic_status: ['formal_science'], icon: 'icon_number.svg' } },
+  { id: 'mathematics', name: 'mathematics', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'formal_sciences', output_type: 'discipline', epistemic_status: ['formal_science'], icon: 'icon_mathematics.svg' } },
+  { id: 'statistics', name: 'statistics', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'formal_sciences', output_type: 'discipline', epistemic_status: ['formal_science'], icon: 'icon_statistics.svg' } },
+  { id: 'probability', name: 'probability', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'formal_sciences', output_type: 'concept', epistemic_status: ['formal_science'], icon: 'icon_probability.svg' } },
+  { id: 'hypothesis', name: 'hypothesis', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'science', output_type: 'concept', epistemic_status: ['empirical_science','philosophical'], icon: 'icon_hypothesis.svg' } },
+  { id: 'evidence', name: 'evidence', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'science', output_type: 'evidence', epistemic_status: ['empirical_science'], icon: 'icon_evidence.svg' } },
+  { id: 'scientific_method', name: 'scientific_method', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'science', output_type: 'method', epistemic_status: ['empirical_science','methodological'], icon: 'icon_scientific_method.svg' } },
+  { id: 'direction', name: 'direction', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'concept', epistemic_status: ['empirical_science'], icon: 'icon_direction.svg' } },
+  { id: 'velocity', name: 'velocity', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_velocity.svg' } },
+  { id: 'acceleration', name: 'acceleration', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_acceleration.svg' } },
+  { id: 'force', name: 'force', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_force.svg' } },
+  { id: 'momentum', name: 'momentum', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_momentum.svg' } },
+  { id: 'temperature', name: 'temperature', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', subdomains: ['thermodynamics'], output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_temperature.svg' } },
+  { id: 'frequency', name: 'frequency', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_frequency.svg' } },
+  { id: 'spectrum', name: 'spectrum', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'phenomenon', epistemic_status: ['empirical_science'], icon: 'icon_spectrum.svg' } },
+  { id: 'charge', name: 'charge', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_charge.svg' } },
+  { id: 'voltage', name: 'voltage', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_voltage.svg' } },
+  { id: 'resistance', name: 'resistance', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_resistance.svg' } },
+  { id: 'mathematical_operation', name: 'mathematical_operation', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'formal_sciences', output_type: 'operation', epistemic_status: ['formal_science'], icon: 'icon_mathop.svg' } }
+]
+
+/* Canonical icons for additional Phase-1 concept placeholders discovered during generation */
+foundationElementsPhase1.push(
+  { id: 'ruler', name: 'Ruler', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'science', subdomains: ['metrology'], output_type: 'tool', epistemic_status: ['empirical_science'], icon: 'icon_ruler.svg' } },
+  { id: 'logic', name: 'Logic', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'formal_sciences', output_type: 'discipline', epistemic_status: ['formal_science'], icon: 'icon_logic.svg' } },
+  { id: 'data', name: 'Data', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'technology', output_type: 'artifact', epistemic_status: ['empirical_science'], icon: 'icon_data.svg' } },
+  { id: 'pattern', name: 'Pattern', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'science', output_type: 'concept', epistemic_status: ['empirical_science'], icon: 'icon_pattern.svg' } },
+  { id: 'speed', name: 'Speed', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_speed.svg' } },
+  { id: 'mass', name: 'Mass', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_mass.svg' } },
+  { id: 'heat', name: 'Heat', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', subdomains: ['thermodynamics'], output_type: 'phenomenon', epistemic_status: ['empirical_science'], icon: 'icon_heat.svg' } },
+  { id: 'wave', name: 'Wave', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'phenomenon', epistemic_status: ['empirical_science'], icon: 'icon_wave.svg' } },
+  { id: 'light', name: 'Light', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'phenomenon', epistemic_status: ['empirical_science'], icon: 'icon_light.svg' } },
+  { id: 'prism', name: 'Prism', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'tool', epistemic_status: ['empirical_science'], icon: 'icon_prism.svg' } },
+  { id: 'electron', name: 'Electron', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', output_type: 'particle', epistemic_status: ['empirical_science'], icon: 'icon_electron.svg' } },
+  { id: 'current', name: 'Current', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'physics', subdomains: ['electricity'], output_type: 'quantity', epistemic_status: ['empirical_science'], icon: 'icon_current.svg' } },
+  { id: 'wire', name: 'Wire', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'technology', output_type: 'artifact', epistemic_status: ['engineering'], icon: 'icon_wire.svg' } },
+  { id: 'time', name: 'Time', emoji: null, category: 'Concepts', tags: [], opts: { domain: 'abstract', output_type: 'dimension', epistemic_status: ['formal_science'], icon: 'icon_time.svg' } },
+)

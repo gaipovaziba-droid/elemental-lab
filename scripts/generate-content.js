@@ -5,7 +5,15 @@ import { foundationRecipesA } from './content/foundation-recipes-a.js'
 import { foundationRecipesB } from './content/foundation-recipes-b.js'
 import { foundationRecipesCore } from './content/foundation-recipes-core.js'
 import { foundationRecipesDomain } from './content/foundation-recipes-domain.js'
+import { foundationRecipesPhase1 } from './content/foundation-science-phase1.js'
+import { foundationElementsPhase1 } from './content/foundation-science-phase1.js'
 import { periodicRecipes } from './content/periodic-recipes.js'
+import {
+  foundationRecipesPhase2,
+  foundationElementsPhase2,
+  foundationRecipesPhase2Geology,
+  foundationElementsPhase2Geology,
+} from './content/foundation-science-phase2.js'
 import { periodicUseRecipes } from './content/periodic-use-recipes.js'
 import { classifyLegacyRecipe } from './content/legacy-recipe-types.js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -38,13 +46,26 @@ function el(id, name, emoji, category, tags = [], opts = {}) {
     if (opts.atomicNumber) E[id].atomicNumber = opts.atomicNumber
     if (opts.chemicalGroup) E[id].chemicalGroup = opts.chemicalGroup
     if (opts.description) E[id].description = opts.description
+    // preserve icon metadata when el() is called from curated modules
+    if (opts.icon) E[id].icon = opts.icon
     return id
   }
   E[id] = { id, name, emoji, category, tags }
+  // preserve optional metadata fields (new schema)
   if (opts.description) E[id].description = opts.description
   if (opts.symbol) E[id].symbol = opts.symbol
   if (opts.atomicNumber) E[id].atomicNumber = opts.atomicNumber
   if (opts.chemicalGroup) E[id].chemicalGroup = opts.chemicalGroup
+  if (opts.icon) E[id].icon = opts.icon
+  if (opts.domain) E[id].domain = opts.domain
+  if (opts.subdomains) E[id].subdomains = Array.isArray(opts.subdomains) ? opts.subdomains : [opts.subdomains]
+  if (opts.output_type) E[id].output_type = opts.output_type
+  if (opts.epistemic_status) E[id].epistemic_status = Array.isArray(opts.epistemic_status) ? opts.epistemic_status : [opts.epistemic_status]
+  // merge tags from positional `tags` and opts.tags
+  if (opts.tags) {
+    const optTags = Array.isArray(opts.tags) ? opts.tags : [opts.tags]
+    E[id].tags = Array.from(new Set([...(E[id].tags || []), ...optTags]))
+  }
   CAT[category] = true
   return id
 }
@@ -472,6 +493,16 @@ el('lens','Lens','🔍','Physics')
 re('glass','physics','lens','strong')
 el('laboratory','Laboratory','🧪','Science')
 re('science','building','laboratory','strong')
+
+/* ─── CURATED: FOUNDATION PHASE-1 ─── */
+// Keep this block last among curated imports so these recipes are preserved by the generator
+foundationRecipesPhase1.forEach(r => {
+  // ensure any referenced element IDs exist as elements (no-op if el already called)
+  if (r.a && typeof r.a === 'string') el(r.a, r.a, null, 'Concepts')
+  if (r.b && typeof r.b === 'string') el(r.b, r.b, null, 'Concepts')
+  if (r.result && typeof r.result === 'string') el(r.result, r.result, null, 'Concepts')
+  re(r.a, r.b, r.result, 'strong', r.type, r.explanation)
+})
 
 /* ─── BATCH F — Industry & Transportation ─── */
 el('machine','Machine','⚙️','Technology')
@@ -2393,7 +2424,7 @@ const auditedElementUpdates = {
   music_genre: ['Music Genre', 'A category of music sharing cultural traditions, techniques, or stylistic conventions.'],
   owl_b: ['Forest Owl', 'An owl adapted to hunting and nesting in woodland habitats.'],
   server_c: ['Storage Server', 'A networked computer configured to store and provide data to other systems.'],
-  street: ['Streetlight', 'An outdoor electric lamp that illuminates streets and public paths after dark.'],
+  streetlight: ['Streetlight', 'An outdoor electric lamp that illuminates streets and public paths after dark.'],
   telescope_g: ['Optical Telescope', 'A telescope that uses lenses or mirrors in a tube to collect and focus visible light.'],
   tissue_bio: ['Biological Tissue', 'A coordinated group of similar cells that performs a shared function in an organism.'],
 }
@@ -2633,10 +2664,23 @@ Object.values(R).forEach(recipe => {
   })
 })
 
-for (const [id, [name, description]] of Object.entries(auditedElementUpdates)) {
-  if (!E[id]) throw new Error(`Gameplay audit could not update missing element ${id}`)
-  E[id].name = name
-  E[id].description = description
+// Audited element updates are applied after curated recipes are registered
+// so that updates refer to intended element IDs. The strict behaviour is
+// fail-fast: the audit should not silently create new player-facing elements.
+// The application loop is moved further down (see after CURATED_RECIPE_GROUPS).
+// Register Phase-2 explicit element metadata early so curated Phase-2 recipes
+// can reference their declared elements during the curated recipe application.
+if (Array.isArray(foundationElementsPhase2)) {
+  foundationElementsPhase2.forEach(elMeta => {
+    const { id, name, emoji, category, tags, opts } = elMeta
+    el(id, name, emoji, category || 'Concepts', tags || [], opts || {})
+  })
+}
+if (Array.isArray(foundationElementsPhase2Geology)) {
+  foundationElementsPhase2Geology.forEach(elMeta => {
+    const { id, name, emoji, category, tags, opts } = elMeta
+    el(id, name, emoji, category || 'Concepts', tags || [], opts || {})
+  })
 }
 
 const CURATED_RECIPE_GROUPS = [
@@ -2644,6 +2688,8 @@ const CURATED_RECIPE_GROUPS = [
   ['foundation-b', foundationRecipesB],
   ['foundation-core', foundationRecipesCore],
   ['foundation-domain', foundationRecipesDomain],
+  ['foundation-phase2', foundationRecipesPhase2],
+  ['foundation-phase2-geology', foundationRecipesPhase2Geology],
   ['periodic-table', periodicRecipes],
   ['periodic-uses', periodicUseRecipes],
 ]
@@ -2698,6 +2744,15 @@ for (const [groupName, recipes] of CURATED_RECIPE_GROUPS) {
   }
 }
 
+// Apply audited element updates now that curated modules have been registered.
+for (const [id, [name, description]] of Object.entries(auditedElementUpdates)) {
+  if (!E[id]) {
+    throw new Error(`Gameplay audit could not update missing element ${id}`)
+  }
+  E[id].name = name
+  E[id].description = description
+}
+
 // Second description pass — cover Concept and Auto elements created above
 Object.keys(E).forEach(id => {
   if (E[id].description) return
@@ -2708,6 +2763,56 @@ Object.keys(E).forEach(id => {
     E[id].description = `${E[id].name}. An element from the ${cat} category.`
   }
 })
+
+// Remove accidental placeholders introduced during module registration
+// when the curated recipe was subsequently removed (e.g., rainbow_c)
+if (E.rainbow_c && !Object.values(R).some(r => r.result === 'rainbow_c')) {
+  delete E.rainbow_c
+}
+
+// Explicit Phase-1 icon metadata (ensure curated icons are preserved)
+const PHASE1_ICONS = {
+  observation: 'icon_observation.svg',
+  measure: 'icon_measurement.svg',
+  number: 'icon_number.svg',
+  mathematics: 'icon_mathematics.svg',
+  statistics: 'icon_statistics.svg',
+  probability: 'icon_probability.svg',
+  hypothesis: 'icon_hypothesis.svg',
+  evidence: 'icon_evidence.svg',
+  scientific_method: 'icon_scientific_method.svg',
+  direction: 'icon_direction.svg',
+  velocity: 'icon_velocity.svg',
+  acceleration: 'icon_acceleration.svg',
+  force: 'icon_force.svg',
+  momentum: 'icon_momentum.svg',
+  temperature: 'icon_temperature.svg',
+  frequency: 'icon_frequency.svg',
+  spectrum: 'icon_spectrum.svg',
+  charge: 'icon_charge.svg',
+  voltage: 'icon_voltage.svg',
+  resistance: 'icon_resistance.svg',
+  mathematical_operation: 'icon_mathop.svg',
+}
+for (const [id, file] of Object.entries(PHASE1_ICONS)) {
+  if (E[id]) E[id].icon = file
+}
+
+// Register Phase-1 explicit element metadata from curated module
+if (Array.isArray(foundationElementsPhase1)) {
+  foundationElementsPhase1.forEach(elMeta => {
+    const { id, name, emoji, category, tags, opts } = elMeta
+    el(id, name, emoji, category || 'Concepts', tags || [], opts || {})
+  })
+}
+
+// Register Phase-2 explicit element metadata from curated module (if present)
+if (Array.isArray(foundationElementsPhase2)) {
+  foundationElementsPhase2.forEach(elMeta => {
+    const { id, name, emoji, category, tags, opts } = elMeta
+    el(id, name, emoji, category || 'Concepts', tags || [], opts || {})
+  })
+}
 
 const elementIds = Object.keys(E)
 const recipeKeys = Object.keys(R)
@@ -2739,6 +2844,11 @@ for (const [groupName, recipes] of CURATED_RECIPE_GROUPS) {
       compiledRecipe.type !== recipe.type ||
       compiledRecipe.explanation !== recipe.explanation
     ) {
+      try {
+        const fs = await import('fs')
+        fs.mkdirSync('scripts/reports', { recursive: true })
+        fs.writeFileSync('scripts/reports/mismatch-' + groupName + '-' + key.replace(/\//g,'_') + '.json', JSON.stringify({ groupRecipe: recipe, compiledRecipe }, null, 2))
+      } catch (e) {}
       integrityFailures.push(`${groupName} recipe was not preserved at ${key}`)
     }
   }

@@ -19,6 +19,9 @@ function ElementIcon({
   const isTooltipTarget = tooltipTarget?.type === 'sidebar'
     && tooltipTarget.elementId === elementId
   const element = ELEMENTS[elementId]
+  const iconSrc = element?.icon
+    ? new URL(`../../assets/icons/${element.icon}`, import.meta.url).href
+    : null
 
   useEffect(() => {
     const el = ref.current
@@ -101,7 +104,15 @@ function ElementIcon({
         onBlur={pointerDrag.handleBlur}
         style={{ touchAction: 'none' }}
       >
-        <span>{emoji}</span>
+        {emoji ? (
+          <span>{emoji}</span>
+        ) : (
+          iconSrc ? (
+            <img src={iconSrc} alt={name} width={28} height={28} />
+          ) : (
+            <span />
+          )
+        )}
       </div>
       {isTooltipTarget && element && (
         <InfoCard element={element} x={rect.left} y={rect.top} anchor="sidebar" />

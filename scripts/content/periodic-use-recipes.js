@@ -19,7 +19,7 @@ export const periodicUseRecipes = [
   { a: 'element_p', b: 'agriculture', result: 'crop', type: 'conceptual', explanation: 'Phosphorus is an essential plant nutrient supplied to agriculture through phosphate fertilizers.' },
   { a: 'element_k', b: 'agriculture', result: 'crop', type: 'conceptual', explanation: 'Potassium is an essential plant nutrient and one of the three primary fertilizer nutrients.' },
   { a: 'element_ca', b: 'biology', result: 'bone', type: 'conceptual', explanation: 'Bone mineral contains calcium phosphate, giving bone much of its rigidity.' },
-  { a: 'element_na', b: 'element_cl', result: 'salt', type: 'chemical', explanation: 'Sodium and chlorine form ionic sodium chloride, common salt; the reaction conditions are abstracted.' },
+  { a: 'element_na', b: 'element_cl', result: 'sodium_chloride', type: 'chemical', explanation: 'Sodium and chlorine form table salt (NaCl) through ionic combination.' },
   { a: 'element_u', b: 'energy', result: 'nuclear_power', type: 'technological', explanation: 'Controlled fission of uranium fuel releases heat used to generate nuclear power.' },
   { a: 'element_fe', b: 'construction', result: 'building', type: 'industrial', explanation: 'Iron-based structural steel is a foundational material in modern buildings.' },
   { a: 'element_au', b: 'electronics', result: 'circuit', type: 'conceptual', explanation: 'Gold is used on reliable, corrosion-resistant contacts in electronic circuits.' },

@@ -21,7 +21,6 @@ const RECIPE_TYPES = [
 const REQUIRED_ELEMENT_STRING_FIELDS = [
   'id',
   'name',
-  'emoji',
   'category',
   'description',
 ]
@@ -529,6 +528,7 @@ for (const { key, recipe } of runtimeRecipeEntries) {
 const missingElementFields = Object.fromEntries(
   REQUIRED_ELEMENT_STRING_FIELDS.map(field => [field, []]),
 )
+const missingVisual = []
 const invalidElementTags = []
 const mismatchedElementIds = []
 const overlongDescriptions = []
@@ -552,6 +552,8 @@ for (const [key, element] of elementEntries) {
   if (!Array.isArray(element.tags) || element.tags.some(tag => !isNonEmptyString(tag))) {
     invalidElementTags.push(key)
   }
+  // visual identity: accept either emoji or icon (icon is preferred for semantic SVGs)
+  if (!isNonEmptyString(element.emoji) && !isNonEmptyString(element.icon)) missingVisual.push(key)
 }
 
 const rejectedLiteralRecipes = REJECTED_LITERAL_RECIPES
@@ -788,6 +790,7 @@ for (const field of REQUIRED_ELEMENT_STRING_FIELDS) {
     `elements missing ${field} (${missingElementFields[field].length})`,
   )
 }
+failWhen(missingVisual.length > 0, `elements missing emoji/icon (${missingVisual.length})`)
 failWhen(invalidElementTags.length > 0, `elements with invalid tags (${invalidElementTags.length})`)
 failWhen(mismatchedElementIds.length > 0, `element ID/key mismatches (${mismatchedElementIds.length})`)
 failWhen(overlongDescriptions.length > 0, `overlong element descriptions (${overlongDescriptions.length})`)

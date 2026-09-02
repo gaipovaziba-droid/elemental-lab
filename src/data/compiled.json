@@ -1271,7 +1271,8 @@
       "emoji": "💎",
       "category": "Geology",
       "tags": [],
-      "description": "A naturally occurring inorganic solid with a definite chemical composition and crystalline structure."
+      "description": "A naturally occurring inorganic solid with a definite chemical composition and crystalline structure.",
+      "icon": "icon_mineral.svg"
     },
     "fossil": {
       "id": "fossil",
@@ -1432,6 +1433,321 @@
       "category": "Science",
       "tags": [],
       "description": "A controlled environment for scientific experiments and research. Where discoveries are made."
+    },
+    "observation": {
+      "id": "observation",
+      "name": "observation",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "observation. An element from the Concepts category.",
+      "icon": "icon_observation.svg"
+    },
+    "ruler": {
+      "id": "ruler",
+      "name": "ruler",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "ruler. An element from the Concepts category.",
+      "icon": "icon_ruler.svg"
+    },
+    "measure": {
+      "id": "measure",
+      "name": "measure",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "measure. An element from the Concepts category.",
+      "icon": "icon_measurement.svg"
+    },
+    "number": {
+      "id": "number",
+      "name": "number",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "number. An element from the Concepts category.",
+      "icon": "icon_number.svg"
+    },
+    "mathematics": {
+      "id": "mathematics",
+      "name": "mathematics",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "mathematics. An element from the Concepts category.",
+      "icon": "icon_mathematics.svg"
+    },
+    "statistics": {
+      "id": "statistics",
+      "name": "statistics",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "statistics. An element from the Concepts category.",
+      "icon": "icon_statistics.svg"
+    },
+    "probability": {
+      "id": "probability",
+      "name": "probability",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "probability. An element from the Concepts category.",
+      "icon": "icon_probability.svg"
+    },
+    "logic": {
+      "id": "logic",
+      "name": "logic",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "logic. An element from the Concepts category.",
+      "icon": "icon_logic.svg"
+    },
+    "data": {
+      "id": "data",
+      "name": "data",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "data. An element from the Concepts category.",
+      "icon": "icon_data.svg"
+    },
+    "hypothesis": {
+      "id": "hypothesis",
+      "name": "hypothesis",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "hypothesis. An element from the Concepts category.",
+      "icon": "icon_hypothesis.svg"
+    },
+    "evidence": {
+      "id": "evidence",
+      "name": "evidence",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "evidence. An element from the Concepts category.",
+      "icon": "icon_evidence.svg"
+    },
+    "scientific_method": {
+      "id": "scientific_method",
+      "name": "scientific_method",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "scientific_method. An element from the Concepts category.",
+      "icon": "icon_scientific_method.svg"
+    },
+    "pattern": {
+      "id": "pattern",
+      "name": "pattern",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "pattern. An element from the Concepts category.",
+      "icon": "icon_pattern.svg"
+    },
+    "direction": {
+      "id": "direction",
+      "name": "direction",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "direction. An element from the Concepts category.",
+      "icon": "icon_direction.svg"
+    },
+    "speed": {
+      "id": "speed",
+      "name": "speed",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "speed. An element from the Concepts category.",
+      "icon": "icon_speed.svg"
+    },
+    "velocity": {
+      "id": "velocity",
+      "name": "velocity",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "velocity. An element from the Concepts category.",
+      "icon": "icon_velocity.svg"
+    },
+    "time": {
+      "id": "time",
+      "name": "time",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "A fundamental dimension of the universe in which events occur in sequence from the past, through the present, into the future.",
+      "icon": "icon_time.svg"
+    },
+    "acceleration": {
+      "id": "acceleration",
+      "name": "acceleration",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "acceleration. An element from the Concepts category.",
+      "icon": "icon_acceleration.svg"
+    },
+    "mass": {
+      "id": "mass",
+      "name": "mass",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "mass. An element from the Concepts category.",
+      "icon": "icon_mass.svg"
+    },
+    "force": {
+      "id": "force",
+      "name": "force",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "force. An element from the Concepts category.",
+      "icon": "icon_force.svg"
+    },
+    "momentum": {
+      "id": "momentum",
+      "name": "momentum",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "momentum. An element from the Concepts category.",
+      "icon": "icon_momentum.svg"
+    },
+    "heat": {
+      "id": "heat",
+      "name": "heat",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "heat. An element from the Concepts category.",
+      "icon": "icon_heat.svg"
+    },
+    "temperature": {
+      "id": "temperature",
+      "name": "temperature",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "temperature. An element from the Concepts category.",
+      "icon": "icon_temperature.svg"
+    },
+    "wave": {
+      "id": "wave",
+      "name": "wave",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "wave. An element from the Concepts category.",
+      "icon": "icon_wave.svg"
+    },
+    "frequency": {
+      "id": "frequency",
+      "name": "frequency",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "frequency. An element from the Concepts category.",
+      "icon": "icon_frequency.svg"
+    },
+    "light": {
+      "id": "light",
+      "name": "light",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "light. An element from the Concepts category.",
+      "icon": "icon_light.svg"
+    },
+    "prism": {
+      "id": "prism",
+      "name": "prism",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "prism. An element from the Concepts category.",
+      "icon": "icon_prism.svg"
+    },
+    "spectrum": {
+      "id": "spectrum",
+      "name": "spectrum",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "spectrum. An element from the Concepts category.",
+      "icon": "icon_spectrum.svg"
+    },
+    "electron": {
+      "id": "electron",
+      "name": "electron",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "A negatively charged particle that orbits the nucleus of an atom. Responsible for chemical bonding and electricity.",
+      "icon": "icon_electron.svg"
+    },
+    "charge": {
+      "id": "charge",
+      "name": "charge",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "charge. An element from the Concepts category.",
+      "icon": "icon_charge.svg"
+    },
+    "current": {
+      "id": "current",
+      "name": "current",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "current. An element from the Concepts category.",
+      "icon": "icon_current.svg"
+    },
+    "resistance": {
+      "id": "resistance",
+      "name": "resistance",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "resistance. An element from the Concepts category.",
+      "icon": "icon_resistance.svg"
+    },
+    "voltage": {
+      "id": "voltage",
+      "name": "voltage",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "voltage. An element from the Concepts category.",
+      "icon": "icon_voltage.svg"
+    },
+    "wire": {
+      "id": "wire",
+      "name": "wire",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "A thin flexible thread of metal used to carry electrical current.",
+      "icon": "icon_wire.svg"
+    },
+    "mathematical_operation": {
+      "id": "mathematical_operation",
+      "name": "mathematical_operation",
+      "emoji": null,
+      "category": "Concepts",
+      "tags": [],
+      "description": "mathematical_operation. An element from the Concepts category.",
+      "icon": "icon_mathop.svg"
     },
     "machine": {
       "id": "machine",
@@ -1609,14 +1925,6 @@
       "tags": [],
       "description": "Lamp. An element from the Tools category."
     },
-    "wire": {
-      "id": "wire",
-      "name": "Wire",
-      "emoji": "🔌",
-      "category": "Technology",
-      "tags": [],
-      "description": "A thin flexible thread of metal used to carry electrical current."
-    },
     "bulb": {
       "id": "bulb",
       "name": "Light Bulb",
@@ -1776,14 +2084,6 @@
       "category": "Technology",
       "tags": [],
       "description": "Algorithm. An element from the Technology category."
-    },
-    "data": {
-      "id": "data",
-      "name": "Data",
-      "emoji": "📊",
-      "category": "Technology",
-      "tags": [],
-      "description": "Data. An element from the Technology category."
     },
     "database": {
       "id": "database",
@@ -2080,14 +2380,6 @@
       "category": "Abstract",
       "tags": [],
       "description": "The ability to apply knowledge and experience with good judgment."
-    },
-    "time": {
-      "id": "time",
-      "name": "Time",
-      "emoji": "⏳",
-      "category": "Abstract",
-      "tags": [],
-      "description": "A fundamental dimension of the universe in which events occur in sequence from the past, through the present, into the future."
     },
     "space": {
       "id": "space",
@@ -2595,6 +2887,16 @@
       ],
       "description": "Digital Art. An element from the Discovery category."
     },
+    "streetlight": {
+      "id": "streetlight",
+      "name": "Streetlight",
+      "emoji": "🔮",
+      "category": "Discovery",
+      "tags": [
+        "cross"
+      ],
+      "description": "An outdoor electric lamp that illuminates streets and public paths after dark."
+    },
     "fan": {
       "id": "fan",
       "name": "Fan",
@@ -2815,6 +3117,16 @@
       ],
       "description": "Hydro Energy. An element from the Discovery category."
     },
+    "geothermal_energy": {
+      "id": "geothermal_energy",
+      "name": "Geothermal Energy",
+      "emoji": "🔮",
+      "category": "Discovery",
+      "tags": [
+        "cross"
+      ],
+      "description": "Geothermal Energy. An element from the Discovery category."
+    },
     "data_mining": {
       "id": "data_mining",
       "name": "Data Mining",
@@ -3024,6 +3336,16 @@
         "cross"
       ],
       "description": "Earth Observation. An element from the Discovery category."
+    },
+    "ocean_current": {
+      "id": "ocean_current",
+      "name": "Ocean Current",
+      "emoji": "🔮",
+      "category": "Discovery",
+      "tags": [
+        "cross"
+      ],
+      "description": "Ocean Current. An element from the Discovery category."
     },
     "iceberg": {
       "id": "iceberg",
@@ -3543,14 +3865,6 @@
       "tags": [],
       "description": "Orange. An element from the Abstract category."
     },
-    "rainbow_c": {
-      "id": "rainbow_c",
-      "name": "Rainbow",
-      "emoji": "🌈",
-      "category": "Weather",
-      "tags": [],
-      "description": "Rainbow. An element from the Weather category."
-    },
     "banjo": {
       "id": "banjo",
       "name": "Banjo",
@@ -3829,7 +4143,8 @@
       "emoji": "🤍",
       "category": "Materials",
       "tags": [],
-      "description": "A common crystalline mineral made of silicon dioxide, found in many rocks and sands."
+      "description": "A common crystalline mineral made of silicon dioxide, found in many rocks and sands.",
+      "icon": "icon_quartz.svg"
     },
     "marble": {
       "id": "marble",
@@ -8418,16 +8733,6 @@
       ],
       "description": "Bone. An intermediate concept discovered through combination."
     },
-    "heat": {
-      "id": "heat",
-      "name": "Heat",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Heat. An intermediate concept discovered through combination."
-    },
     "matter": {
       "id": "matter",
       "name": "Matter",
@@ -8597,26 +8902,6 @@
         "concept"
       ],
       "description": "Array. An intermediate concept discovered through combination."
-    },
-    "speed": {
-      "id": "speed",
-      "name": "Speed",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Speed. An intermediate concept discovered through combination."
-    },
-    "logic": {
-      "id": "logic",
-      "name": "Logic",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Logic. An intermediate concept discovered through combination."
     },
     "language": {
       "id": "language",
@@ -8808,16 +9093,6 @@
       ],
       "description": "Change. An intermediate concept discovered through combination."
     },
-    "measure": {
-      "id": "measure",
-      "name": "Measure",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Measure. An intermediate concept discovered through combination."
-    },
     "void": {
       "id": "void",
       "name": "Void",
@@ -8977,16 +9252,6 @@
         "concept"
       ],
       "description": "Story. An intermediate concept discovered through combination."
-    },
-    "light": {
-      "id": "light",
-      "name": "Light",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Light. An intermediate concept discovered through combination."
     },
     "god": {
       "id": "god",
@@ -9168,16 +9433,6 @@
       ],
       "description": "Impurity. An intermediate concept discovered through combination."
     },
-    "current": {
-      "id": "current",
-      "name": "Current",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Current. An intermediate concept discovered through combination."
-    },
     "conductor": {
       "id": "conductor",
       "name": "Conductor",
@@ -9227,16 +9482,6 @@
         "concept"
       ],
       "description": "Improvement. An intermediate concept discovered through combination."
-    },
-    "mass": {
-      "id": "mass",
-      "name": "Mass",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Mass. An intermediate concept discovered through combination."
     },
     "attraction": {
       "id": "attraction",
@@ -9328,16 +9573,6 @@
       ],
       "description": "Leader. An intermediate concept discovered through combination."
     },
-    "ruler": {
-      "id": "ruler",
-      "name": "Ruler",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Ruler. An intermediate concept discovered through combination."
-    },
     "crown": {
       "id": "crown",
       "name": "Crown",
@@ -9407,16 +9642,6 @@
         "concept"
       ],
       "description": "Wavelength. An intermediate concept discovered through combination."
-    },
-    "prism": {
-      "id": "prism",
-      "name": "Prism",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Prism. An intermediate concept discovered through combination."
     },
     "folk": {
       "id": "folk",
@@ -9787,16 +10012,6 @@
         "concept"
       ],
       "description": "Racket. An intermediate concept discovered through combination."
-    },
-    "wave": {
-      "id": "wave",
-      "name": "Wave",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Wave. An intermediate concept discovered through combination."
     },
     "fight": {
       "id": "fight",
@@ -10257,16 +10472,6 @@
         "concept"
       ],
       "description": "Locomotive. An intermediate concept discovered through combination."
-    },
-    "street": {
-      "id": "street",
-      "name": "Streetlight",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "An outdoor electric lamp that illuminates streets and public paths after dark."
     },
     "solar_heater": {
       "id": "solar_heater",
@@ -10738,16 +10943,6 @@
       ],
       "description": "Collapse. An intermediate concept discovered through combination."
     },
-    "pattern": {
-      "id": "pattern",
-      "name": "Pattern",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Pattern. An intermediate concept discovered through combination."
-    },
     "mars": {
       "id": "mars",
       "name": "Mars",
@@ -10988,16 +11183,6 @@
       ],
       "description": "Tide. An intermediate concept discovered through combination."
     },
-    "geothermal": {
-      "id": "geothermal",
-      "name": "Geothermal",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Geothermal. An intermediate concept discovered through combination."
-    },
     "burn": {
       "id": "burn",
       "name": "Burn",
@@ -11016,6 +11201,7 @@
       "tags": [
         "concept"
       ],
+      "icon": "icon_co2.svg",
       "description": "Carbon dioxide. An intermediate concept discovered through combination."
     },
     "smoke": {
@@ -11218,16 +11404,6 @@
       ],
       "description": "Proton. An intermediate concept discovered through combination."
     },
-    "electron": {
-      "id": "electron",
-      "name": "Electron",
-      "emoji": "🔮",
-      "category": "Concept",
-      "tags": [
-        "concept"
-      ],
-      "description": "Electron. An intermediate concept discovered through combination."
-    },
     "ash": {
       "id": "ash",
       "name": "Ash",
@@ -11257,6 +11433,929 @@
         "concept"
       ],
       "description": "Weight. An intermediate concept discovered through combination."
+    },
+    "hydrogen_molecule": {
+      "id": "hydrogen_molecule",
+      "name": "hydrogen_molecule",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "molecule"
+      ],
+      "icon": "icon_h2.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "hydrogen_molecule. An element from the Chemistry category."
+    },
+    "oxygen_molecule": {
+      "id": "oxygen_molecule",
+      "name": "oxygen_molecule",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "molecule"
+      ],
+      "icon": "icon_o2.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "oxygen_molecule. An element from the Chemistry category."
+    },
+    "evaporation": {
+      "id": "evaporation",
+      "name": "evaporation",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_evaporation.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "hydrology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "evaporation. An element from the Geology category."
+    },
+    "condensation": {
+      "id": "condensation",
+      "name": "condensation",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_condensation.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "hydrology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "condensation. An element from the Geology category."
+    },
+    "precipitation": {
+      "id": "precipitation",
+      "name": "precipitation",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_precipitation.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "hydrology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "precipitation. An element from the Geology category."
+    },
+    "methane": {
+      "id": "methane",
+      "name": "methane",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "molecule",
+        "hydrocarbon"
+      ],
+      "icon": "icon_methane.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "organic_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "methane. An element from the Chemistry category."
+    },
+    "ammonia": {
+      "id": "ammonia",
+      "name": "ammonia",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "molecule"
+      ],
+      "icon": "icon_ammonia.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "inorganic_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "ammonia. An element from the Chemistry category."
+    },
+    "sodium_chloride": {
+      "id": "sodium_chloride",
+      "name": "sodium_chloride",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "salt"
+      ],
+      "icon": "icon_salt.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "inorganic_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "sodium_chloride. An element from the Chemistry category."
+    },
+    "ionic_bond": {
+      "id": "ionic_bond",
+      "name": "ionic_bond",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "bond",
+        "concept"
+      ],
+      "icon": "icon_ionic_bond.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "ionic_bond. An element from the Chemistry category."
+    },
+    "covalent_bond": {
+      "id": "covalent_bond",
+      "name": "covalent_bond",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "bond",
+        "concept"
+      ],
+      "icon": "icon_covalent_bond.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "covalent_bond. An element from the Chemistry category."
+    },
+    "solution": {
+      "id": "solution",
+      "name": "solution",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "mixture",
+        "aqueous"
+      ],
+      "icon": "icon_solution.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "solution. An element from the Chemistry category."
+    },
+    "organic_compound": {
+      "id": "organic_compound",
+      "name": "organic_compound",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "organic"
+      ],
+      "icon": "icon_organic.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "organic_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "organic_compound. An element from the Chemistry category."
+    },
+    "ion": {
+      "id": "ion",
+      "name": "ion",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "charge"
+      ],
+      "icon": "icon_ion.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "ion. An element from the Chemistry category."
+    },
+    "cation": {
+      "id": "cation",
+      "name": "cation",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "ion",
+        "positive"
+      ],
+      "icon": "icon_cation.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "cation. An element from the Chemistry category."
+    },
+    "anion": {
+      "id": "anion",
+      "name": "anion",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "ion",
+        "negative"
+      ],
+      "icon": "icon_anion.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "anion. An element from the Chemistry category."
+    },
+    "mixture": {
+      "id": "mixture",
+      "name": "mixture",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "system"
+      ],
+      "icon": "icon_mixture.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "mixture. An element from the Chemistry category."
+    },
+    "reactant": {
+      "id": "reactant",
+      "name": "reactant",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "reaction"
+      ],
+      "icon": "icon_reactant.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "reactant. An element from the Chemistry category."
+    },
+    "product": {
+      "id": "product",
+      "name": "product",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "reaction"
+      ],
+      "icon": "icon_product.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "concept",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "product. An element from the Chemistry category."
+    },
+    "oxidation": {
+      "id": "oxidation",
+      "name": "oxidation",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "redox"
+      ],
+      "icon": "icon_oxidation.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "oxidation. An element from the Chemistry category."
+    },
+    "reduction": {
+      "id": "reduction",
+      "name": "reduction",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "redox"
+      ],
+      "icon": "icon_reduction.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "reduction. An element from the Chemistry category."
+    },
+    "redox_reaction": {
+      "id": "redox_reaction",
+      "name": "redox_reaction",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "reaction"
+      ],
+      "icon": "icon_redox.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "redox_reaction. An element from the Chemistry category."
+    },
+    "pH": {
+      "id": "pH",
+      "name": "pH",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "measure"
+      ],
+      "icon": "icon_ph.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "analytical_chemistry"
+      ],
+      "output_type": "quantity",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "pH. An element from the Chemistry category."
+    },
+    "solvent": {
+      "id": "solvent",
+      "name": "solvent",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "solution"
+      ],
+      "icon": "icon_solvent.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "solvent. An element from the Chemistry category."
+    },
+    "solute": {
+      "id": "solute",
+      "name": "solute",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "solution"
+      ],
+      "icon": "icon_solute.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "general_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "solute. An element from the Chemistry category."
+    },
+    "concentration": {
+      "id": "concentration",
+      "name": "concentration",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "quantity"
+      ],
+      "icon": "icon_concentration.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "analytical_chemistry"
+      ],
+      "output_type": "quantity",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "concentration. An element from the Chemistry category."
+    },
+    "crystallization": {
+      "id": "crystallization",
+      "name": "crystallization",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_crystallization.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "materials_chemistry"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "crystallization. An element from the Chemistry category."
+    },
+    "catalyst": {
+      "id": "catalyst",
+      "name": "catalyst",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "reaction"
+      ],
+      "icon": "icon_catalyst.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "catalyst. An element from the Chemistry category."
+    },
+    "catalysis": {
+      "id": "catalysis",
+      "name": "catalysis",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_catalysis.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "catalysis. An element from the Chemistry category."
+    },
+    "equilibrium": {
+      "id": "equilibrium",
+      "name": "equilibrium",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_equilibrium.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "physical_chemistry"
+      ],
+      "output_type": "phenomenon",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "equilibrium. An element from the Chemistry category."
+    },
+    "silicon_dioxide": {
+      "id": "silicon_dioxide",
+      "name": "silicon_dioxide",
+      "emoji": null,
+      "category": "Materials",
+      "tags": [
+        "mineral",
+        "silicate"
+      ],
+      "icon": "icon_silica.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "geochemistry"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "silicon_dioxide. An element from the Materials category."
+    },
+    "calcium_carbonate": {
+      "id": "calcium_carbonate",
+      "name": "calcium_carbonate",
+      "emoji": null,
+      "category": "Materials",
+      "tags": [
+        "mineral",
+        "carbonate"
+      ],
+      "icon": "icon_carbonate.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "geochemistry"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "calcium_carbonate. An element from the Materials category."
+    },
+    "iron_oxide": {
+      "id": "iron_oxide",
+      "name": "iron_oxide",
+      "emoji": null,
+      "category": "Materials",
+      "tags": [
+        "mineral",
+        "oxide"
+      ],
+      "icon": "icon_iron_oxide.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "geochemistry"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "iron_oxide. An element from the Materials category."
+    },
+    "carbonate": {
+      "id": "carbonate",
+      "name": "carbonate",
+      "emoji": null,
+      "category": "Chemistry",
+      "tags": [
+        "ion",
+        "salt"
+      ],
+      "icon": "icon_carbonate.svg",
+      "domain": "chemical_sciences",
+      "subdomains": [
+        "inorganic_chemistry"
+      ],
+      "output_type": "substance",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "carbonate. An element from the Chemistry category."
+    },
+    "crust": {
+      "id": "crust",
+      "name": "crust",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "layer"
+      ],
+      "icon": "icon_crust.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geology"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "crust. An element from the Geology category."
+    },
+    "mantle": {
+      "id": "mantle",
+      "name": "mantle",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "layer"
+      ],
+      "icon": "icon_mantle.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geophysics"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "mantle. An element from the Geology category."
+    },
+    "core": {
+      "id": "core",
+      "name": "core",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "layer"
+      ],
+      "icon": "icon_core.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geophysics"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "core. An element from the Geology category."
+    },
+    "lithosphere": {
+      "id": "lithosphere",
+      "name": "lithosphere",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "layer"
+      ],
+      "icon": "icon_lithosphere.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geology"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "lithosphere. An element from the Geology category."
+    },
+    "tectonic_plate": {
+      "id": "tectonic_plate",
+      "name": "tectonic_plate",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "plate"
+      ],
+      "icon": "icon_plate.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geology",
+        "geophysics"
+      ],
+      "output_type": "structure",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "tectonic_plate. An element from the Geology category."
+    },
+    "plate_tectonics": {
+      "id": "plate_tectonics",
+      "name": "plate_tectonics",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "system"
+      ],
+      "icon": "icon_plate_tectonics.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geology"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "plate_tectonics. An element from the Geology category."
+    },
+    "weathering": {
+      "id": "weathering",
+      "name": "weathering",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_weathering.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geomorphology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "weathering. An element from the Geology category."
+    },
+    "erosion": {
+      "id": "erosion",
+      "name": "erosion",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_erosion.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geomorphology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "erosion. An element from the Geology category."
+    },
+    "sediment": {
+      "id": "sediment",
+      "name": "sediment",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "material"
+      ],
+      "icon": "icon_sediment.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "sedimentology"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "sediment. An element from the Geology category."
+    },
+    "deposition": {
+      "id": "deposition",
+      "name": "deposition",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_deposition.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "sedimentology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "deposition. An element from the Geology category."
+    },
+    "rock_cycle": {
+      "id": "rock_cycle",
+      "name": "rock_cycle",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "system"
+      ],
+      "icon": "icon_rock_cycle.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "geology"
+      ],
+      "output_type": "system",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "rock_cycle. An element from the Geology category."
+    },
+    "igneous_rock": {
+      "id": "igneous_rock",
+      "name": "igneous_rock",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "rock"
+      ],
+      "icon": "icon_igneous.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "petrology"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "igneous_rock. An element from the Geology category."
+    },
+    "sedimentary_rock": {
+      "id": "sedimentary_rock",
+      "name": "sedimentary_rock",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "rock"
+      ],
+      "icon": "icon_sedimentary.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "petrology"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "sedimentary_rock. An element from the Geology category."
+    },
+    "metamorphic_rock": {
+      "id": "metamorphic_rock",
+      "name": "metamorphic_rock",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "rock"
+      ],
+      "icon": "icon_metamorphic.svg",
+      "domain": "earth_sciences",
+      "subdomains": [
+        "petrology"
+      ],
+      "output_type": "material",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "metamorphic_rock. An element from the Geology category."
+    },
+    "differentiation": {
+      "id": "differentiation",
+      "name": "differentiation",
+      "emoji": null,
+      "category": "Geology",
+      "tags": [
+        "process"
+      ],
+      "icon": "icon_differentiation.svg",
+      "domain": "space_sciences",
+      "subdomains": [
+        "planetary_geology"
+      ],
+      "output_type": "process",
+      "epistemic_status": [
+        "empirical_science"
+      ],
+      "description": "differentiation. An element from the Geology category."
     }
   },
   "recipes": {
@@ -12278,6 +13377,188 @@
       "result": "laboratory",
       "type": "conceptual"
     },
+    "human+microscope": {
+      "a": "human",
+      "b": "microscope",
+      "result": "observation",
+      "type": "conceptual",
+      "explanation": "Humans using instruments produce observations."
+    },
+    "human+ruler": {
+      "a": "human",
+      "b": "ruler",
+      "result": "measure",
+      "type": "conceptual",
+      "explanation": "A human using a ruler records a measurement."
+    },
+    "human+measure": {
+      "a": "human",
+      "b": "measure",
+      "result": "number",
+      "type": "conceptual",
+      "explanation": "Humans quantify measurements as numbers."
+    },
+    "human+number": {
+      "a": "human",
+      "b": "number",
+      "result": "mathematics",
+      "type": "conceptual",
+      "explanation": "Mathematics formalizes numeric reasoning used by humans."
+    },
+    "human+mathematics": {
+      "a": "human",
+      "b": "mathematics",
+      "result": "statistics",
+      "type": "conceptual",
+      "explanation": "Statistics arises when humans apply mathematics to data."
+    },
+    "human+statistics": {
+      "a": "statistics",
+      "b": "human",
+      "result": "probability",
+      "type": "conceptual",
+      "explanation": "Probability is a mathematical framework developed to reason about statistical uncertainty."
+    },
+    "laboratory+microscope": {
+      "a": "laboratory",
+      "b": "microscope",
+      "result": "observation",
+      "type": "conceptual",
+      "explanation": "Observations arise when experiments are performed using instruments or sensors."
+    },
+    "observation+ruler": {
+      "a": "observation",
+      "b": "ruler",
+      "result": "measure",
+      "type": "conceptual",
+      "explanation": "Measurements are recorded observations made with instruments (for example a ruler produces a length measurement)."
+    },
+    "logic+number": {
+      "a": "number",
+      "b": "logic",
+      "result": "mathematics",
+      "type": "conceptual",
+      "explanation": "Mathematics emerges from abstracting numbers with formal logical rules."
+    },
+    "data+mathematics": {
+      "a": "data",
+      "b": "mathematics",
+      "result": "statistics",
+      "type": "conceptual",
+      "explanation": "Statistics is the application of mathematical methods to analyze data."
+    },
+    "mathematics+statistics": {
+      "a": "statistics",
+      "b": "mathematics",
+      "result": "probability",
+      "type": "conceptual",
+      "explanation": "Probability formalizes uncertainty within statistical and mathematical frameworks."
+    },
+    "logic+observation": {
+      "a": "observation",
+      "b": "logic",
+      "result": "hypothesis",
+      "type": "conceptual",
+      "explanation": "Hypotheses are proposed explanations formed by reasoning over observations."
+    },
+    "data+observation": {
+      "a": "observation",
+      "b": "data",
+      "result": "evidence",
+      "type": "conceptual",
+      "explanation": "Evidence consists of observed data that support or refute hypotheses."
+    },
+    "hypothesis+laboratory": {
+      "a": "hypothesis",
+      "b": "laboratory",
+      "result": "scientific_method",
+      "type": "conceptual",
+      "explanation": "The scientific method combines hypotheses, experiments, and evidence into a repeatable procedure."
+    },
+    "observation+pattern": {
+      "a": "observation",
+      "b": "pattern",
+      "result": "direction",
+      "type": "conceptual",
+      "explanation": "Direction can be inferred by observing consistent patterns of movement or orientation."
+    },
+    "direction+speed": {
+      "a": "speed",
+      "b": "direction",
+      "result": "velocity",
+      "type": "conceptual",
+      "explanation": "Velocity is speed combined with a direction, making it a vector quantity."
+    },
+    "time+velocity": {
+      "a": "velocity",
+      "b": "time",
+      "result": "acceleration",
+      "type": "conceptual",
+      "explanation": "Acceleration is the change of velocity with respect to time."
+    },
+    "acceleration+mass": {
+      "a": "mass",
+      "b": "acceleration",
+      "result": "force",
+      "type": "conceptual",
+      "explanation": "Force relates mass and acceleration (Newton's second law: F = m·a)."
+    },
+    "mass+velocity": {
+      "a": "mass",
+      "b": "velocity",
+      "result": "momentum",
+      "type": "conceptual",
+      "explanation": "Momentum is defined as mass multiplied by velocity, and is conserved in isolated systems."
+    },
+    "heat+measure": {
+      "a": "heat",
+      "b": "measure",
+      "result": "temperature",
+      "type": "conceptual",
+      "explanation": "Temperature quantifies thermal state; instruments measure temperature from heat-related signals."
+    },
+    "time+wave": {
+      "a": "wave",
+      "b": "time",
+      "result": "frequency",
+      "type": "conceptual",
+      "explanation": "Frequency is the number of wave cycles per unit time."
+    },
+    "light+prism": {
+      "a": "light",
+      "b": "prism",
+      "result": "spectrum",
+      "type": "conceptual",
+      "explanation": "A prism disperses light into a spectrum across wavelengths."
+    },
+    "electron+observation": {
+      "a": "electron",
+      "b": "observation",
+      "result": "charge",
+      "type": "conceptual",
+      "explanation": "Electrons are observed to carry electric charge; charge is a measurable particle property."
+    },
+    "current+resistance": {
+      "a": "current",
+      "b": "resistance",
+      "result": "voltage",
+      "type": "conceptual",
+      "explanation": "Voltage, current, and resistance are related (Ohm's law: V = I·R)."
+    },
+    "metal+wire": {
+      "a": "wire",
+      "b": "metal",
+      "result": "resistance",
+      "type": "conceptual",
+      "explanation": "Electrical resistance depends on the material and geometry of conductors like wires."
+    },
+    "number+number": {
+      "a": "number",
+      "b": "number",
+      "result": "mathematical_operation",
+      "type": "conceptual",
+      "explanation": "Operations like addition and multiplication combine numbers into new numbers or results."
+    },
     "engine+tool": {
       "a": "tool",
       "b": "engine",
@@ -13096,6 +14377,12 @@
       "result": "digital_art",
       "type": "conceptual"
     },
+    "electricity+light": {
+      "a": "electricity",
+      "b": "light",
+      "result": "streetlight",
+      "type": "technological"
+    },
     "electricity+motor": {
       "a": "electricity",
       "b": "motor",
@@ -13210,6 +14497,12 @@
       "result": "hydro_energy",
       "type": "conceptual"
     },
+    "earth+heat": {
+      "a": "earth",
+      "b": "heat",
+      "result": "geothermal_energy",
+      "type": "conceptual"
+    },
     "data+mining": {
       "a": "data",
       "b": "mining",
@@ -13322,6 +14615,12 @@
       "a": "earth",
       "b": "space",
       "result": "earth_observation",
+      "type": "conceptual"
+    },
+    "current+ocean": {
+      "a": "ocean",
+      "b": "current",
+      "result": "ocean_current",
       "type": "conceptual"
     },
     "ice+ocean": {
@@ -13856,12 +15155,6 @@
       "a": "red",
       "b": "yellow",
       "result": "orange_c",
-      "type": "physical"
-    },
-    "light+prism": {
-      "a": "light",
-      "b": "prism",
-      "result": "rainbow_c",
       "type": "physical"
     },
     "folk+guitar": {
@@ -14876,12 +16169,6 @@
       "a": "steam",
       "b": "locomotive",
       "result": "train",
-      "type": "technological"
-    },
-    "electricity+light": {
-      "a": "electricity",
-      "b": "light",
-      "result": "street",
       "type": "technological"
     },
     "heat+sun": {
@@ -15963,12 +17250,6 @@
       "a": "turbine",
       "b": "energy",
       "result": "wind_energy",
-      "type": "conceptual"
-    },
-    "earth+heat": {
-      "a": "earth",
-      "b": "heat",
-      "result": "geothermal",
       "type": "conceptual"
     },
     "burn+fossil": {
@@ -18571,6 +19852,356 @@
       "type": "conceptual",
       "explanation": "The physics of uranium nuclei introduces nuclear science and energy."
     },
+    "element_h+element_h": {
+      "a": "element_h",
+      "b": "element_h",
+      "result": "hydrogen_molecule",
+      "type": "chemical",
+      "explanation": "Two hydrogen atoms form an H₂ molecule (simplified stoichiometry)."
+    },
+    "element_o+element_o": {
+      "a": "element_o",
+      "b": "element_o",
+      "result": "oxygen_molecule",
+      "type": "chemical",
+      "explanation": "Two oxygen atoms form an O₂ molecule."
+    },
+    "element_c+element_o": {
+      "a": "element_c",
+      "b": "element_o",
+      "result": "carbon_dioxide",
+      "type": "chemical",
+      "explanation": "Carbon and oxygen combine to form CO₂ in many real-world oxidations (abstraction)."
+    },
+    "element_c+element_h": {
+      "a": "element_c",
+      "b": "element_h",
+      "result": "methane",
+      "type": "chemical",
+      "explanation": "Simplified formation: carbon combines with hydrogen to form methane (educational abstraction)."
+    },
+    "element_h+element_n": {
+      "a": "element_n",
+      "b": "element_h",
+      "result": "ammonia",
+      "type": "chemical",
+      "explanation": "Nitrogen and hydrogen combine to yield ammonia under catalytic conditions (abstracted)."
+    },
+    "element_cl+element_na": {
+      "a": "element_na",
+      "b": "element_cl",
+      "result": "sodium_chloride",
+      "type": "chemical",
+      "explanation": "Sodium and chlorine form table salt (NaCl) through ionic combination."
+    },
+    "element_o+element_si": {
+      "a": "element_si",
+      "b": "element_o",
+      "result": "silicon_dioxide",
+      "type": "chemical",
+      "explanation": "Silicon and oxygen form silicon dioxide (SiO₂), the main component of silica and quartz (simplified)."
+    },
+    "base+carbon_dioxide": {
+      "a": "carbon_dioxide",
+      "b": "base",
+      "result": "carbonate",
+      "type": "chemical",
+      "explanation": "Carbon dioxide reacts with a basic aqueous solution to form carbonate species (simplified aqueous chemistry)."
+    },
+    "carbonate+element_ca": {
+      "a": "element_ca",
+      "b": "carbonate",
+      "result": "calcium_carbonate",
+      "type": "chemical",
+      "explanation": "Calcium ions and carbonate ions precipitate as calcium carbonate (CaCO₃), a common mineral."
+    },
+    "element_fe+element_o": {
+      "a": "element_fe",
+      "b": "element_o",
+      "result": "iron_oxide",
+      "type": "chemical",
+      "explanation": "Iron and oxygen commonly produce iron oxides (rust) in oxidizing conditions."
+    },
+    "chemistry+sodium_chloride": {
+      "a": "sodium_chloride",
+      "b": "chemistry",
+      "result": "ionic_bond",
+      "type": "conceptual",
+      "explanation": "Associate the common compound sodium chloride with the ionic bond concept (classification, not a literal formation reaction)."
+    },
+    "chemistry+solution": {
+      "a": "solution",
+      "b": "chemistry",
+      "result": "solute",
+      "type": "conceptual",
+      "explanation": "Classificatory mapping: solutions contain solutes; this associates the solution concept with the solute role for discoverability rather than describing a formation reaction."
+    },
+    "chemistry+water": {
+      "a": "water",
+      "b": "chemistry",
+      "result": "solvent",
+      "type": "conceptual",
+      "explanation": "Water is the prototypical solvent for many aqueous processes; associate water with the solvent role."
+    },
+    "solute+solvent": {
+      "a": "solute",
+      "b": "solvent",
+      "result": "mixture",
+      "type": "chemical",
+      "explanation": "Solutes dispersed in solvents form mixtures or solutions (classification)."
+    },
+    "element_h+oxygen_molecule": {
+      "a": "element_h",
+      "b": "oxygen_molecule",
+      "result": "reactant",
+      "type": "conceptual",
+      "explanation": "Hydrogen and oxygen are reactants in the formation of water; this illustrates the reactant role without claiming every substance is a reactant."
+    },
+    "chemistry+reactant": {
+      "a": "reactant",
+      "b": "chemistry",
+      "result": "product",
+      "type": "conceptual",
+      "explanation": "Reactants in chemical contexts yield products; associate reactant roles with product classification for discoverability."
+    },
+    "product+reactant": {
+      "a": "reactant",
+      "b": "product",
+      "result": "reaction",
+      "type": "conceptual",
+      "explanation": "Reactants and products define a chemical reaction; this pairs role concepts into the reaction concept."
+    },
+    "metal+reaction": {
+      "a": "metal",
+      "b": "reaction",
+      "result": "catalyst",
+      "type": "conceptual",
+      "explanation": "Many metal surfaces catalyze reactions by providing an alternative pathway and are regenerated overall; this is a role classification."
+    },
+    "chemistry+methane": {
+      "a": "methane",
+      "b": "chemistry",
+      "result": "covalent_bond",
+      "type": "conceptual",
+      "explanation": "Associate methane with covalent bonding as an illustrative example (classification, not a literal formation reaction)."
+    },
+    "sodium_chloride+water": {
+      "a": "water",
+      "b": "sodium_chloride",
+      "result": "solution",
+      "type": "chemical",
+      "explanation": "Solids like sodium chloride dissolve in water to form aqueous solutions (educational abstraction)."
+    },
+    "element_na+ionic_bond": {
+      "a": "element_na",
+      "b": "ionic_bond",
+      "result": "cation",
+      "type": "conceptual",
+      "explanation": "In ionic compounds sodium commonly exists as a positively charged cation; this associates the element with the cation concept (classification)."
+    },
+    "element_cl+ionic_bond": {
+      "a": "element_cl",
+      "b": "ionic_bond",
+      "result": "anion",
+      "type": "conceptual",
+      "explanation": "In ionic compounds chlorine commonly exists as a negatively charged anion; this associates the element with the anion concept (classification)."
+    },
+    "chemistry+ionic_bond": {
+      "a": "ionic_bond",
+      "b": "chemistry",
+      "result": "ion",
+      "type": "conceptual",
+      "explanation": "Ionic bonding produces charged ions; associate the ionic bond concept with the generic ion classification for discoverability."
+    },
+    "burn+element_o": {
+      "a": "burn",
+      "b": "element_o",
+      "result": "oxidation",
+      "type": "conceptual",
+      "explanation": "Combustion is an oxygen-rich example of oxidation; oxidation more generally refers to net loss of electrons in a chemical change (classification linking oxygen-driven examples to the electron-transfer concept)."
+    },
+    "electron+oxidation": {
+      "a": "electron",
+      "b": "oxidation",
+      "result": "reduction",
+      "type": "conceptual",
+      "explanation": "Reduction is the complementary electron-gain half of an oxidation process; this links the electron-transfer concepts."
+    },
+    "oxidation+reduction": {
+      "a": "oxidation",
+      "b": "reduction",
+      "result": "redox_reaction",
+      "type": "conceptual",
+      "explanation": "Oxidation and reduction are complementary parts of redox reactions (classification)."
+    },
+    "acid+solution": {
+      "a": "acid",
+      "b": "solution",
+      "result": "pH",
+      "type": "conceptual",
+      "explanation": "pH is a measure related to acidic or basic solutions; this associates solution state with pH as a measured quantity."
+    },
+    "measure+solution": {
+      "a": "solution",
+      "b": "measure",
+      "result": "concentration",
+      "type": "conceptual",
+      "explanation": "Concentration is the measured amount of solute in a solution; this links solution and measurement concepts."
+    },
+    "concentration+solution": {
+      "a": "solution",
+      "b": "concentration",
+      "result": "crystallization",
+      "type": "physical",
+      "explanation": "Crystallization commonly occurs from increased concentration or cooling of solutions; this links measurable concentration changes to crystallization for discoverability."
+    },
+    "catalyst+reaction": {
+      "a": "reaction",
+      "b": "catalyst",
+      "result": "catalysis",
+      "type": "conceptual",
+      "explanation": "Catalysts accelerate reactions without being consumed; this links catalyst and reaction concepts."
+    },
+    "concentration+reaction": {
+      "a": "reaction",
+      "b": "concentration",
+      "result": "equilibrium",
+      "type": "conceptual",
+      "explanation": "Reaction rates and concentrations determine chemical equilibrium; this provides a minimal conceptual bridge."
+    },
+    "covalent_bond+methane": {
+      "a": "methane",
+      "b": "covalent_bond",
+      "result": "organic_compound",
+      "type": "conceptual",
+      "explanation": "Methane is a simple organic molecule; associating it with the covalent bond concept establishes a chemistry-based link to the category \"organic compound\" (classification)."
+    },
+    "sun+water": {
+      "a": "water",
+      "b": "sun",
+      "result": "evaporation",
+      "type": "physical",
+      "explanation": "Solar heating commonly drives surface evaporation of water, though evaporation can occur from any heat source and does not strictly require sunlight."
+    },
+    "cold+steam": {
+      "a": "steam",
+      "b": "cold",
+      "result": "condensation",
+      "type": "physical",
+      "explanation": "Cooling water vapor condenses into liquid droplets."
+    },
+    "cloud+gravity": {
+      "a": "cloud",
+      "b": "gravity",
+      "result": "precipitation",
+      "type": "physical",
+      "explanation": "Condensed water in clouds falls as precipitation under gravity."
+    },
+    "lava+time": {
+      "a": "lava",
+      "b": "time",
+      "result": "crust",
+      "type": "physical",
+      "explanation": "Lava that cools over time at the surface forms solid crustal material; this links eruptive material with crust formation."
+    },
+    "magma+time": {
+      "a": "magma",
+      "b": "time",
+      "result": "igneous_rock",
+      "type": "physical",
+      "explanation": "Magma that cools and solidifies over time forms igneous rocks; time abstracts cooling/solidification processes."
+    },
+    "erosion+rock": {
+      "a": "rock",
+      "b": "erosion",
+      "result": "sediment",
+      "type": "physical",
+      "explanation": "Erosion of rock produces sediments which can later lithify into sedimentary rock."
+    },
+    "pressure+sediment": {
+      "a": "sediment",
+      "b": "pressure",
+      "result": "sedimentary_rock",
+      "type": "physical",
+      "explanation": "Compaction and pressure on sediments leads to formation of sedimentary rocks (lithification abstraction)."
+    },
+    "mantle+rock": {
+      "a": "rock",
+      "b": "mantle",
+      "result": "metamorphic_rock",
+      "type": "physical",
+      "explanation": "Burial into hot, high-pressure geologic environments like the mantle alters existing rock without melting, producing metamorphic rock."
+    },
+    "rock+water": {
+      "a": "rock",
+      "b": "water",
+      "result": "weathering",
+      "type": "physical",
+      "explanation": "Weathering is the breakdown of rock in place via physical and chemical processes including water action."
+    },
+    "water+weathering": {
+      "a": "weathering",
+      "b": "water",
+      "result": "erosion",
+      "type": "physical",
+      "explanation": "Erosion is the transport of weathered materials by water, wind, or ice."
+    },
+    "erosion+gravity": {
+      "a": "erosion",
+      "b": "gravity",
+      "result": "deposition",
+      "type": "physical",
+      "explanation": "Deposition occurs when transported sediments settle under the influence of gravity."
+    },
+    "crust+mantle": {
+      "a": "crust",
+      "b": "mantle",
+      "result": "lithosphere",
+      "type": "physical",
+      "explanation": "The lithosphere comprises the crust and uppermost mantle as a rigid outer shell (conceptual association)."
+    },
+    "lithosphere+pressure": {
+      "a": "lithosphere",
+      "b": "pressure",
+      "result": "tectonic_plate",
+      "type": "physical",
+      "explanation": "Large rigid sections of the lithosphere form tectonic plates influenced by mantle forces and stresses."
+    },
+    "tectonic_plate+tectonic_plate": {
+      "a": "tectonic_plate",
+      "b": "tectonic_plate",
+      "result": "plate_tectonics",
+      "type": "physical",
+      "explanation": "Interactions among tectonic plates produce the system known as plate tectonics."
+    },
+    "igneous_rock+sedimentary_rock": {
+      "a": "igneous_rock",
+      "b": "sedimentary_rock",
+      "result": "rock_cycle",
+      "type": "conceptual",
+      "explanation": "The rock cycle describes interconnected transformations among igneous, sedimentary, and metamorphic rocks."
+    },
+    "heat+rock": {
+      "a": "rock",
+      "b": "heat",
+      "result": "mantle",
+      "type": "conceptual",
+      "explanation": "Earth's mantle is predominantly hot, solid silicate rock that deforms slowly; this is a structural classification, not a literal mixture."
+    },
+    "gravity+heat": {
+      "a": "heat",
+      "b": "gravity",
+      "result": "differentiation",
+      "type": "physical",
+      "explanation": "Planetary differentiation is driven by heat and gravity, enabling dense materials to segregate."
+    },
+    "differentiation+earth": {
+      "a": "earth",
+      "b": "differentiation",
+      "result": "core",
+      "type": "physical",
+      "explanation": "Planetary differentiation leads to the formation of an iron-rich core; this is a conceptual mapping, not a literal single-step formation recipe."
+    },
     "electron+proton": {
       "a": "proton",
       "b": "electron",
@@ -19516,13 +21147,6 @@
       "type": "conceptual",
       "explanation": "Bone mineral contains calcium phosphate, giving bone much of its rigidity."
     },
-    "element_cl+element_na": {
-      "a": "element_na",
-      "b": "element_cl",
-      "result": "salt",
-      "type": "chemical",
-      "explanation": "Sodium and chlorine form ionic sodium chloride, common salt; the reaction conditions are abstracted."
-    },
     "element_u+energy": {
       "a": "element_u",
       "b": "energy",
@@ -19652,6 +21276,7 @@
     "Chemistry",
     "Commerce",
     "Concept",
+    "Concepts",
     "Construction",
     "Culture",
     "Discovery",
@@ -19843,6 +21468,27 @@
     "telescope": "strong",
     "lens": "strong",
     "laboratory": "strong",
+    "observation": "strong",
+    "measure": "strong",
+    "number": "strong",
+    "mathematics": "strong",
+    "statistics": "strong",
+    "probability": "strong",
+    "hypothesis": "strong",
+    "evidence": "strong",
+    "scientific_method": "strong",
+    "direction": "strong",
+    "velocity": "strong",
+    "acceleration": "strong",
+    "force": "strong",
+    "momentum": "strong",
+    "temperature": "strong",
+    "frequency": "strong",
+    "spectrum": "strong",
+    "charge": "strong",
+    "voltage": "strong",
+    "resistance": "strong",
+    "mathematical_operation": "strong",
     "machine": "strong",
     "engine": "strong",
     "factory": "strong",
@@ -19975,6 +21621,7 @@
     "video_game": "strong",
     "digital_music": "reasonable",
     "digital_art": "reasonable",
+    "streetlight": "strong",
     "fan": "strong",
     "greenhouse": "strong",
     "hydroelectric": "strong",
@@ -19995,6 +21642,7 @@
     "solar_energy": "strong",
     "wind_energy": "strong",
     "hydro_energy": "strong",
+    "geothermal_energy": "strong",
     "data_mining": "reasonable",
     "computer_virus": "strong",
     "chip": "reasonable",
@@ -20014,6 +21662,7 @@
     "genetics": "strong",
     "genome": "strong",
     "earth_observation": "reasonable",
+    "ocean_current": "strong",
     "iceberg": "strong",
     "glacier": "strong",
     "meltwater": "reasonable",
@@ -20099,7 +21748,6 @@
     "yellow": "strong",
     "purple": "strong",
     "orange_c": "strong",
-    "rainbow_c": "strong",
     "banjo": "strong",
     "accordion": "strong",
     "harmonica": "strong",
@@ -20265,7 +21913,6 @@
     "sweater": "strong",
     "comfort": "reasonable",
     "juice": "strong",
-    "street": "strong",
     "solar_heater": "strong",
     "hot_water": "strong",
     "airplane": "strong",
@@ -20430,7 +22077,6 @@
     "archipelago": "strong",
     "tide": "strong",
     "wave": "strong",
-    "geothermal": "strong",
     "carbon_dioxide": "strong",
     "pollution": "strong",
     "smog": "strong",
@@ -20582,7 +22228,6 @@
     "sound": "reasonable",
     "rhythm": "reasonable",
     "group": "reasonable",
-    "measure": "reasonable",
     "mass": "reasonable",
     "matter": "reasonable",
     "nature": "reasonable",
@@ -20889,6 +22534,54 @@
     "centaur_m": "reasonable",
     "canyon": "reasonable",
     "nuclear": "reasonable",
+    "hydrogen_molecule": "strong",
+    "oxygen_molecule": "strong",
+    "methane": "reasonable",
+    "ammonia": "reasonable",
+    "sodium_chloride": "strong",
+    "silicon_dioxide": "strong",
+    "carbonate": "reasonable",
+    "calcium_carbonate": "strong",
+    "iron_oxide": "strong",
+    "ionic_bond": "reasonable",
+    "solute": "reasonable",
+    "solvent": "reasonable",
+    "mixture": "reasonable",
+    "reactant": "strong",
+    "product": "reasonable",
+    "catalyst": "reasonable",
+    "covalent_bond": "reasonable",
+    "solution": "reasonable",
+    "cation": "reasonable",
+    "anion": "reasonable",
+    "ion": "reasonable",
+    "oxidation": "reasonable",
+    "reduction": "strong",
+    "redox_reaction": "reasonable",
+    "pH": "reasonable",
+    "concentration": "reasonable",
+    "crystallization": "reasonable",
+    "catalysis": "reasonable",
+    "equilibrium": "reasonable",
+    "organic_compound": "reasonable",
+    "evaporation": "strong",
+    "condensation": "strong",
+    "precipitation": "strong",
+    "crust": "reasonable",
+    "igneous_rock": "strong",
+    "sediment": "reasonable",
+    "sedimentary_rock": "reasonable",
+    "metamorphic_rock": "reasonable",
+    "weathering": "strong",
+    "erosion": "strong",
+    "deposition": "reasonable",
+    "lithosphere": "reasonable",
+    "tectonic_plate": "reasonable",
+    "plate_tectonics": "reasonable",
+    "rock_cycle": "strong",
+    "mantle": "reasonable",
+    "differentiation": "reasonable",
+    "core": "reasonable",
     "element_mc": "reasonable",
     "element_lv": "reasonable",
     "element_ts": "reasonable",
@@ -20896,10 +22589,10 @@
     "air": "reasonable"
   },
   "metadata": {
-    "elementCount": 1219,
-    "recipeCount": 1312,
-    "categoryCount": 32,
-    "strongRecipes": 744,
-    "reasonableRecipes": 472
+    "elementCount": 1287,
+    "recipeCount": 1387,
+    "categoryCount": 33,
+    "strongRecipes": 780,
+    "reasonableRecipes": 504
   }
 }
